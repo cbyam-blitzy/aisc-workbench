@@ -1,0 +1,20 @@
+{
+  "name": "wispr-flow",
+  "interface": {
+    "displayName": "Wispr Flow"
+  },
+  "plugins": [
+    {
+      "name": "wispr-flow-agent-playbooks",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

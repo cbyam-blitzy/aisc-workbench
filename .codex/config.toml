@@ -1,0 +1,2 @@
+[plugins."wispr-flow-agent-playbooks@wispr-flow"]
+enabled = true

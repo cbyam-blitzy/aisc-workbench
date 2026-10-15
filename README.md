@@ -30,9 +30,16 @@ working; it is not a source-controlled deliverable location.
 | Path | Purpose |
 | --- | --- |
 | `AGENTS.md` | Operating rules and privacy requirements for agents. |
+| `plugin.json` | Skills-only plugin manifest for Codex and ChatGPT. |
 | `skills/` | Reusable workflow-specific skills, added as they are developed. |
 | `templates/` | Generic, fully redacted output templates. |
 | `accounts/` | Local, Git-ignored workspace for sensitive meeting-derived material. |
+
+The repository is also exposed as the repo-local **Wispr Flow** plugin. In a
+trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
+and install or refresh it from the `Wispr Flow` marketplace. Start a new chat
+after installation, then invoke a workflow by name, for example
+`$write-follow-up-email`.
 
 ## Working with Wispr Flow
 
