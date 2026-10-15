@@ -14,3 +14,7 @@ accounts/
 Use lowercase, hyphenated account folder names. Keep generated outputs in Markdown
 so they remain easy to search, diff, and automate. Do not copy raw transcripts
 here unless an account workflow specifically requires it.
+
+## Repository verification
+
+This note confirms the repository's commit-and-push workflow is operational.
