@@ -40,7 +40,12 @@ trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
 and install or refresh it from the `Wispr Flow` marketplace. Start a new chat
 after installation, then invoke a workflow by name, for example
 `$blitzy-write-follow-up-email`, `$blitzy-review-aap`,
-`$blitzy-review-tech-spec`, or `$blitzy-humanizer`.
+`$blitzy-review-tech-spec`, `$blitzy-humanizer`, or `$blitzy-solution-impact`.
+
+Use `$blitzy-solution-impact` with a delivered solution's project guide to
+summarize delivery, validation, business impact, and remaining human work. It
+researches a comparable engineering baseline and asks for actual Blitzy compute
+time before calculating acceleration.
 
 ## Working with Wispr Flow
 
