@@ -39,7 +39,8 @@ The repository is also exposed as the repo-local **Wispr Flow** plugin. In a
 trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
 and install or refresh it from the `Wispr Flow` marketplace. Start a new chat
 after installation, then invoke a workflow by name, for example
-`$write-follow-up-email`.
+`$blitzy-write-follow-up-email`, `$blitzy-review-aap`,
+`$blitzy-review-tech-spec`, or `$blitzy-humanizer`.
 
 ## Working with Wispr Flow
 

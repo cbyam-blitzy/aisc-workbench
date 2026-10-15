@@ -1,5 +1,5 @@
 ---
-name: write-follow-up-email
+name: blitzy-write-follow-up-email
 description: Turn a customer meeting transcript or notes into a short follow-up email draft in Blitzy's writing style - a few sentences on key items discussed, decisions made, and blockers cleared, followed by an owner-first action items list. Use this whenever the user asks to recap, summarize, or follow up on a call or meeting with any customer or prospect, pastes or points to a transcript, or says things like "write the recap", "draft the follow-up email", "send notes from today's call", or "what did we agree on" - even if they don't say "email".
 ---
 
@@ -15,19 +15,11 @@ Produce a short, scannable follow-up email the user can send to the customer aft
 - Read the whole transcript before writing. Decisions and commitments often land in the last minutes.
 - Transcripts are auto-generated and garbled (names misspelled, numbers wrong, speakers mislabeled). Use the Participants section to resolve names. If a figure, date, or name is ambiguous, flag it in the note after the email instead of guessing.
 
-**The Blitzy Writing Style Guide.** Look for `blitzy_writing_style_guide.md` (also spelled `Blitzy Writing Style Guide.md`) in the user's `SharedContext` folder and read it before drafting. It is the source of truth for voice and is updated over time, so prefer the live file over the snapshot below. If the folder isn't connected or the file is missing, use the snapshot and say once, in the note, that you used it.
-
-Snapshot of the guide's rules that matter for a recap:
-- Omit needless words. Every sentence should lose nothing if shortened.
-- Lead with the action: what is needed, from whom. Context supports it.
-- Active voice, definite language, named owners. "Patrick coordinates the schema," not "the schema will be coordinated."
-- One idea per sentence. Short declarative sentences.
-- Partner, not vendor: warm, direct, no overselling, no over-apologizing. Frame tradeoffs as shared, never as blame.
-- Earned confidence: state outcomes plainly. Claims are sourced or cut. No unsourced superlatives.
-- Precise over impressive: use the exact technical term. Blitzy operates at the project or epic level, so never frame it as a co-pilot or assistant.
-- Avoid "just", "I wanted to", "circle back", "touch base", "as per", stacked qualifiers, hedging ("could", "might", "may" as uncertainty), semicolons, and restating the customer's problem back to them at length.
-- Bullets: bold the deliverable, plain text for detail, at most about two sentences per bullet. Skip dates unless committing to one.
-- The guide asks for action-forward subject lines, but for this skill the user's fixed subject format (see Step 2) takes precedence.
+**The Blitzy Writing Style Guide.** Read and follow
+`shared-context/blitzy_writing_style_guide.md` before drafting. It is the
+project-wide source of truth for voice, structure, formatting, and claims.
+The fixed subject format in Step 2 takes precedence over the guide's general
+subject-line guidance.
 
 ## Step 2: Draft the email
 
@@ -58,7 +50,7 @@ Best,
 
 Why each piece looks this way:
 
-- **Subject line is deliberately plain**: the meeting's name as it appears in the transcript title, then the meeting date with the month spelled out, then "Follow Up". Example: "Allianz & Blitzy - Technical Discussion (Access and Security) - October 5, 2026 - Follow Up". The user wants a simple, predictable subject that threads cleanly, so don't add a headline or outcome to it.
+- **Subject line is deliberately plain**: the meeting's name as it appears in the transcript title, then the meeting date with the month spelled out, then "Follow Up". Example: "ExampleCo & Blitzy - Technical Discussion (Access and Security) - October 5, 2026 - Follow Up". The user wants a simple, predictable subject that threads cleanly, so don't add a headline or outcome to it.
 - **Opening in one line** (thanks plus the goal) follows the style guide. Don't add a second pleasantry.
 - **The summary is prose, not bullets.** It reads like a person wrote it. Prioritize outcomes (decisions, unblocked items, agreed scope) over a play-by-play, because the customer attended and only needs what changes their next step. If the call produced an open blocker, state it in one neutral clause paired with the next step to resolve it.
 - **Action items are owner-first bullets**: "**Owner** to action." Name the owner exactly as the transcript shows them volunteering or being assigned. Never infer from job title or role, since a wrong owner in a customer-facing email is worse than a missing one. If no one clearly owns an action, write "Owner TBD" and mention it in the note. Never use a vague owner like "Blitzy team" if a person spoke up.
@@ -69,7 +61,7 @@ Why each piece looks this way:
 
 ## Step 3: Add a brief note to the user, outside the email
 
-After the draft, add 1-3 short lines only if useful: ambiguities you resolved or couldn't (garbled names, figures), owners you assumed, risks you left out of the email on purpose, and whether you used the live style guide or the snapshot. Skip the note if there is nothing to flag. Separate it clearly from the draft so the user can copy the email without editing.
+After the draft, add 1-3 short lines only if useful: ambiguities you resolved or couldn't (garbled names, figures), owners you assumed, or risks you left out of the email on purpose. Skip the note if there is nothing to flag. Separate it clearly from the draft so the user can copy the email without editing.
 
 ## Reusing across accounts
 

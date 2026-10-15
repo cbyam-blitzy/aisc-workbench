@@ -39,6 +39,25 @@ everyone who has repository access.
   requirements change.
 - Use clear, focused commits. Inspect `git diff --cached` before each commit.
 
+## Writing standards
+
+- Read and follow `shared-context/blitzy_writing_style_guide.md` for every
+  written output, including customer emails, follow-ups, executive updates,
+  internal summaries, knowledge documents, and repository documentation.
+- Treat that guide as the current, project-wide source of truth for voice,
+  structure, formatting, and claims. Do not rely on embedded or cached style
+  snapshots when the file is available.
+
+## Output traceability
+
+- Prefix every file delivered to a user with its creation timestamp in US
+  Eastern time (EST or EDT, as applicable), using the filename format
+  `YYYYMMDDTHHMMSS±HHMM_<descriptive-name>`. For example:
+  `20261015T102530-0400_aap-review.md`.
+- Do not add delivery timestamps to reusable repository assets such as skills,
+  templates, or shared guidance. Apply the prefix when producing a user-facing
+  deliverable file.
+
 ## Completion checks
 
 Before considering a change ready:
