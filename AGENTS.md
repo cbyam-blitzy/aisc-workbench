@@ -22,7 +22,13 @@ everyone who has repository access.
 ## Working with Wispr Flow
 
 - Use the Wispr Flow MCP server as the authoritative source for meeting
-  context; do not copy its source material into this repository.
+  context when its notes are available; do not copy its source material into
+  version-controlled files.
+- When notes for a meeting are unavailable in Wispr Flow, check
+  `accounts/<account>/transcripts/` for a locally supplied transcript. Use the
+  matching transcript as fallback context within the requester's authorized
+  scope, and identify it as the source. Do not substitute another meeting if
+  no matching transcript exists. Keep these transcripts local and out of Git.
 - Limit review and follow-up work to the requester's authorized scope.
 - Confirm before taking an external, irreversible, or audience-affecting
   action, unless the request explicitly authorizes it.

@@ -2,5 +2,6 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "wispr-flow-agent-playbooks",
   "version": "0.2.0",
-  "description": "Reusable Blitzy and Wispr Flow workflows for meeting follow-ups and build-plan reviews."
+  "description": "Reusable Blitzy and Wispr Flow workflows for meeting follow-ups and build-plan reviews.",
+  "skills": "./skills/"
 }

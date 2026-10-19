@@ -1,9 +1,9 @@
 ---
-name: blitzy-solution-impact
+name: blitzy-review-project-guide
 description: Produce an evidence-based impact report for a Blitzy-delivered solution from its project guide. Summarize delivery and validation, estimate equivalent engineering effort and staffing without Blitzy using sourced industry benchmarks, and ask for actual compute time before calculating delivery acceleration.
 ---
 
-# Blitzy solution impact
+# Blitzy review project guide
 
 Memorialize what Blitzy delivered, how it was validated, and the business value it enables. Compare an equivalent scope and quality of work without Blitzy against the actual Blitzy delivery interval. Make the baseline calculation reproducible.
 
@@ -81,26 +81,29 @@ Build a plausible sequence with parallel work, dependencies, review/rework and w
 Keep person-hours of effort, workdays and elapsed calendar time separate. State conversion assumptions and use the same time units and milestone on both sides of any ratio.
 
 - **Guide-reported autonomous effort share:** estimated AI-completed hours / total scoped estimated hours × 100. Report the guide's overall completion separately when it includes completed manual work. This is an estimate of effort attribution, not measured automation coverage.
-- **Equivalent-milestone acceleration:** baseline elapsed time to equivalent delivered milestone / actual Blitzy elapsed time to that milestone. Report as `X× as fast` or `X× acceleration`.
+- **Delivery velocity multiplier against baseline:** Blitzy delivery rate / baseline delivery rate = (matched scope / actual Blitzy elapsed time) / (matched scope / baseline elapsed time) = baseline elapsed time / actual Blitzy elapsed time. Report explicitly as `X× baseline delivery velocity`. For equal scope and quality, this is the same ratio as equivalent-milestone acceleration; do not count it as an additional benefit. This is a delivery-rate comparison, not Scrum story-point velocity or per-engineer productivity.
+- **Equivalent-milestone acceleration:** use the delivery velocity multiplier above, also expressible as `X× as fast` or `X× acceleration`.
 - **Equivalent-milestone elapsed-time reduction:** (1 − actual Blitzy elapsed time / baseline elapsed time) × 100.
 - **Compute-stage comparison:** if only active compute duration is supplied, an elapsed-baseline/active-compute ratio may be shown only as a clearly labeled compute-stage comparison with excluded delays listed. Do not call it end-to-end delivery acceleration.
 - **Net human effort avoided:** baseline human person-hours for the matched scope − actual human person-hours spent for the matched Blitzy-assisted scope. Calculate only when actual human effort is available. Otherwise report estimated equivalent engineering effort delivered, without claiming realized labor savings.
 - **Projected full-outcome acceleration:** baseline full-production elapsed duration / projected Blitzy-assisted full-production elapsed duration. Model the remaining human work, dependencies and shared release gates in both schedules. Add durations only when sequential; an effort estimate alone does not establish elapsed remaining time.
 
-Calculate low/base/high acceleration from the corresponding baseline scenarios and the same actual interval. If actual time is uncertain, show the input range and how it affects the result. Keep results below 1× or negative time reductions when the evidence produces them. Do not force a positive benefit. Round to precision justified by the inputs and make the arithmetic reproducible.
+Calculate low/base/high velocity multipliers and acceleration from the corresponding baseline scenarios and the same actual interval. Lead with the base-case multiplier and include its scenario range. Carry forward the baseline's estimate/projection label, milestone boundary, and time exclusions. If only active compute time is known, label the multiplier a compute-stage comparison; if actual time is missing, mark it pending. If actual time is uncertain, show the input range and how it affects the result. Keep results below 1× or negative time reductions when the evidence produces them. Do not force a positive benefit. Round to precision justified by the inputs and make the arithmetic reproducible.
 
 Do not label human-equivalent hours / compute hours as delivery acceleration: the numerator is labor effort and the denominator is elapsed runtime. Do not use total project effort as the numerator when only the completed delivery has occurred. Do not calculate financial ROI from equivalent effort alone; financial savings require supplied cost assumptions, actual human effort, and Blitzy costs.
 
 ## Write the impact report
 
-Deliver in chat unless the user requests a file. For a file, follow the repository's Eastern-time creation-timestamp naming convention and keep account-specific material in the ignored local work area, outside reusable assets and version control. The skill must not depend on the sample project guide being installed beside it.
+Save the complete analysis as a Markdown (`.md`) file by default. Follow the repository's Eastern-time creation-timestamp naming convention: `YYYYMMDDTHHMMSS±HHMM_<descriptive-name>.md`. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
+
+Read back the saved report to verify its contents. Return a clickable file link and a brief takeaway in chat; do not print the full analysis in chat or terminal output. If writing the file is unavailable, explain the limitation and ask for an accessible destination.
 
 Use this structure, keeping the opening concise and the calculation detail auditable:
 
-1. **Impact summary:** what changed, why it matters, delivered milestone, baseline team/duration, actual Blitzy interval, acceleration range, and the material remaining condition. Mark unavailable inputs pending. Describe the platform's architectural understanding and autonomous validation only where project evidence shows their contribution.
+1. **Impact summary:** what changed, why it matters, delivered milestone, baseline team/duration, actual Blitzy interval, explicit base-case delivery velocity multiplier and scenario range, elapsed-time reduction, and the material remaining condition. Mark unavailable inputs pending. Describe the platform's architectural understanding and autonomous validation only where project evidence shows their contribution.
 2. **Delivered solution and validation:** summarize architectural changes, functionality, compatibility, documentation and operations enablement. Link capabilities to specific quality evidence and its limits. Include meaningful test counts, outcomes and runtime observations; passing tests do not imply a code-coverage percentage, a defect-free system, or production validation.
 3. **Business impact:** connect each material capability to the business problem, evidence and benefit. Distinguish observed outcomes, estimated engineering capacity delivered, and benefits enabled but dependent on adoption or release. Avoid invented revenue, cost savings, incident reductions or compliance guarantees. State how an enabled benefit could be measured after deployment.
-4. **Baseline and acceleration:** present matched scope, task effort ranges, team composition, schedule rationale, source applicability, user-supplied time and exclusions, formulas and scenario results. Distinguish independently supported estimates from guide-derived ones.
+4. **Baseline, velocity, and acceleration:** present matched scope, task effort ranges, team composition, schedule rationale, source applicability, user-supplied time and exclusions, formulas and scenario results. Show baseline duration, Blitzy duration, velocity multiplier, and elapsed-time reduction together. Distinguish independently supported estimates from guide-derived ones.
 5. **Human delivery and readiness:** summarize remaining work by category, estimated effort, owner if documented, dependencies, open approvals, access gaps, material deviations and residual risks. Preserve the actual completion percentage even when below the operating target. Separate built, tested, deployable, deployed and producing business results.
 6. **Evidence and assumptions:** include guide section references, benchmark citations, input provenance and date, source gaps and a compact coverage check showing where every guide section informed the report. Do not repeat the guide wholesale.
 

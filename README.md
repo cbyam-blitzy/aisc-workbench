@@ -40,18 +40,59 @@ trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
 and install or refresh it from the `Wispr Flow` marketplace. Start a new chat
 after installation, then invoke a workflow by name, for example
 `$blitzy-write-follow-up-email`, `$blitzy-review-aap`,
-`$blitzy-review-tech-spec`, `$blitzy-humanizer`, or `$blitzy-solution-impact`.
+`$blitzy-review-tech-spec`, `$blitzy-humanizer`, or `$blitzy-review-project-guide`.
 
-Use `$blitzy-solution-impact` with a delivered solution's project guide to
+Use `$blitzy-review-project-guide` with a delivered solution's project guide to
 summarize delivery, validation, business impact, and remaining human work. It
 researches a comparable engineering baseline and asks for actual Blitzy compute
 time before calculating acceleration.
 
+## Refresh after changing skills
+
+Last verified: 2026-10-15. Recheck these commands when the Codex CLI changes.
+
+The installed plugin uses a cached copy. After saving changes in this repository:
+
+1. From the repository root, confirm that `codex plugin marketplace list --json`
+   resolves `wispr-flow` to this checkout.
+2. Refresh the installed copy:
+
+   ```sh
+   codex plugin add wispr-flow-agent-playbooks@wispr-flow --json
+   ```
+
+3. Use the returned `installedPath` to verify the copied skills:
+
+   ```sh
+   diff -qr skills /path/from/installedPath/skills
+   ```
+
+   No output and exit status 0 mean the skill directories match. The refresh
+   includes saved, uncommitted changes; a commit or push is not required.
+4. Restart the desktop app and start a new chat. Type `$` and search for the
+   exact `name` from the skill's `SKILL.md` frontmatter, such as
+   `blitzy-review-project-guide`.
+
+If the marketplace is missing, register this checkout once with
+`codex plugin marketplace add . --json`, then repeat the refresh. Run commands
+from the repository root so `.` resolves to the intended checkout.
+
+This process was verified with the local `wispr-flow` marketplace. The installed
+CLI's `marketplace upgrade` command refreshes Git marketplace snapshots; use
+`plugin add` to refresh this local plugin. Keep customer material in the ignored
+`accounts/` workspace and out of reusable plugin assets.
+
+See the [official plugin packaging documentation](https://developers.openai.com/plugins/build/plugins)
+for marketplace configuration, cached installs, and desktop restart guidance.
+
 ## Working with Wispr Flow
 
-Use Wispr Flow's MCP server as the source of meeting context. Keep the work
-scoped to the requester's authorization, and confirm any external or
-irreversible action before performing it. Turn patterns that are useful across
+Use Wispr Flow's MCP server as the source of meeting context when notes are
+available. When a meeting's notes are unavailable in Wispr Flow, check
+`accounts/<account>/transcripts/` for a locally supplied transcript and identify
+the matching transcript as the fallback source. Keep transcripts local and out
+of Git. Keep the work scoped to the requester's authorization, and confirm any
+external or irreversible action before performing it. Turn patterns that are useful across
 meetings into generic, redacted playbooks in this repository rather than
 checking in an example from a real account.
 
