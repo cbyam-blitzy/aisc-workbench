@@ -5,6 +5,8 @@ description: Review an Agent Action Plan (AAP) against its build prompt and auth
 
 # AAP Reviewer
 
+Read and follow `shared-context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 An Agent Action Plan is the contract a build will execute. It is generated
 from a build prompt (what the user asked for) and grounded in a tech spec
 (what is true about the system). Tell the user, in plain language, whether the

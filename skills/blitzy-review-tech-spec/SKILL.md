@@ -5,6 +5,8 @@ description: Review a technical specification and produce a plain-language brief
 
 # Blitzy technical-spec review
 
+Read and follow `shared-context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Turn a long technical specification into a briefing that a deal or delivery lead can understand without reading the source: what the system is, how it behaves, what matters for migration or delivery, what remains unknown, and who needs to weigh in.
 
 The specification already holds the evidence. The review adds interpretation. For every finding, explain the consequence for modernization, estimation, risk, or the customer conversation.

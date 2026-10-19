@@ -40,12 +40,18 @@ trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
 and install or refresh it from the `Wispr Flow` marketplace. Start a new chat
 after installation, then invoke a workflow by name, for example
 `$blitzy-write-follow-up-email`, `$blitzy-review-aap`,
-`$blitzy-review-tech-spec`, `$blitzy-humanizer`, or `$blitzy-review-project-guide`.
+`$blitzy-review-tech-spec`, `$blitzy-humanizer`, `$blitzy-review-project-guide`,
+or `$blitzy-evaluate-acct`.
 
 Use `$blitzy-review-project-guide` with a delivered solution's project guide to
 summarize delivery, validation, business impact, and remaining human work. It
 researches a comparable engineering baseline and asks for actual Blitzy compute
 time before calculating acceleration.
+
+Use `$blitzy-evaluate-acct` with an account name to create an internal strategy
+memo from its meeting history. It connects discussion threads, stakeholder
+goals, evaluation questions and adoption readiness to the current pre-sales
+positioning directives. Account memos stay in the ignored `accounts/` workspace.
 
 ## Refresh after changing skills
 

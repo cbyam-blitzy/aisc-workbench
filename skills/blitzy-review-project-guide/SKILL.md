@@ -94,7 +94,7 @@ Do not label human-equivalent hours / compute hours as delivery acceleration: th
 
 ## Write the impact report
 
-Save the complete analysis as a Markdown (`.md`) file by default. Follow the repository's Eastern-time creation-timestamp naming convention: `YYYYMMDDTHHMMSS±HHMM_<descriptive-name>.md`. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
+Save the complete analysis as a Markdown (`.md`) file by default. Follow `shared-context/file_naming_directives.md` in the working repository for its filename, including when this skill is loaded from a plugin cache. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
 
 Read back the saved report to verify its contents. Return a clickable file link and a brief takeaway in chat; do not print the full analysis in chat or terminal output. If writing the file is unavailable, explain the limitation and ask for an accessible destination.
 

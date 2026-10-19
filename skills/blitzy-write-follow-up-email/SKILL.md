@@ -5,6 +5,8 @@ description: Turn a customer meeting transcript or notes into a short follow-up 
 
 # Meeting Recap Email
 
+Read and follow `shared-context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Produce a short, scannable follow-up email the user can send to the customer after a call. Customers skim these. The goal is that someone who missed the meeting knows in 20 seconds what was decided and who owes what.
 
 ## Step 1: Find and read the sources

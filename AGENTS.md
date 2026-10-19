@@ -56,13 +56,9 @@ everyone who has repository access.
 
 ## Output traceability
 
-- Prefix every file delivered to a user with its creation timestamp in US
-  Eastern time (EST or EDT, as applicable), using the filename format
-  `YYYYMMDDTHHMMSS±HHMM_<descriptive-name>`. For example:
-  `20261015T102530-0400_aap-review.md`.
-- Do not add delivery timestamps to reusable repository assets such as skills,
-  templates, or shared guidance. Apply the prefix when producing a user-facing
-  deliverable file.
+- Read and follow `shared-context/file_naming_directives.md` for files
+  delivered by skills and ad hoc prompts. It is the source of truth for the
+  `<timestamp>-<account>-<title>` convention and its exceptions.
 
 ## Completion checks
 

@@ -5,6 +5,8 @@ description: Edit text to remove signs of AI-generated writing and make it sound
 
 # Blitzy Humanizer
 
+Read and follow `shared-context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Edit writing so it sounds like a person wrote it without changing its meaning. Remove AI-writing tells, then restore an appropriate human voice. Do not make formal material performatively casual: match the document's register.
 
 ## Workflow
