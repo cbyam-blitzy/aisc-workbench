@@ -35,6 +35,27 @@ everyone who has repository access.
 - Capture reusable lessons as generic skills, procedures, or redacted
   templates—not as account-specific artifacts.
 
+## Context efficiency
+
+- Start with existing account assessments when relevant. Retrieve additional
+  evidence to resolve material gaps or verify claims, following the task's
+  required source coverage and freshness checks.
+- Search before reading large files. Read relevant sections with enough
+  surrounding context to preserve meaning; read required guides in full when
+  their instructions apply throughout.
+- Filter embedded images, base64 data and other non-text payloads before
+  displaying Markdown. Inspect those assets separately when relevant.
+- When tool responses duplicate text and structured content, display one
+  representation and only the fields needed for the task.
+- Discover tools by name and brief description; load full schemas only for
+  selected tools.
+- Retain retrieved results during the task. Avoid fetching or printing the
+  same material again unless it changed or needs further verification.
+- Keep tool output bounded. If truncated, retrieve the missing range or
+  narrow the selection rather than repeat the full response.
+- Efficiency must not weaken required evidence review, chronological
+  coverage or source verification. Identify source gaps that remain.
+
 ## Repository conventions
 
 - Put durable agent-wide rules in this file.

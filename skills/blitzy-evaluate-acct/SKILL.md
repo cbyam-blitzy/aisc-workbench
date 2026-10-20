@@ -24,6 +24,8 @@ Use Wispr Flow MCP meeting context when available. When the user names local tra
 
 Build a dated inventory of relevant meetings and supporting account material. Read substantive passages in context, including the end of each relevant discussion; use keyword search to locate passages, not as a substitute for reading them. Cover the evolution of each material thread rather than relying only on the latest call. Use participant lists to resolve names. Do not browse public sources for private account context or transmit customer details in research queries.
 
+Retrieve transcripts in bounded ranges and continue through the substantive passages and closing discussion needed for each material thread. Retain retrieved ranges and the evidence ledger rather than fetching or printing them again. When a response contains duplicate text and structured representations, display one representation with the needed notes, transcript range, participants and source references. These limits do not reduce the chronological coverage required above or permit summaries to replace required transcript review.
+
 Track a compact working evidence ledger: date, speaker, initiative or team, claim or commitment, source location, and any later qualification. Keep these distinctions clear:
 
 - Customer statements and recorded commitments.
