@@ -40,14 +40,21 @@ everyone who has repository access.
 - Put durable agent-wide rules in this file.
 - Add reusable workflows under `skills/<workflow-name>/` using lowercase,
   hyphenated names.
-- Put generic reusable output patterns under `templates/`.
+- Use lowercase underscore-separated names for shared-context directories
+  and reference files under `shared_context/`. Preserve lowercase hyphenated
+  skill names and directories under `skills/` for skill discovery.
+- Keep shared POV, prompt and rule templates in
+  `shared_context/blitzy_pov_templates/`,
+  `shared_context/blitzy_prompt_templates/` and
+  `shared_context/blitzy_rule_templates/`. Use `templates/` for other generic
+  reusable output patterns. Deliverable filenames follow the naming guide.
 - Keep documentation concise, specific, and updated when behavior or safety
   requirements change.
 - Use clear, focused commits. Inspect `git diff --cached` before each commit.
 
 ## Writing standards
 
-- Read and follow `shared-context/blitzy_writing_style_guide.md` for every
+- Read and follow `shared_context/blitzy_writing_style_guide.md` for every
   written output, including customer emails, follow-ups, executive updates,
   internal summaries, knowledge documents, and repository documentation.
 - Treat that guide as the current, project-wide source of truth for voice,
@@ -56,17 +63,52 @@ everyone who has repository access.
 
 ## Engagement stage and shared references
 
-- Read `shared-context/blitzy_intro.md` when describing Blitzy's workflow or
-  planning platform milestones. Use it to distinguish automated processes and
-  their generated artifacts from customer readouts, reviews and acceptance.
+- Ground Blitzy descriptions and workflow recommendations in
+  `shared_context/blitzy_overview/blitzy_intro.md` and the relevant overview
+  pages below. Read only those needed for the task; use `glossary.md` when a
+  platform term needs clarification.
+- Use platform references to explain capabilities and review practices.
+  Use account evidence for customer needs, agreements and measured results.
+  Cite the relevant source when a material claim depends on it. Documentation
+  and template examples do not prove project coverage, successful tests,
+  acceleration or acceptance. Surface conflicts between references or with
+  account agreements rather than resolving them by assumption.
+- Distinguish automated ingestion/specification, AAP and Project Guide
+  generation from human readouts, review, approval and acceptance.
+
+| Task or question | Read under `shared_context/blitzy_overview/` |
+| --- | --- |
+| Workflow, artifact purpose and terminology | `blitzy_intro.md`; `glossary.md` as needed |
+| Account provisioning, repository/submodule access, branch isolation, integrations and project sharing | `project_setup.md` |
+| Conversational source exploration, Build prompt drafting and advisory scoring | `chat_with_code.md` |
+| Ingestion scope, business context, exclusions, formats and branch/spec inheritance | `ingestion_prompts.md` |
+| Current-state understanding and specification review | `tech_spec.md` |
+| AAP completeness, rules, refinement and inline edits | `agent_action_plan.md` |
+| Delivered scope, validation, remaining work and merge-readiness discussion | `project_guide.md` |
+| Toolchains, target OS, build/test setup, private dependencies and secrets references | `environment_config.md` |
+
+- For setup recommendations, identify the required repositories and submodules,
+  authorized integration owner, stable branch and intended sharing audience.
+  Reading setup guidance does not authorize provisioning, permission changes,
+  source transfer or sharing. Do not push to a branch during generation.
+- Preserve Chat with Code's beta, workflow-step and access qualifications.
+  At the AAP step it provides source Q&A, not plan review or plan edits;
+  Build Prompt Strength is advisory, not approval or an acceptance gate.
+  Flag conflicting availability statements rather than promising support.
+- Select a task-matching prompt template from
+  `shared_context/blitzy_prompt_templates/` when drafting or recommending a
+  generation prompt. Consult `shared_context/blitzy_rule_templates/` when
+  proposing or checking project rules. Templates are starting points, not
+  customer requirements; apply only selected or agreed rules. Do not load the
+  entire library or impose every rule on every task.
 - Establish the stage of the specific engagement or workstream from the
   request and account evidence. One account can have early discovery and an
   active POV in separate workstreams. Preserve agreed scope and commitments.
 - For early sales positioning, use
-  `shared-context/blitzy_presales_positioning_directives.md` to guide discovery
+  `shared_context/blitzy_presales_positioning_directives.md` to guide discovery
   toward a paid engagement while bypassing a POV or technical validation.
 - For an active POV or technical validation, read and apply
-  `shared-context/blitzy_pov_playbook.md`. Tailor outputs, deliverables and
+  `shared_context/blitzy_pov_playbook.md`. Tailor outputs, deliverables and
   feedback to its applicable criteria and the customer-agreed evaluation:
   baselines, success criteria, target state, spec/AAP approval, environment
   readiness, build/test/parity evidence and Mutual Action Plan milestones.
@@ -74,7 +116,7 @@ everyone who has repository access.
   with the earlier-stage sales approach or silently rewrite agreed criteria.
 - Distinguish playbook targets from measured results and customer sign-offs.
   A target or proposed baseline does not establish achieved acceleration.
-- Use `shared-context/blitzy_security_faqs.md` as an internal reference when
+- Use `shared_context/blitzy_security_faqs.md` as an internal reference when
   answering customer questions about Blitzy security. Preserve deployment-tier
   qualifications, flag contradictions and keep items marked `TO CONFIRM`
   unverified until the appropriate internal owner confirms them. Do not send
@@ -86,7 +128,7 @@ everyone who has repository access.
 
 ## Output traceability
 
-- Read and follow `shared-context/file_naming_directives.md` for files
+- Read and follow `shared_context/file_naming_directives.md` for files
   delivered by skills and ad hoc prompts. It is the source of truth for the
   `<timestamp>-<account>-<title>` convention and its exceptions.
 

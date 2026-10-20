@@ -5,21 +5,27 @@ description: Review a technical specification and produce a plain-language brief
 
 # Blitzy technical-spec review
 
-Read and follow `shared-context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+Read and follow `shared_context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 Turn a long technical specification into a briefing that a deal or delivery lead can understand without reading the source: what the system is, how it behaves, what matters for migration or delivery, what remains unknown, and who needs to weigh in.
 
 The specification already holds the evidence. The review adds interpretation. For every finding, explain the consequence for modernization, estimation, risk, or the customer conversation.
 
+## Blitzy reference context
+
+Unless the user restricts the review to the supplied specification, read `shared_context/blitzy_overview/tech_spec.md` for the artifact's purpose and platform review workflow. Consult `ingestion_prompts.md` in that directory for missing domain context, exclusions, supported inputs or branch/spec inheritance, `environment_config.md` for build/test prerequisites, and `glossary.md` for unclear platform terms. The platform's targeted customer spot-check does not replace this skill's full-document review. Keep general guidance separate from facts stated in the supplied spec; do not infer complete source coverage or customer validation from the artifact's existence.
+
+When the permitted review raises missing repositories, submodules, source versions or access, consult `shared_context/blitzy_overview/project_setup.md`. Use `chat_with_code.md` in that directory when suggesting follow-up source exploration at the Tech spec step. Proposed chat queries do not independently verify findings, and source exploration cannot establish the customer's desired behavior.
+
 ## Inputs
 
 - Use the named technical specification. If none is named, look in the supplied project materials.
 - If the user limits the review to the spec, use nothing else. Otherwise, use permitted account context only to identify owners or avoid re-raising a resolved item; it never overrides the spec.
-- Read `shared-context/blitzy_writing_style_guide.md` before writing. It is the current source of truth for Blitzy voice, structure, formatting, and claims.
+- Read `shared_context/blitzy_writing_style_guide.md` before writing. It is the current source of truth for Blitzy voice, structure, formatting, and claims.
 
 Read the entire specification. Map its headings first, then read by section. Later sections often contain the most material dependencies and gaps. When the review permits parallel work, divide large specifications by top-level sections and verify each reported finding against the source.
 
-For an active POV or technical validation, read `shared-context/blitzy_pov_playbook.md` from the working repository. Tailor feedback to current-state accuracy, customer spec validation, the agreed forward-engineering target, parity approach, baseline, environment prerequisites and MAP. Include a compact assessment of applicable playbook criteria with evidence, status and the owner/decision that closes each gap. Distinguish criteria the spec supports from approvals and runtime results it cannot establish. Honor a spec-only review restriction and state that playbook alignment was not assessed. Do not substitute early-stage sales positioning for active evaluation readiness.
+For an active POV or technical validation, read `shared_context/blitzy_pov_playbook.md` from the working repository. Tailor feedback to current-state accuracy, customer spec validation, the agreed forward-engineering target, parity approach, baseline, environment prerequisites and MAP. Include a compact assessment of applicable playbook criteria with evidence, status and the owner/decision that closes each gap. Distinguish criteria the spec supports from approvals and runtime results it cannot establish. Honor a spec-only review restriction and state that playbook alignment was not assessed. Do not substitute early-stage sales positioning for active evaluation readiness.
 
 ## Writing rules
 

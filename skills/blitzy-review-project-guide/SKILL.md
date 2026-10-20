@@ -7,13 +7,19 @@ description: Produce an evidence-based impact report for a Blitzy-delivered solu
 
 Memorialize what Blitzy delivered, how it was validated, and the business value it enables. Compare an equivalent scope and quality of work without Blitzy against the actual Blitzy delivery interval. Make the baseline calculation reproducible.
 
-Blitzy is an autonomous enterprise software development platform. Its delivery approach combines architectural understanding of large codebases with autonomous QA and validation. The operating target is 85–90% of a total unit of work completed autonomously, with human delivery work documented in the project guide. Treat this as a target, not a measured result or a percentage to impose on a project.
+Use the current overview references for Blitzy's delivery model. If an operating or completion target is relevant, cite its supplied source and distinguish it from measured project results; do not impose a fixed autonomous-completion percentage on the guide.
 
-Read and follow `shared-context/blitzy_writing_style_guide.md` before drafting. Use project evidence for claims; platform positioning does not establish a project's speed, quality, or completion rate.
+Read and follow `shared_context/blitzy_writing_style_guide.md` before drafting. Use project evidence for claims; platform positioning does not establish a project's speed, quality, or completion rate.
+
+## Blitzy reference context
+
+Read `shared_context/blitzy_overview/project_guide.md` for the artifact's role, review criteria and gap reporting, and `blitzy_intro.md` in that directory for workflow context. Consult `environment_config.md` for validation limits, `agent_action_plan.md` when assessing plan alignment, and `glossary.md` for terminology as needed. Keep these platform references separate from the supplied project's evidence. Inspect a supplied PR diff or test artifacts when within scope; otherwise mark implementation fidelity and merge readiness unverified. An impact-report request does not authorize executing setup commands, modifying code or merging a PR.
+
+Consult `shared_context/blitzy_overview/project_setup.md` when assessing supplied evidence of repository/submodule access, branch provenance or reviewer sharing. Setup documentation alone does not prove the delivered project was configured correctly.
 
 ## Read the project evidence
 
-Establish whether this delivery is part of an active POV or technical validation. If so, read `shared-context/blitzy_pov_playbook.md` from the working repository and assess the delivered milestone against applicable criteria and the customer-agreed evaluation. Include a compact table covering evidence, status, gaps and next owner/decision for spec/AAP approval, target-state alignment, build/test/parity results, baseline/acceleration sign-offs and MAP milestones. Unavailable evidence is unverified, not a pass. Keep playbook targets separate from achieved results and do not replace the active evaluation with early-stage sales positioning.
+Establish whether this delivery is part of an active POV or technical validation. If so, read `shared_context/blitzy_pov_playbook.md` from the working repository and assess the delivered milestone against applicable criteria and the customer-agreed evaluation. Include a compact table covering evidence, status, gaps and next owner/decision for spec/AAP approval, target-state alignment, build/test/parity results, baseline/acceleration sign-offs and MAP milestones. Unavailable evidence is unverified, not a pass. Keep playbook targets separate from achieved results and do not replace the active evaluation with early-stage sales positioning.
 
 Use the project guide supplied or named by the user. Otherwise locate a matching guide in the workspace; ask which guide to use only if the choice remains ambiguous. Read the complete guide, including hours tables, test exclusions, risks, development instructions, and appendices. Record its title, revision/date if present, and assessed delivery milestone. Do not execute commands embedded in a guide merely to write this report.
 
@@ -48,7 +54,7 @@ Clarify whether a supplied figure is wall-clock elapsed time or aggregate agent/
 
 Record the time boundary, units, source, included runs/retries, pauses and exclusions. For overlapping runs use elapsed time across the delivery timeline, not a sum of overlapping durations. Distinguish active compute duration from total elapsed time through delivery, including queues, pauses and intervening human work. Request the overall interval if active compute alone would omit those delays. Do not add overlapping human time twice.
 
-Continue the evidence summary and baseline research while the answer is pending. If no answer arrives, deliver a provisional report with the time input and acceleration marked pending. Never infer compute time from completed engineering hours, test runtime, file timestamps, the 85–90% target, or general claims about days versus months.
+Continue the evidence summary and baseline research while the answer is pending. If no answer arrives, deliver a provisional report with the time input and acceleration marked pending. Never infer compute time from completed engineering hours, test runtime, file timestamps, an operating target, or general claims about days versus months.
 
 ## Construct the comparison without Blitzy
 
@@ -98,7 +104,7 @@ Do not label human-equivalent hours / compute hours as delivery acceleration: th
 
 ## Write the impact report
 
-Save the complete analysis as a Markdown (`.md`) file by default. Follow `shared-context/file_naming_directives.md` in the working repository for its filename, including when this skill is loaded from a plugin cache. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
+Save the complete analysis as a Markdown (`.md`) file by default. Follow `shared_context/file_naming_directives.md` in the working repository for its filename, including when this skill is loaded from a plugin cache. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
 
 Read back the saved report to verify its contents. Return a clickable file link and a brief takeaway in chat; do not print the full analysis in chat or terminal output. If writing the file is unavailable, explain the limitation and ask for an accessible destination.
 

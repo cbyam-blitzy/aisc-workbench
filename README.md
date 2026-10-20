@@ -32,9 +32,18 @@ working; it is not a source-controlled deliverable location.
 | `AGENTS.md` | Operating rules and privacy requirements for agents. |
 | `plugin.json` | Skills-only plugin manifest for Codex and ChatGPT. |
 | `skills/` | Reusable workflow-specific skills, added as they are developed. |
-| `shared-context/` | Current writing, engagement-stage, POV and security references. |
+| `shared_context/` | Current writing, file naming, engagement-stage, POV and security references. |
+| `shared_context/blitzy_overview/` | Platform workflow, project setup, Chat with Code, glossary, ingestion, artifact review and environment references. |
+| `shared_context/blitzy_pov_templates/` | Reusable POV Evaluation Memo and Mutual Action Plan templates. |
+| `shared_context/blitzy_prompt_templates/` | Task-specific generation prompt templates. |
+| `shared_context/blitzy_rule_templates/` | Selectable project-rule templates. |
 | `templates/` | Generic, fully redacted output templates. |
 | `accounts/` | Local, Git-ignored workspace for sensitive meeting-derived material. |
+
+Shared-context directory and reference filenames use lowercase words separated
+by underscores. Skill names and directories retain hyphens for discovery.
+Account deliverables retain the timestamp/account/title convention in
+`shared_context/file_naming_directives.md`.
 
 The repository is also exposed as the repo-local **Wispr Flow** plugin. In a
 trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
@@ -54,9 +63,23 @@ memo from its meeting history. It connects discussion threads, stakeholder
 goals, evaluation questions and adoption readiness to the guidance for each
 workstream's stage. Account memos stay in the ignored `accounts/` workspace.
 
-Use `shared-context/blitzy_presales_positioning_directives.md` for early sales
+Ground platform explanations in `shared_context/blitzy_overview/blitzy_intro.md`
+and the relevant overview pages. Use `project_setup.md` for provisioning,
+repository access, branches and sharing, and `chat_with_code.md` for source
+exploration and Build prompt assistance, preserving its beta and step-specific
+limits. `AGENTS.md` maps questions to references;
+each skill identifies the pages it needs. Load only relevant material from the
+working repository, including when running a cached plugin skill. Use platform
+documentation for workflow context and account sources for customer commitments
+and measured results. Surface conflicts and cite material supporting evidence.
+
+Prompt templates and rule templates are selectable starting points. Choose the
+template for the requested task and apply only relevant, selected or agreed
+rules. Their examples and defaults do not become customer requirements.
+
+Use `shared_context/blitzy_presales_positioning_directives.md` for early sales
 positioning toward a paid engagement while bypassing a POV/technical validation.
-For an active evaluation, use `shared-context/blitzy_pov_playbook.md` to guide
+For an active evaluation, use `shared_context/blitzy_pov_playbook.md` to guide
 outputs, deliverables and feedback against applicable criteria and the agreed
 evaluation. `AGENTS.md` defines the stage distinction for all workflows.
 
@@ -65,7 +88,7 @@ Use `$blitzy-draft-pov-eval-memo` to draft a pre-POV agreement and
 templates and account evidence. Both workflows mark unresolved inputs and
 proposals, preserve agreed commitments, and keep account outputs local.
 
-Use `shared-context/blitzy_security_faqs.md` as an internal reference for
+Use `shared_context/blitzy_security_faqs.md` as an internal reference for
 customer security questions. Preserve deployment qualifications and obtain
 confirmation for items marked `TO CONFIRM` before using them externally.
 

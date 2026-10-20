@@ -6,7 +6,7 @@ Source: Supplied notes from the October 16, 2026 AISC training, “How to land d
 
 Position Blitzy around changing how the customer delivers software. Use individual initiatives to demonstrate and adopt that process.
 
-**Applicability:** Use these directives for early sales positioning toward a paid engagement while bypassing a POV or technical validation. Once a workstream is in an active POV or technical validation, use `shared-context/blitzy_pov_playbook.md` to guide its outputs, deliverables and feedback against the applicable playbook criteria and customer-agreed evaluation. These directives can inform a separate expansion conversation; they do not replace active evaluation commitments. Apply this distinction per workstream, as described in `AGENTS.md`.
+**Applicability:** Use these directives for early sales positioning toward a paid engagement while bypassing a POV or technical validation. Once a workstream is in an active POV or technical validation, use `shared_context/blitzy_pov_playbook.md` to guide its outputs, deliverables and feedback against the applicable playbook criteria and customer-agreed evaluation. These directives can inform a separate expansion conversation; they do not replace active evaluation commitments. Apply this distinction per workstream, as described in `AGENTS.md`.
 
 1. **Lead discovery with strategic priorities and delivery processes.**
    Establish what the organization needs to change, where software delivery constrains it, and what leadership expects from AI adoption. Gather stack details and timelines once their relevance is clear.

@@ -5,7 +5,7 @@ description: Review an Agent Action Plan (AAP) against its build prompt and auth
 
 # AAP Reviewer
 
-Read and follow `shared-context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+Read and follow `shared_context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 An Agent Action Plan is the contract a build will execute. It is generated
 from a build prompt (what the user asked for) and grounded in a tech spec
@@ -34,6 +34,12 @@ verdict is the most important output.
 Directive questions—what to do, how much, and in what order—are settled by the
 build prompt, not the spec. The spec cannot tell you what the user wanted.
 
+## Blitzy reference context
+
+Unless the user restricts the review to the three supplied documents, read `shared_context/blitzy_overview/agent_action_plan.md` for completeness, custom-rule verification and refinement options. Consult `environment_config.md` in that directory for execution prerequisites, `tech_spec.md` for current-state context, and `glossary.md` for terminology as needed. Check selected custom rules by intent; use `shared_context/blitzy_rule_templates/` and the task-matching template in `shared_context/blitzy_prompt_templates/` only when relevant to supplied rules or a requested correction. Template defaults are not omitted customer directives. Keep platform guidance distinct from document conflicts. For recommended fixes, distinguish Refine, prompt regeneration and inline edits; preserve all existing AAP headings when proposing inline edits. A restriction to the three documents also excludes these platform references.
+
+For permitted setup/readiness checks, consult `shared_context/blitzy_overview/project_setup.md` on repository/submodule access and branch isolation. Read `chat_with_code.md` in that directory when recommending conversational help: at the AAP step, chat answers source questions and does not discuss or edit the plan. Use the AAP refinement paths for plan changes; an advisory Build Prompt Strength score does not replace this review or approval.
+
 ## Inputs
 
 - The AAP, typically `agent_action_plan.md`; the build prompt, such as
@@ -52,7 +58,7 @@ against the source documents. A false conflict wastes the user's time.
 ## What to check
 
 For an active POV or technical validation, read the current
-`shared-context/blitzy_pov_playbook.md` from the working repository. Assess
+`shared_context/blitzy_pov_playbook.md` from the working repository. Assess
 the plan against its applicable criteria and the customer-agreed target,
 baseline, success criteria, validation approach, environment access and MAP.
 Identify missing evidence or approvals before generation. Keep playbook
@@ -124,7 +130,7 @@ assessment separate.
 
 ## How to write it
 
-Follow `shared-context/blitzy_writing_style_guide.md` for the briefing's
+Follow `shared_context/blitzy_writing_style_guide.md` for the briefing's
 voice, structure, formatting, and claims.
 
 - Explain the why for every conflict: what the AAP says, what the prompt or

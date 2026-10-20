@@ -20,7 +20,7 @@ Three factors determine whether a POV lands on time and produces a clear result:
 
 * **Defined Baselines.** Clear and concise understanding of how long it would take a prospect to complete the POV without Blitzy vs with Blitzy. **(This is critical). We should not move forward without baselines.**
 
-* **Adherence to [Mutual Action Plan](blitzy-pov-templates/blitzy_pov_map_template.md) (MAP) timelines.** Both Blitzy and the customer hold to the agreed MAP. The POV window is fixed and slippage on either side compresses the evaluation and puts the read-out date at risk.
+* **Adherence to [Mutual Action Plan](blitzy_pov_templates/blitzy_pov_map_template.md) (MAP) timelines.** Both Blitzy and the customer hold to the agreed MAP. The POV window is fixed and slippage on either side compresses the evaluation and puts the read-out date at risk.
 
 * **Environment access.** At minimum, the customer provides access to source code, a compiler, and a runtime which is enough to compile the code and begin validating unit tests. Section 4 covers this in technical detail.  Keep in mind, this is dependent on the project. For example documentation and CVE remediation only require source code, but a refactor will require level 5 (DB access, APIs/3P API access) to fully validate current vs future state.
 

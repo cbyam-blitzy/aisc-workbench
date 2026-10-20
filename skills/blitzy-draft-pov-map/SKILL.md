@@ -13,15 +13,21 @@ Resolve the account, workstream and existing MAP from the request and workspace.
 
 Read the current working repository files, including when this skill is loaded from a plugin cache:
 
-- `shared-context/blitzy-pov-templates/blitzy_pov_map_template.md`
-- `shared-context/blitzy_writing_style_guide.md`
-- `shared-context/file_naming_directives.md`
-- `shared-context/blitzy_pov_playbook.md`
-- `shared-context/blitzy_intro.md`
+- `shared_context/blitzy_pov_templates/blitzy_pov_map_template.md`
+- `shared_context/blitzy_writing_style_guide.md`
+- `shared_context/file_naming_directives.md`
+- `shared_context/blitzy_pov_playbook.md`
+- `shared_context/blitzy_overview/blitzy_intro.md`
 
 Find the repository through the workspace and parent directories; do not hardcode a machine path. Follow account instructions. Read any relevant Evaluation Memo, approved scope, baseline worksheet, existing MAP or written changes supplied in the account folder. An Evaluation Memo is useful but not required to produce a discussion draft: flag its absence and leave approval-dependent fields pending. Do not create or revise a separate Evaluation Memo unless requested.
 
 If a required shared reference is unavailable, identify the missing path and qualify provisional output. Do not invent a structure and present it as the shared template. Establish the selected workstream's engagement stage; preserve an active evaluation rather than substituting early-stage sales positioning or expanding it into broader adoption work.
+
+## Blitzy reference context
+
+Read the relevant pages in `shared_context/blitzy_overview/` when tailoring milestones: `ingestion_prompts.md` for optional context and branch/spec inheritance, `tech_spec.md` for specification review, `agent_action_plan.md` for plan approval/refinement, `project_guide.md` for delivery and review, and `environment_config.md` for setup and validation. Use `glossary.md` for terminology. Match milestones to the selected workflow and agreed validation depth; documentation does not prove readiness or completion. Consult task-matching prompt/rule templates in `shared_context/blitzy_prompt_templates/` and `shared_context/blitzy_rule_templates/` only when needed to define proposed inputs or rules.
+
+Use `shared_context/blitzy_overview/project_setup.md` to tailor entry/preparation milestones for provisioning, repository/submodule permissions, branch isolation and the intended project audience. Read `chat_with_code.md` in that directory when planning source exploration or Build prompt drafting. Schedule that assistance within the relevant step; AAP-stage chat cannot review or edit the plan, and advisory prompt scoring does not complete an approval milestone.
 
 ## Separate evidence from proposed planning
 
@@ -38,7 +44,7 @@ Preserve the current template's header fields, phases, milestone IDs, completion
 Carry forward these planning distinctions:
 
 - **Entry:** P1–P5 cover scope/target/validation agreement, approved baseline, required authorizations, signed Evaluation Memo and agreed MAP, and confirmed inputs. K1 confirms entry, checkpoints, final readout and escalation contacts. Record gaps; do not imply entry is complete merely because this draft exists.
-- **Preparation:** retain the current order: **R1 — Source-control access verified; R2 — Source-control repository set up for Blitzy ingestion; R3 — Code ingestion prompt prepared.** Keep the “Before ingestion” references consistent with those IDs. Verify actual source/requirements access, prepare the agreed repository and supporting inputs, then define the ingestion prompt against the approved inventory.
+- **Preparation:** retain the current template order: **R1 — Source-control access verified; R2 — Source-control repository set up for Blitzy ingestion; R3 — Ingestion context confirmed.** Verify access and repository inputs, then confirm scope, domain context, exclusions and specification inheritance or regeneration. An ingestion prompt is optional platform functionality; prepare one when needed or agreed. Preserve any prompt requirement in an existing agreed MAP, and flag differences rather than silently changing it. Keep “Before ingestion” references consistent with the milestone IDs.
 - **Specification:** X1 is ingestion and automatically generated Technical Specification delivery. X2 is its human readout; X3 is customer validation. Do not schedule ingestion and automatic specification generation as separate platform runs.
 - **Generation readiness:** X4 verifies reproducible environment setup and required dependencies/data; X5 prepares build intent and the AAP; X6 records joint AAP approval. Customer spec validation, verified environment readiness and AAP approval precede generation. Environment preparation may run in parallel with specification work after entry approval.
 - **Delivery and review:** X7 delivers the generated code/PR and accompanying Project Guide, with automated validation in the configured environment. X8 accepts successful build evidence and reproducibility. X9 reviews tests and functional/parity evidence, including failures and limits. Do not turn the Project Guide into a separate generation run or treat generated tests as tests executed successfully.
@@ -67,7 +73,7 @@ For an initial plan, leave the progress and agreed-change logs empty rather than
 
 ## Deliver and verify
 
-Save a Markdown MAP by default in the ignored account folder using `shared-context/file_naming_directives.md` and a title such as `pov-map`, including the project when useful. Preserve an existing filename for updates. Honor a requested destination or format.
+Save a Markdown MAP by default in the ignored account folder using `shared_context/file_naming_directives.md` and a title such as `pov-map`, including the project when useful. Preserve an existing filename for updates. Honor a requested destination or format.
 
 Save separate concise internal drafting notes in the account folder under the same naming convention. Include source links/sections and evidence cutoff, material field references keyed to milestone IDs, scope assumptions, conflicting commitments, proposed owners/dates and decisions blocking entry or generation. Keep internal strategy and negotiation commentary out of the customer-review MAP. If a single file is requested, use a clearly labeled internal appendix and identify it before any customer use.
 
