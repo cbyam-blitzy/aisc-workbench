@@ -51,6 +51,16 @@ against the source documents. A false conflict wastes the user's time.
 
 ## What to check
 
+For an active POV or technical validation, read the current
+`shared-context/blitzy_pov_playbook.md` from the working repository. Assess
+the plan against its applicable criteria and the customer-agreed target,
+baseline, success criteria, validation approach, environment access and MAP.
+Identify missing evidence or approvals before generation. Keep playbook
+readiness gaps distinct from prompt/spec conflicts; do not change the build
+prompt's scope or assume customer sign-off. If the user limits the review to
+the three documents, honor that limit and state that playbook alignment was
+not assessed. Early-stage pre-sales positioning does not replace this review.
+
 1. **Scope change from prompt to AAP.** Compare what the build prompt scopes
    in and out with what the AAP commits to. Capture every added, deferred,
    dropped, reinterpreted, tightened, or loosened item, even if it is sensible.
@@ -109,7 +119,8 @@ it.
 
 When the AAP cites legacy files, workbooks, or source outside the supplied
 documents, say those citations are unverified. Limit conclusions to the AAP,
-prompt, and spec.
+prompt, and spec for document conflicts; keep the permitted playbook-readiness
+assessment separate.
 
 ## How to write it
 
@@ -149,6 +160,11 @@ voice, structure, formatting, and claims.
    recommended option with a reason.
 7. **What I could not check.** State dependencies on information outside the
    three documents and claims that were not independently verified.
+
+For active evaluations where the review scope permits it, include a compact
+playbook-alignment table: applicable criterion, evidence, status, gap and
+owner/decision. Reflect material readiness gaps in the verdict without
+mislabeling them as prompt/spec conflicts.
 
 ## Delivery
 

@@ -13,6 +13,8 @@ Read and follow `shared-context/blitzy_writing_style_guide.md` before drafting. 
 
 ## Read the project evidence
 
+Establish whether this delivery is part of an active POV or technical validation. If so, read `shared-context/blitzy_pov_playbook.md` from the working repository and assess the delivered milestone against applicable criteria and the customer-agreed evaluation. Include a compact table covering evidence, status, gaps and next owner/decision for spec/AAP approval, target-state alignment, build/test/parity results, baseline/acceleration sign-offs and MAP milestones. Unavailable evidence is unverified, not a pass. Keep playbook targets separate from achieved results and do not replace the active evaluation with early-stage sales positioning.
+
 Use the project guide supplied or named by the user. Otherwise locate a matching guide in the workspace; ask which guide to use only if the choice remains ambiguous. Read the complete guide, including hours tables, test exclusions, risks, development instructions, and appendices. Record its title, revision/date if present, and assessed delivery milestone. Do not execute commands embedded in a guide merely to write this report.
 
 Build a compact evidence ledger: claim or metric, value, guide section, evidence type, and limitation. Distinguish guide-reported results from independently inspected artifacts, user-provided actuals, external benchmarks, and analyst estimates. A guide's statement that a command passed is reported evidence, not a test you personally ran.
@@ -50,6 +52,8 @@ Continue the evidence summary and baseline research while the answer is pending.
 
 ## Construct the comparison without Blitzy
 
+For an active evaluation, use its customer-agreed, signed-off baseline as the primary acceptance comparator and preserve its scope and time boundary. Request it if missing and mark baseline sign-off and the acceptance comparison pending. Research or reconstruct a baseline only as a separately labeled estimate or sensitivity check; it cannot silently replace the agreed baseline or establish POV success. Assess the playbook's acceleration target against comparable actual elapsed time, not equivalent person-hours or active compute alone. Broader impact reports may still use the estimation method below.
+
 Define two boundaries explicitly:
 
 - **Equivalent delivered milestone:** the capabilities, documentation, QA, validation, and handoff artifacts actually delivered by Blitzy. This is the primary acceleration comparison.
@@ -59,7 +63,7 @@ The baseline team must deliver equivalent quality and acceptance evidence, inclu
 
 State the counterfactual: a comparable team using ordinary development tools without Blitzy, with comparable starting code, requirements, access and domain knowledge. State whether other AI tools are included; use conventional engineering without autonomous project delivery when the user has not specified a different comparator. Do not assume an unusually inefficient team.
 
-Research appropriate industry benchmarks at report time. Prefer original empirical studies, published benchmark datasets, transparent industry surveys, and documented estimation models with relevant calibration. Read the supporting material, not just search snippets. Check project type, scale, legacy complexity, quality requirements, team experience, tooling, sample dates, units and methodology. Do not transmit private project names, code, or customer details in research queries.
+When constructing a retrospective estimate or a separate sensitivity check, research appropriate industry benchmarks at report time. Prefer original empirical studies, published benchmark datasets, transparent industry surveys, and documented estimation models with relevant calibration. Read the supporting material, not just search snippets. Check project type, scale, legacy complexity, quality requirements, team experience, tooling, sample dates, units and methodology. Do not transmit private project names, code, or customer details in research queries.
 
 Use a task-level work breakdown matching the guide. For each work package show:
 
@@ -108,3 +112,5 @@ Use this structure, keeping the opening concise and the calculation detail audit
 6. **Evidence and assumptions:** include guide section references, benchmark citations, input provenance and date, source gaps and a compact coverage check showing where every guide section informed the report. Do not repeat the guide wholesale.
 
 Before finalizing, reconcile hours and test totals, check every ratio's scope and units, confirm staffing capacity supports the schedule, and trace material claims to evidence. Surface contradictions and unresolved inputs where they affect conclusions. Preserve useful impact even when acceleration cannot yet be calculated.
+
+For an active evaluation, include the playbook assessment in delivered solution and validation, and distinguish technical evidence from customer acceptance and baseline sign-off in the impact summary.

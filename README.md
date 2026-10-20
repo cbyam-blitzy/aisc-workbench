@@ -32,6 +32,7 @@ working; it is not a source-controlled deliverable location.
 | `AGENTS.md` | Operating rules and privacy requirements for agents. |
 | `plugin.json` | Skills-only plugin manifest for Codex and ChatGPT. |
 | `skills/` | Reusable workflow-specific skills, added as they are developed. |
+| `shared-context/` | Current writing, engagement-stage, POV and security references. |
 | `templates/` | Generic, fully redacted output templates. |
 | `accounts/` | Local, Git-ignored workspace for sensitive meeting-derived material. |
 
@@ -50,8 +51,23 @@ time before calculating acceleration.
 
 Use `$blitzy-evaluate-acct` with an account name to create an internal strategy
 memo from its meeting history. It connects discussion threads, stakeholder
-goals, evaluation questions and adoption readiness to the current pre-sales
-positioning directives. Account memos stay in the ignored `accounts/` workspace.
+goals, evaluation questions and adoption readiness to the guidance for each
+workstream's stage. Account memos stay in the ignored `accounts/` workspace.
+
+Use `shared-context/blitzy_presales_positioning_directives.md` for early sales
+positioning toward a paid engagement while bypassing a POV/technical validation.
+For an active evaluation, use `shared-context/blitzy_pov_playbook.md` to guide
+outputs, deliverables and feedback against applicable criteria and the agreed
+evaluation. `AGENTS.md` defines the stage distinction for all workflows.
+
+Use `$blitzy-draft-pov-eval-memo` to draft a pre-POV agreement and
+`$blitzy-draft-pov-map` to draft its Mutual Action Plan from the shared
+templates and account evidence. Both workflows mark unresolved inputs and
+proposals, preserve agreed commitments, and keep account outputs local.
+
+Use `shared-context/blitzy_security_faqs.md` as an internal reference for
+customer security questions. Preserve deployment qualifications and obtain
+confirmation for items marked `TO CONFIRM` before using them externally.
 
 ## Refresh after changing skills
 

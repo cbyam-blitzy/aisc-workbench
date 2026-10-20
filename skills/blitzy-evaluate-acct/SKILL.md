@@ -5,7 +5,7 @@ description: Evaluate a Blitzy pre-sales account from its meeting history and cr
 
 # Blitzy account evaluation
 
-Create an internal account memo that explains what each stakeholder wants, how the discussions connect, and what evidence and decisions could support adoption of Blitzy across software initiatives. Apply the current pre-sales positioning directives while preserving the customer's actual scope, commitments and commercial history.
+Create an internal account memo that explains what each stakeholder wants, how the discussions connect, and what evidence and decisions could support adoption of Blitzy across software initiatives. Apply the shared guidance for each workstream's engagement stage while preserving the customer's actual scope, commitments and commercial history.
 
 ## Establish scope and sources
 
@@ -14,8 +14,9 @@ Resolve the account from the request and the workspace. Ask only if the account 
 Read and follow the repository's current shared guidance before drafting. These files are the source of truth for writing, positioning and file naming; keep their rules in shared context rather than duplicating them in this skill:
 
 - `shared-context/blitzy_writing_style_guide.md`
-- `shared-context/blitzy_presales_positioning_directives.md`
 - `shared-context/file_naming_directives.md`
+
+Establish each workstream's stage using the engagement-stage rules in `AGENTS.md`. For early positioning, read `shared-context/blitzy_presales_positioning_directives.md`. For active POV/technical validation work, read `shared-context/blitzy_pov_playbook.md`. Read both when the account spans both stages, keeping their assessments separate. Use `shared-context/blitzy_security_faqs.md` only when a Blitzy security question is relevant; preserve its qualifications and unconfirmed items.
 
 Locate these in the working repository when the installed skill is in a plugin cache. Do not substitute an embedded style or positioning snapshot. If a required guide cannot be found, identify that gap and distinguish a provisional account assessment from a completed review against the missing guidance.
 
@@ -47,11 +48,13 @@ Choose questions that can change a decision. Link system understanding to an act
 
 Respect teams' accounts of what already works. Do not invent poor documentation, broken QA, staffing shortages or resistance to change to strengthen the positioning. Where stakeholders disagree about the bottleneck, propose a way to test the competing explanations.
 
-## Apply the pre-sales positioning directives
+## Apply guidance for the engagement stage
 
-Evaluate the account against `shared-context/blitzy_presales_positioning_directives.md` as read for this task. For each directive, identify the relevant account evidence, an unresolved question or mismatch, and any recommended adjustment. Refer to the current directive number or heading so the review remains traceable when the shared guidance changes.
+For early positioning, evaluate the relevant workstreams against `shared-context/blitzy_presales_positioning_directives.md` as read for this task. For each directive, identify the relevant account evidence, an unresolved question or mismatch, and any recommended adjustment. Refer to the current directive number or heading so the review remains traceable when the shared guidance changes.
 
 Use this assessment to shape the recommended engagement and next conversation. Distinguish the position supported by customer discussions from the position recommended by the guidance. If they differ, explain the gap and the decision needed; do not rewrite customer commitments to make them fit. Do not reproduce the directive list or maintain a second positioning policy here.
+
+For an active POV or technical validation, assess progress and gaps against the playbook and the customer-agreed scope, success criteria, signed-off baseline, target state, spec/AAP reviews, environment access, validation evidence and MAP. Record each applicable criterion as met, unmet, unverified or not applicable, with evidence and the next owner/decision. Flag differences between the playbook and the agreed evaluation for resolution rather than changing the commitment. Keep expansion recommendations separate from the active evaluation's deliverables and acceptance decision.
 
 ## Design evidence and measures
 
@@ -68,7 +71,7 @@ Distinguish what a reverse engineering activity can establish from what requires
 | Identified security or dependency concerns | Successful remediation and operational outcomes |
 | Ability to review and reuse context on another question | Sustainable adoption across successive initiatives |
 
-Derive proposed measures from the shared directives and the account's stated outcomes. Specify the baseline, measurement boundary and evidence needed for each. Keep person-hours separate from elapsed time; analysis findings alone do not establish delivery acceleration, labor savings or ROI.
+Derive measures from the stage-appropriate shared guidance and the account's agreed outcomes. For an active evaluation, preserve its agreed baseline and measurement boundary; identify missing sign-offs or changes needed. Keep person-hours separate from elapsed time; analysis findings alone do not establish delivery acceleration, labor savings or ROI.
 
 Separate actions already committed on a call from newly proposed actions. If an owner is unknown, mark the role or owner to confirm rather than assigning a person by inference.
 
@@ -83,11 +86,11 @@ Use a structure appropriate to the account, normally:
 3. **Priority initiatives and the path to adoption.** Preserve each team's goals, evidence, open questions and connection to adoption.
 4. **Proposed engagement and operating model.** Define initial initiatives, minimum process changes, bounded evaluation if needed, artifacts and measures.
 5. **Next conversation and actions.** Give the sponsor decision and proposed or committed owners.
-6. **Positioning review.** Map the shared directives to account evidence, gaps and recommended adjustments. Keep every directive visible, grouping rows only when the mapping remains clear; do not manufacture a numeric readiness score.
+6. **Stage-specific review.** For early positioning, map every shared directive to account evidence, gaps and recommended adjustments. For active POV/technical validation, map applicable playbook criteria and agreed evaluation milestones to evidence, status and next decisions. Separate these reviews for mixed-stage accounts; do not manufacture a numeric readiness score.
 7. **Source references.** Link meetings or local files with dates and timestamps or section locations. Keep analysis recommendations distinct from customer commitments.
 
 Keep the opening concise and the question bank proportional to the decisions at hand. Avoid repeating the same qualification across sections. Write the memo for internal account and solutions planning unless the user specifies a customer-facing audience; exclude candid internal commentary from customer-facing material.
 
-Read back the saved memo. Verify material claims and commitments against their sources, links, chronology, reviewer attribution and the analysis/implementation boundary. Check the recommendations against the current shared directives and the customer's existing commitments. Confirm that reusable changes contain no customer material.
+Read back the saved memo. Verify material claims and commitments against their sources, links, chronology, reviewer attribution and the analysis/implementation boundary. Check recommendations against the stage-appropriate shared guidance and the customer's existing commitments. Confirm that reusable changes contain no customer material.
 
 Return a clickable memo link and the main strategic takeaway. Do not print the full memo in chat. Do not send messages, change CRM records, publish, commit or push merely because an account evaluation was requested.

@@ -19,6 +19,8 @@ The specification already holds the evidence. The review adds interpretation. Fo
 
 Read the entire specification. Map its headings first, then read by section. Later sections often contain the most material dependencies and gaps. When the review permits parallel work, divide large specifications by top-level sections and verify each reported finding against the source.
 
+For an active POV or technical validation, read `shared-context/blitzy_pov_playbook.md` from the working repository. Tailor feedback to current-state accuracy, customer spec validation, the agreed forward-engineering target, parity approach, baseline, environment prerequisites and MAP. Include a compact assessment of applicable playbook criteria with evidence, status and the owner/decision that closes each gap. Distinguish criteria the spec supports from approvals and runtime results it cannot establish. Honor a spec-only review restriction and state that playbook alignment was not assessed. Do not substitute early-stage sales positioning for active evaluation readiness.
+
 ## Writing rules
 
 - Lead with the point, then explain the consequence.

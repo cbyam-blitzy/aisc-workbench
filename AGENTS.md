@@ -54,6 +54,36 @@ everyone who has repository access.
   structure, formatting, and claims. Do not rely on embedded or cached style
   snapshots when the file is available.
 
+## Engagement stage and shared references
+
+- Read `shared-context/blitzy_intro.md` when describing Blitzy's workflow or
+  planning platform milestones. Use it to distinguish automated processes and
+  their generated artifacts from customer readouts, reviews and acceptance.
+- Establish the stage of the specific engagement or workstream from the
+  request and account evidence. One account can have early discovery and an
+  active POV in separate workstreams. Preserve agreed scope and commitments.
+- For early sales positioning, use
+  `shared-context/blitzy_presales_positioning_directives.md` to guide discovery
+  toward a paid engagement while bypassing a POV or technical validation.
+- For an active POV or technical validation, read and apply
+  `shared-context/blitzy_pov_playbook.md`. Tailor outputs, deliverables and
+  feedback to its applicable criteria and the customer-agreed evaluation:
+  baselines, success criteria, target state, spec/AAP approval, environment
+  readiness, build/test/parity evidence and Mutual Action Plan milestones.
+  Surface missing inputs and deviations; do not replace an active evaluation
+  with the earlier-stage sales approach or silently rewrite agreed criteria.
+- Distinguish playbook targets from measured results and customer sign-offs.
+  A target or proposed baseline does not establish achieved acceleration.
+- Use `shared-context/blitzy_security_faqs.md` as an internal reference when
+  answering customer questions about Blitzy security. Preserve deployment-tier
+  qualifications, flag contradictions and keep items marked `TO CONFIRM`
+  unverified until the appropriate internal owner confirms them. Do not send
+  the internal FAQ wholesale or turn draft answers into security guarantees.
+- Read current shared files from the working repository, including when a
+  skill is loaded from a plugin cache. If a required reference or engagement
+  stage is unclear, identify the gap and qualify the assessment; ask only when
+  the missing information changes the work.
+
 ## Output traceability
 
 - Read and follow `shared-context/file_naming_directives.md` for files

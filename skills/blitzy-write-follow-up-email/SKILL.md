@@ -25,6 +25,17 @@ subject-line guidance.
 
 ## Step 2: Draft the email
 
+For an active POV or technical validation, read
+`shared-context/blitzy_pov_playbook.md` from the working repository. Prioritize
+the call's decisions and blockers affecting agreed success criteria, baselines,
+target state, spec/AAP reviews, environment access, validation and MAP dates.
+Keep the email short and include only actions actually committed on the call.
+Flag additional playbook gaps or proposed actions separately in the user note;
+do not turn them into customer commitments or use early-stage positioning to
+redirect the active evaluation. For Blitzy security questions, consult
+`shared-context/blitzy_security_faqs.md` and preserve deployment qualifications
+and `TO CONFIRM` limitations; keep internal draft material out of the email.
+
 Deliver the draft in chat, not as a file, unless the user asks for a file.
 
 ```
