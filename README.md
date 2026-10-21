@@ -16,6 +16,10 @@ identify gaps, and coordinate next steps with customer engineering teams.
 It is an automation and operating-guidance repository—not an archive of meeting
 records.
 
+For installation on another computer, follow the
+[new machine setup runbook](runbooks/new_machine_setup.md). It covers plugin
+installation, meeting access, local customer files, and verification.
+
 ## What belongs here
 
 - Reusable agent instructions and decision rules.
@@ -41,6 +45,7 @@ working; it is not a source-controlled deliverable location.
 | `AGENTS.md` | Operating rules and privacy requirements for agents. |
 | `plugin.json` | Skills-only plugin manifest for Codex and ChatGPT. |
 | `skills/` | Reusable workflow-specific skills, added as they are developed. |
+| `runbooks/` | Setup and maintenance procedures for this repository. |
 | `shared_context/standards/` | Shared writing style and deliverable naming rules. |
 | `shared_context/platform/` | Platform workflow, project setup, Chat with Code, glossary, ingestion, artifact review and environment references. |
 | `shared_context/presales/` | Early sales positioning directives. |
