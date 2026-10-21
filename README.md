@@ -17,8 +17,8 @@ the working project so skills can read current shared guidance.
 | Component | Current name |
 | --- | --- |
 | GitHub repository and checkout | `aisc-workbench` |
-| Plugin identifier | `wispr-flow-agent-playbooks@wispr-flow` |
-| Marketplace display name | Wispr Flow |
+| Plugin identifier | `aisc-workbench@aisc-workbench` |
+| Marketplace display name | AISC Workbench |
 
 The plugin provides skills; configure and authenticate Wispr Flow MCP separately
 for meeting-based work. Customer files under `accounts/` do not arrive with a clone.

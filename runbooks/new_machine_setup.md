@@ -28,12 +28,12 @@ username or absolute path.
 git clone https://github.com/cbyam-blitzy/aisc-workbench.git
 cd aisc-workbench
 codex plugin marketplace add . --json
-codex plugin add wispr-flow-agent-playbooks@wispr-flow --json
+codex plugin add aisc-workbench@aisc-workbench --json
 ```
 
-The repository is `aisc-workbench`; the plugin remains
-`wispr-flow-agent-playbooks@wispr-flow`, with marketplace display name
-**Wispr Flow**. These are the names in the current
+The repository and marketplace are named `aisc-workbench`. Install the plugin
+using `aisc-workbench@aisc-workbench`; its marketplace display name is
+**AISC Workbench**. These are the names in the current
 [plugin manifest](../plugin.json) and
 [marketplace catalog](../.agents/plugins/marketplace.json).
 
@@ -69,7 +69,7 @@ Run commands from the checkout root.
 codex plugin marketplace list --json
 ```
 
-Confirm `wispr-flow` resolves to this checkout. The install command returns
+Confirm `aisc-workbench` resolves to this checkout. The install command returns
 `installedPath`; replace the placeholder below with that value:
 
 ```sh
@@ -102,7 +102,7 @@ checkout alone does not refresh installed skills.
 2. From the checkout root, run:
 
    ```sh
-   codex plugin add wispr-flow-agent-playbooks@wispr-flow --json
+   codex plugin add aisc-workbench@aisc-workbench --json
    ```
 
 3. Compare `skills/` with the returned `installedPath/skills` as above.
@@ -118,6 +118,7 @@ Resolve registration and project access before diagnosing individual skills.
 | Symptom | Action |
 | --- | --- |
 | Marketplace is missing or points to an old checkout path | From the current checkout root, run `codex plugin marketplace add . --json`, refresh the plugin, and verify registration again |
+| Upgrading an installation with a previous plugin name | Remove the previous plugin with `codex plugin remove OLD_PLUGIN@OLD_MARKETPLACE --json` and its marketplace with `codex plugin marketplace remove OLD_MARKETPLACE --json`; then register this checkout and install `aisc-workbench@aisc-workbench` |
 | Checkout was moved | Reopen the project at its new location and re-register its marketplace from that directory |
 | A skill does not appear when using `/` | Type `$` in the chat composer and use its exact skill name; `/` does not invoke these repository skills |
 | Skills are missing or outdated | Refresh the plugin, compare installed skills, restart the app, and start a new chat |

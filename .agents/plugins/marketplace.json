@@ -1,11 +1,11 @@
 {
-  "name": "wispr-flow",
+  "name": "aisc-workbench",
   "interface": {
-    "displayName": "Wispr Flow"
+    "displayName": "AISC Workbench"
   },
   "plugins": [
     {
-      "name": "wispr-flow-agent-playbooks",
+      "name": "aisc-workbench",
       "source": {
         "source": "local",
         "path": "./"

@@ -1,2 +1,2 @@
-[plugins."wispr-flow-agent-playbooks@wispr-flow"]
+[plugins."aisc-workbench@aisc-workbench"]
 enabled = true

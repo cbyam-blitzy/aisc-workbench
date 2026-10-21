@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "wispr-flow-agent-playbooks",
+  "name": "aisc-workbench",
   "version": "0.2.0",
-  "description": "Reusable Blitzy and Wispr Flow workflows for meeting follow-ups and build-plan reviews.",
+  "description": "Reusable AISC workflows for account evaluation, technical validation, Blitzy artifact review, impact assessment, customer follow-up, and platform guidance.",
   "skills": "./skills/"
 }
