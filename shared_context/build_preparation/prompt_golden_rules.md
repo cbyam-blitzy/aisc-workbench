@@ -220,15 +220,15 @@ Apply these rules when drafting prompts or refining after AAP review.
 
 ## Related Guides
 
-> **[Validation Checklist](/prompt-engineering/validation-checklist)**
+> **[Validation Checklist](../artifact_review/aap_validation_checklist.md)**
 >
 > Verify your prompt covers all 10 rules before submitting.
 
-> **[Rules](/prompt-engineering/rules)**
+> **[Rules](https://docs.blitzy.com/prompt-engineering/rules)**
 >
 > Attach reusable quality directives to enforce standards during generation.
 
-> **[Generation Prompts](/prompt-engineering/generation)**
+> **[Generation Prompts](generation_prompts.md)**
 >
 > Write and submit generation prompts for Blitzy.
 

@@ -5,6 +5,8 @@ description: Review an Agent Action Plan (AAP) against its build prompt and auth
 
 # AAP Reviewer
 
+Read and follow `shared_context/standards/readability_directives.md` for all delivered outputs. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Read and follow `shared_context/standards/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 An Agent Action Plan is the contract a build will execute. It is generated
@@ -36,9 +38,9 @@ build prompt, not the spec. The spec cannot tell you what the user wanted.
 
 ## Blitzy reference context
 
-Unless the user restricts the review to the three supplied documents, read `shared_context/platform/agent_action_plan.md` for completeness, custom-rule verification and refinement options. Consult `environment_config.md` in that directory for execution prerequisites, `tech_spec.md` for current-state context, and `glossary.md` for terminology as needed. Check selected custom rules by intent; use `shared_context/build_preparation/rule_templates/` and the task-matching template in `shared_context/build_preparation/prompt_templates/` only when relevant to supplied rules or a requested correction. Template defaults are not omitted customer directives. Keep platform guidance distinct from document conflicts. For recommended fixes, distinguish Refine, prompt regeneration and inline edits; preserve all existing AAP headings when proposing inline edits. A restriction to the three documents also excludes these platform references.
+Unless the user restricts the review to the three supplied documents, read `shared_context/platform/project_lifecycle/agent_action_plan.md` for completeness, custom-rule verification and refinement options. Consult `shared_context/build_preparation/setup/environment_config.md` for execution prerequisites, `shared_context/platform/project_lifecycle/technical_specification.md` for current-state context, and `shared_context/platform/intro/glossary.md` for terminology as needed. Check selected custom rules by intent; use `shared_context/build_preparation/rule_templates/` and the task-matching template in `shared_context/build_preparation/prompt_templates/` only when relevant to supplied rules or a requested correction. Template defaults are not omitted customer directives. Keep platform guidance distinct from document conflicts. For recommended fixes, distinguish Refine, prompt regeneration and inline edits; preserve all existing AAP headings when proposing inline edits. A restriction to the three documents also excludes these platform references.
 
-For permitted setup/readiness checks, consult `shared_context/platform/project_setup.md` on repository/submodule access and branch isolation. Read `chat_with_code.md` in that directory when recommending conversational help: at the AAP step, chat answers source questions and does not discuss or edit the plan. Use the AAP refinement paths for plan changes; an advisory Build Prompt Strength score does not replace this review or approval.
+For permitted setup/readiness checks, consult `shared_context/platform/project_lifecycle/project_setup.md` on repository/submodule access and branch isolation. Read `shared_context/platform/project_lifecycle/chat_with_code.md` when recommending conversational help: at the AAP step, chat answers source questions and does not discuss or edit the plan. Use the AAP refinement paths for plan changes; an advisory Build Prompt Strength score does not replace this review or approval.
 
 ## Inputs
 
@@ -153,17 +155,13 @@ and playbook-readiness assessments separate.
 ## How to write it
 
 Follow `shared_context/standards/writing_style_guide.md` for the briefing's
-voice, structure, formatting, and claims.
+voice and claims.
 
 - Explain the why for every conflict: what the AAP says, what the prompt or
   spec says, why both cannot be true, and what happens at execution if left
   unresolved.
-- Use plain language. Do not use line numbers, section IDs, or long quotes.
-  Name the document to edit and the relevant area.
-- Lead with the point in every section. State confidence precisely: “the spec
-  states,” “the prompt says,” “the AAP implies,” or “I could not tell.” Never
-  present an inference as a fact.
-- Do not pad. If a section has no findings, say “No conflicts found.”
+- Name the document to edit and the relevant area in each conflict; put
+  precise source locations in the final evidence appendix.
 
 ## Structure of the briefing
 
@@ -177,7 +175,7 @@ voice, structure, formatting, and claims.
 3. **Section-by-section walkthrough.** For each top-level AAP section, give a
    headline takeaway, summarize its commitment, state alignment with the
    build prompt and tech spec, and tag each conflict with its gating verdict.
-   Target roughly 100–200 words per section.
+   Scale detail to the findings while covering every top-level section.
 4. **Directive check.** Use a compact table of build-prompt directives with a
    status and short note. Group related directives to keep it readable.
 5. **Conflict register.** Rank conflicts, gating items first. Include the
@@ -203,8 +201,8 @@ mislabeling them as prompt/spec conflicts.
 
 ## Delivery
 
-- Produce a readable document rather than a data dump. If the session offers a
-  shareable page or document type, use it; otherwise save Markdown alongside
+- If the session offers a shareable page or document type, use it; otherwise
+  save Markdown alongside
   the supplied files, for example `<aap-name>-review.md`. Follow a requested
   format when the user specifies one.
 - In chat, give three or four lines: whether the plan can run, the number of

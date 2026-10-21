@@ -5,6 +5,8 @@ description: Review a technical specification and produce a plain-language brief
 
 # Blitzy technical-spec review
 
+Read and follow `shared_context/standards/readability_directives.md` for all delivered outputs. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Read and follow `shared_context/standards/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 Turn a long technical specification into a briefing that a deal or delivery lead can understand without reading the source: what the system is, how it behaves, what matters for migration or delivery, what remains unknown, and who needs to weigh in.
@@ -13,28 +15,23 @@ The specification already holds the evidence. The review adds interpretation. Fo
 
 ## Blitzy reference context
 
-Unless the user restricts the review to the supplied specification, read `shared_context/platform/tech_spec.md` for the artifact's purpose and platform review workflow. Consult `ingestion_prompts.md` in that directory for missing domain context, exclusions, supported inputs or branch/spec inheritance, `environment_config.md` for build/test prerequisites, and `glossary.md` for unclear platform terms. The platform's targeted customer spot-check does not replace this skill's full-document review. Keep general guidance separate from facts stated in the supplied spec; do not infer complete source coverage or customer validation from the artifact's existence.
+Unless the user restricts the review to the supplied specification, read `shared_context/platform/project_lifecycle/technical_specification.md` for the artifact's purpose and platform review workflow. Consult `shared_context/build_preparation/ingestion_prompts.md` for missing domain context, exclusions, supported inputs or branch/spec inheritance, `shared_context/build_preparation/setup/environment_config.md` for build/test prerequisites, and `shared_context/platform/intro/glossary.md` for unclear platform terms. The platform's targeted customer spot-check does not replace this skill's full-document review. Keep general guidance separate from facts stated in the supplied spec; do not infer complete source coverage or customer validation from the artifact's existence.
 
-When the permitted review raises missing repositories, submodules, source versions or access, consult `shared_context/platform/project_setup.md`. Use `chat_with_code.md` in that directory when suggesting follow-up source exploration at the Tech spec step. Proposed chat queries do not independently verify findings, and source exploration cannot establish the customer's desired behavior.
+When the permitted review raises missing repositories, submodules, source versions or access, consult `shared_context/platform/project_lifecycle/project_setup.md`. Use `shared_context/platform/project_lifecycle/chat_with_code.md` when suggesting follow-up source exploration at the Tech spec step. Proposed chat queries do not independently verify findings, and source exploration cannot establish the customer's desired behavior.
 
 ## Inputs
 
 - Use the named technical specification. If none is named, look in the supplied project materials.
 - If the user limits the review to the spec, use nothing else. Otherwise, use permitted account context only to identify owners or avoid re-raising a resolved item; it never overrides the spec.
-- Read `shared_context/standards/writing_style_guide.md` before writing. It is the current source of truth for Blitzy voice, structure, formatting, and claims.
+- Read `shared_context/standards/writing_style_guide.md` before writing. It is the current source of truth for Blitzy voice and claims.
 
 Read the entire specification. Map its headings first, then read by section. Later sections often contain the most material dependencies and gaps. When the review permits parallel work, divide large specifications by top-level sections and verify each reported finding against the source.
 
 For an active POV or technical validation, read `shared_context/pov/playbook.md` from the working repository. Tailor feedback to current-state accuracy, customer spec validation, the agreed forward-engineering target, parity approach, baseline, environment prerequisites and MAP. Include a compact assessment of applicable playbook criteria with evidence, status and the owner/decision that closes each gap. Distinguish criteria the spec supports from approvals and runtime results it cannot establish. Honor a spec-only review restriction and state that playbook alignment was not assessed. Do not substitute early-stage sales positioning for active evaluation readiness.
 
-## Writing rules
+## Interpretation
 
-- Lead with the point, then explain the consequence.
-- Use plain language. Define jargon once and name an artifact only when it helps a reader act.
-- Keep only scale-setting numbers and numbers a customer will need to verify. Do not turn the review into a citation dump.
-- State certainty precisely: “the spec states,” “the spec implies,” or “the spec does not say.”
-- Flag contradictions plainly. Do not resolve them by assumption.
-- Write short explanatory paragraphs. Use lists and tables for gaps, questions, and ownership.
+Flag contradictions in the specification plainly; do not resolve them by assumption.
 
 ## Briefing structure
 
@@ -44,7 +41,7 @@ Open with a half-page executive summary: what the system is, three to five findi
 
 ### 2. Section-by-section walkthrough
 
-For every top-level section, write roughly 150–250 words covering:
+For every top-level section, cover the following at the depth its findings require:
 
 - **Headline:** the main takeaway.
 - **What it covers:** a short plain-language explanation with only essential scale numbers.
@@ -52,7 +49,7 @@ For every top-level section, write roughly 150–250 words covering:
 - **What's missing and how to close it:** up to four specific gaps, each with the blocker, concrete evidence or decision that closes it, and the owner. Say “Nothing material” when applicable.
 - **Who should confirm:** the best-fit persona, the question they should answer, and who else cares.
 
-Skip a reference-only section unless its source base is thin, single-sourced, or otherwise material.
+Put supporting specification citations in the final source appendix. Identify a thin, single-sourced, or otherwise limited evidence base where it affects a finding.
 
 ### 3. Themes across the spec
 
@@ -87,7 +84,6 @@ Use a persona table with the confirmation each persona owns, two or three questi
 
 ## Delivery
 
-- Produce a readable briefing, not a data dump. Use clear headings, short paragraphs, and generous whitespace.
 - If a shareable document type is available, use it; otherwise save Markdown alongside the supplied specification. Follow a user-requested format.
 - In chat, give three or four lines naming the headline finding and blocker count.
 - State what you did not independently verify.

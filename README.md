@@ -1,170 +1,129 @@
-# Wispr Flow agent playbooks
+# AISC Workbench
 
-This repository supports the AISC's work through reusable skills, guidance,
-and templates for account evaluation, technical validation planning, Blitzy
-artifact review, impact assessment, and customer follow-up. Wispr Flow's MCP
-server provides meeting context for workflows that need it.
+AISC Workbench provides reusable skills, operating guidance, and templates for
+account evaluation, technical validation, Blitzy artifact review, impact
+assessment, customer follow-up, and day-to-day platform questions.
 
-The AISC owns the technical validation path: the platform deep dive, POC
-execution, key technical relationships within the account, and the credibility
-of Blitzy's output. The AISC is the customer's technical counterpart—the
-person the engineering team calls with a question, concern, or blocker.
+The AISC owns the customer's technical validation path and the credibility of
+Blitzy's output. These workflows support that work with evidence, clear gaps,
+and decisions or actions assigned to the right owner.
 
-These workflows help the AISC prepare technical discussions, assess evidence,
-identify gaps, and coordinate next steps with customer engineering teams.
+## Get started
 
-It is an automation and operating-guidance repository—not an archive of meeting
-records.
+Follow the [setup and maintenance runbook](runbooks/new_machine_setup.md) to
+install, verify, or refresh the local plugin. Keep this checkout available as
+the working project so skills can read current shared guidance.
 
-For installation on another computer, follow the
-[new machine setup runbook](runbooks/new_machine_setup.md). It covers plugin
-installation, meeting access, local customer files, and verification.
+| Component | Current name |
+| --- | --- |
+| GitHub repository and checkout | `aisc-workbench` |
+| Plugin identifier | `wispr-flow-agent-playbooks@wispr-flow` |
+| Marketplace display name | Wispr Flow |
 
-## What belongs here
+The plugin provides skills; configure and authenticate Wispr Flow MCP separately
+for meeting-based work. Customer files under `accounts/` do not arrive with a clone.
 
-- Reusable agent instructions and decision rules.
-- Skills and playbooks for recurring meeting-review workflows.
-- Redacted templates for deliverables, follow-ups, and action plans.
-- Documentation for safe, repeatable use of the Wispr Flow MCP server.
+## How to run a skill
 
-## What must not be committed
+Type **`$` followed by the skill name in the chat composer**.
+The `/` prefix does not invoke this repository's skills. These are chat
+instructions, not terminal commands.
 
-- Raw transcripts, meeting notes, recordings, or attachments.
-- Customer- or person-specific outputs, including summaries and action plans
-  that contain identifying or confidential details.
-- API keys, tokens, credentials, or private MCP configuration.
+1. Install the plugin, open `aisc-workbench` as the working project, and start
+   a new chat. Restart the desktop app after installing or refreshing skills.
+2. Type `$` and type or select the exact skill name, such as
+   `$blitzy-review-aap`.
+3. Add the task, account or workstream, and the relevant document paths or
+   attachments. Include any scope restrictions or output preferences.
+4. Send the message. Supply any missing inputs the skill identifies; review
+   its findings and open decisions before acting on the output.
 
-The root-level `accounts/` directory is intentionally ignored by Git. It is a
-local workspace for any temporary, meeting-derived material needed while
-working; it is not a source-controlled deliverable location.
+Copy one of these examples into chat and replace the fictional paths or account:
+
+```text
+$blitzy-evaluate-acct Assess Example Account from its available meeting history. Identify technical blockers and next decisions.
+```
+
+```text
+$blitzy-review-aap Review these matching artifacts:
+accounts/example-account/agent_action_plan.md
+accounts/example-account/build_prompt.md
+accounts/example-account/technical_specification.md
+Identify scope changes, execution blockers, and the fixes needed before generation.
+```
+
+```text
+$blitzy-humanizer Rewrite the text below. Return only the final version:
+We would like to schedule a discussion to confirm the remaining technical inputs.
+```
+
+## Skill summaries
+
+Choose the workflow that matches the task and supply the inputs listed below.
+Customer-specific files and generated reports belong in the ignored `accounts/`
+workspace; follow-up emails and rewrites are normally delivered in chat.
+
+| Skill | What it produces | What to provide |
+| --- | --- | --- |
+| `$blitzy-evaluate-acct` | Account strategy memo connecting stakeholder goals, discussion history, adoption readiness, commercial status, and next steps | Account/workstream and available meeting history or matching local transcripts |
+| `$blitzy-draft-pov-eval-memo` | Customer-reviewable pre-POV agreement covering scope, baseline, success criteria, responsibilities, and open approvals; separate internal drafting notes | Account evaluation, proposed or agreed scope, and existing agreements or memo |
+| `$blitzy-draft-pov-map` | Mutual Action Plan with milestones, dates, owners, approval gates, and unresolved decisions; separate internal drafting notes | Account evaluation, agreed scope, and any Evaluation Memo or existing MAP |
+| `$blitzy-review-tech-spec` | Briefing on the system, architectural findings, missing inputs, blockers, and who should confirm them | Technical specification and review scope; supporting account context if permitted |
+| `$blitzy-review-aap` | Plan review identifying scope changes, directive coverage, factual conflicts, and execution-gating verdicts | Matching AAP, build prompt, and authoritative technical specification |
+| `$blitzy-review-project-guide` | Delivery and impact report covering validation, remaining work, equivalent engineering effort, and acceleration when comparable elapsed time is available | Project Guide, supporting delivery evidence, actual Blitzy elapsed time, and any agreed evaluation baseline; missing time is requested |
+| `$blitzy-write-follow-up-email` | Customer email draft summarizing outcomes and owner-first committed actions, with a separate note for material ambiguities | Meeting name/date and accessible meeting context or the matching transcript |
+| `$blitzy-humanizer` | Natural rewrite preserving meaning and facts; a clean final version when requested | Text to edit, audience, and an optional writing sample |
+
+Use [the setup runbook](runbooks/new_machine_setup.md#troubleshooting) if a
+skill is missing or unavailable after typing `$`.
 
 ## Repository layout
 
+Reusable guidance is version-controlled; customer evidence and deliverables stay local.
+
 | Path | Purpose |
 | --- | --- |
-| `AGENTS.md` | Operating rules and privacy requirements for agents. |
-| `plugin.json` | Skills-only plugin manifest for Codex and ChatGPT. |
-| `skills/` | Reusable workflow-specific skills, added as they are developed. |
-| `runbooks/` | Setup and maintenance procedures for this repository. |
-| `shared_context/standards/` | Shared writing style and deliverable naming rules. |
-| `shared_context/platform/` | Platform workflow, project setup, Chat with Code, glossary, ingestion, artifact review and environment references. |
-| `shared_context/presales/` | Early sales positioning directives. |
-| `shared_context/pov/` | Active evaluation playbook and agreement templates under `templates/`. |
-| `shared_context/build_preparation/` | Prompt guidance, task-specific `prompt_templates/` and selectable `rule_templates/`. |
-| `shared_context/artifact_review/` | Reusable artifact review criteria, including the AAP validation checklist. |
-| `shared_context/security/` | Qualified internal security answers. |
-| `templates/` | Generic, fully redacted output templates. |
-| `accounts/` | Local, Git-ignored workspace for sensitive meeting-derived material. |
+| `AGENTS.md` | Operating rules, privacy requirements, and task-to-reference routing |
+| `plugin.json`, `.agents/plugins/marketplace.json`, `.codex/config.toml` | Plugin manifest, local marketplace, and project enablement |
+| `skills/` | Reusable workflows |
+| `runbooks/` | Installation, verification, refresh, and troubleshooting |
+| `shared_context/standards/` | Writing style, readability, citation placement, and naming |
+| `shared_context/platform/intro/` | Overview, terminology, quickstart, workspace, knowledge base, and insights |
+| `shared_context/platform/admin/` | Teams, SSO/SCIM, usage, demos, and locking |
+| `shared_context/platform/project_lifecycle/` | Project setup, source Q&A, specification/AAP review, generation, and PR/code review |
+| `shared_context/build_preparation/` | Ingestion/generation prompts, Golden Rules, Figma guidance, and prompt/rule templates |
+| `shared_context/build_preparation/setup/` | Codebase preparation, submodules, environment configuration, and readiness testing |
+| `shared_context/artifact_review/` | Shared review checklists |
+| `shared_context/pov/` | Active-evaluation playbook and agreement templates |
+| `shared_context/presales/`, `shared_context/security/` | Positioning guidance and qualified internal security answers |
+| `templates/` | Other generic output patterns |
+| `accounts/` | Git-ignored local customer workspace |
 
-Shared-context directory and reference filenames use lowercase words separated
-by underscores. Skill names and directories retain hyphens for discovery.
-Account deliverables retain the timestamp/account/title convention in
-`shared_context/standards/file_naming_directives.md`.
+## Working standards
 
-The repository is also exposed as the repo-local **Wispr Flow** plugin. In a
-trusted project, restart the ChatGPT desktop app, open the Plugins Directory,
-and install or refresh it from the `Wispr Flow` marketplace. Start a new chat
-after installation, then invoke a workflow by name, for example
-`$blitzy-write-follow-up-email`, `$blitzy-review-aap`,
-`$blitzy-review-tech-spec`, `$blitzy-humanizer`, `$blitzy-review-project-guide`,
-or `$blitzy-evaluate-acct`.
+Read [AGENTS.md](AGENTS.md) for operating rules and select only the references
+needed for the task. Platform documentation explains capabilities; account
+evidence establishes customer commitments and measured results.
 
-Use `$blitzy-review-project-guide` with a delivered solution's project guide to
-summarize delivery, validation, business impact, and remaining human work. It
-researches a comparable engineering baseline and asks for actual Blitzy compute
-time before calculating acceleration.
-
-Use `$blitzy-evaluate-acct` with an account name to create an internal strategy
-memo from its meeting history. It connects discussion threads, stakeholder
-goals, evaluation questions and adoption readiness to the guidance for each
-workstream's stage. Account memos stay in the ignored `accounts/` workspace.
-
-Ground platform explanations in `shared_context/platform/introduction.md`
-and the relevant overview pages. Use `project_setup.md` for provisioning,
-repository access, branches and sharing, and `chat_with_code.md` for source
-exploration and Build prompt assistance, preserving its beta and step-specific
-limits. `AGENTS.md` maps questions to references;
-each skill identifies the pages it needs. Load only relevant material from the
-working repository, including when running a cached plugin skill. Use platform
-documentation for workflow context and account sources for customer commitments
-and measured results. Surface conflicts and cite material supporting evidence.
-
-Prompt templates and rule templates are selectable starting points. Choose the
-template for the requested task and apply only relevant, selected or agreed
-rules. Their examples and defaults do not become customer requirements.
-
-Use `shared_context/presales/positioning_directives.md` for early sales
-positioning toward a paid engagement while bypassing a POV/technical validation.
-For an active evaluation, use `shared_context/pov/playbook.md` to guide
-outputs, deliverables and feedback against applicable criteria and the agreed
-evaluation. `AGENTS.md` defines the stage distinction for all workflows.
-
-Use `$blitzy-draft-pov-eval-memo` to draft a pre-POV agreement and
-`$blitzy-draft-pov-map` to draft its Mutual Action Plan from the shared
-templates and account evidence. Both workflows mark unresolved inputs and
-proposals, preserve agreed commitments, and keep account outputs local.
-
-Use `shared_context/security/security_faqs.md` as an internal reference for
-customer security questions. Preserve deployment qualifications and obtain
-confirmation for items marked `TO CONFIRM` before using them externally.
-
-## Refresh after changing skills
-
-Last verified: 2026-10-15. Recheck these commands when the Codex CLI changes.
-
-The installed plugin uses a cached copy. After saving changes in this repository:
-
-1. From the repository root, confirm that `codex plugin marketplace list --json`
-   resolves `wispr-flow` to this checkout.
-2. Refresh the installed copy:
-
-   ```sh
-   codex plugin add wispr-flow-agent-playbooks@wispr-flow --json
-   ```
-
-3. Use the returned `installedPath` to verify the copied skills:
-
-   ```sh
-   diff -qr skills /path/from/installedPath/skills
-   ```
-
-   No output and exit status 0 mean the skill directories match. The refresh
-   includes saved, uncommitted changes; a commit or push is not required.
-4. Restart the desktop app and start a new chat. Type `$` and search for the
-   exact `name` from the skill's `SKILL.md` frontmatter, such as
-   `blitzy-review-project-guide`.
-
-If the marketplace is missing, register this checkout once with
-`codex plugin marketplace add . --json`, then repeat the refresh. Run commands
-from the repository root so `.` resolves to the intended checkout.
-
-This process was verified with the local `wispr-flow` marketplace. The installed
-CLI's `marketplace upgrade` command refreshes Git marketplace snapshots; use
-`plugin add` to refresh this local plugin. Keep customer material in the ignored
-`accounts/` workspace and out of reusable plugin assets.
-
-See the [official plugin packaging documentation](https://developers.openai.com/plugins/build/plugins)
-for marketplace configuration, cached installs, and desktop restart guidance.
-
-## Working with Wispr Flow
-
-Use Wispr Flow's MCP server as the source of meeting context when notes are
-available. When a meeting's notes are unavailable in Wispr Flow, check
-`accounts/<account>/transcripts/` for a locally supplied transcript and identify
-the matching transcript as the fallback source. Keep transcripts local and out
-of Git. Keep the work scoped to the requester's authorization, and confirm any
-external or irreversible action before performing it. Turn patterns that are useful across
-meetings into generic, redacted playbooks in this repository rather than
-checking in an example from a real account.
+- Follow the [writing style guide](shared_context/standards/writing_style_guide.md)
+  for voice and claims, [readability directives](shared_context/standards/readability_directives.md)
+  for structure and final citation appendices, and
+  [naming directives](shared_context/standards/file_naming_directives.md) for files.
+- Use Wispr Flow MCP meeting notes when available. Otherwise use the matching
+  local transcript under `accounts/<account>/transcripts/` and identify it as
+  the fallback source.
+- Use the active POV playbook for an agreed evaluation and positioning guidance
+  for early discovery. Operational references are read as needed, not loaded
+  into every POV deliverable.
+- Treat prompt/rule templates as selectable starting points. Their examples
+  are not customer requirements or proof of validation.
 
 ## Contributing
 
-Before committing:
+Commit reusable instructions and redacted templates; keep customer material,
+credentials, and private configuration out of Git.
 
-1. Review `AGENTS.md` and follow its privacy rules.
-2. Inspect staged changes with `git diff --cached`.
-3. Confirm that all examples use fictional or fully redacted data.
-4. Keep changes focused and document new workflow assumptions.
-
-If a file could identify a customer, attendee, meeting, or internal initiative,
-keep it out of Git and use the ignored local workspace instead.
+1. Follow the privacy rules in `AGENTS.md`; never force-add `accounts/`.
+2. Check affected references and filenames.
+3. Review the exact staged paths and `git diff --cached` before committing.
+4. Keep commits focused and update documentation when behavior changes.

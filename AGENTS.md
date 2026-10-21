@@ -2,177 +2,182 @@
 
 ## Purpose
 
-This repository holds reusable operating guidance for agents supporting the
-AISC across account evaluation, technical validation, Blitzy artifact review,
-impact assessment, and customer follow-up. Use Wispr Flow's MCP server for
-meeting context as described below. Repository contents must remain safe to
-share with everyone who has repository access.
+Support the AISC with evidence-backed account assessments, technical validation,
+Blitzy artifact review, impact analysis, customer follow-up, and platform guidance.
 
-The AISC owns the technical validation path: the platform deep dive, POC
-execution, key technical relationships within the account, and the credibility
-of Blitzy's output. The AISC is the customer's technical counterpart for
-engineering questions, concerns, and blockers.
+The AISC owns the platform deep dive, POC execution, technical relationships,
+and credibility of Blitzy's output. Identify validation gaps, blockers, and the
+owner or decision needed to resolve each. Preserve customer responsibilities,
+agreed scope, and approval authority.
 
-Support that ownership with evidence-backed technical assessments and clear
-next steps. Surface unresolved questions, validation gaps, and blockers;
-identify the owner or decision needed to resolve each. Preserve agreed
-customer responsibilities and approval authority when recommending actions.
+## Privacy and authorization
 
-## Privacy and data handling
+Keep reusable repository content safe to share with everyone who has access.
 
-- Do not add raw transcripts, meeting notes, recordings, attachments, or
-  customer-specific deliverables to version control.
-- Do not commit personally identifiable information, confidential business
-  details, credentials, API keys, tokens, or private MCP configuration.
-- Treat `accounts/` as a local-only work area. It is Git-ignored and must not
-  be force-added.
+- Keep raw transcripts, notes, recordings, attachments, customer deliverables,
+  personal information, confidential business details, and credentials out of
+  version control. Do not commit private MCP configuration.
+- Use `accounts/` for local customer work. It is Git-ignored; never force-add it.
 - Use fictional or fully redacted examples in documentation, templates, and
-  tests. When in doubt, omit the example and describe the pattern generically.
+  tests. Omit an example when its privacy is uncertain.
 - Before staging, review the exact paths and diff. Stop and ask for direction
-  if a proposed change may contain sensitive data.
+  if proposed changes may contain sensitive information.
+- Work within the requester's authorized scope. Confirm external, irreversible,
+  or audience-affecting actions unless the request already authorizes them.
+- Capture reusable lessons as generic guidance or redacted templates.
 
-## Working with Wispr Flow
+## Meeting evidence
 
-- Use the Wispr Flow MCP server as the authoritative source for meeting
-  context when its notes are available; do not copy its source material into
-  version-controlled files.
-- When notes for a meeting are unavailable in Wispr Flow, check
-  `accounts/<account>/transcripts/` for a locally supplied transcript. Use the
-  matching transcript as fallback context within the requester's authorized
-  scope, and identify it as the source. Do not substitute another meeting if
-  no matching transcript exists. Keep these transcripts local and out of Git.
-- Limit review and follow-up work to the requester's authorized scope.
-- Confirm before taking an external, irreversible, or audience-affecting
-  action, unless the request explicitly authorizes it.
-- Capture reusable lessons as generic skills, procedures, or redacted
-  templates—not as account-specific artifacts.
+Use Wispr Flow MCP as the authoritative meeting source when notes are available.
+
+- Keep its source material out of version-controlled files.
+- If notes are unavailable, use the matching local transcript under
+  `accounts/<account>/transcripts/` within the authorized scope and identify
+  that fallback. Never substitute another meeting when no match exists.
+
+## Shared output standards
+
+Read the current standards from this checkout for every written output,
+including skill deliverables and repository documentation.
+
+| Standard under `shared_context/standards/` | Governs |
+| --- | --- |
+| `writing_style_guide.md` | Voice and claims |
+| `readability_directives.md` | Summaries, plain language, layout and final citation appendices |
+| `file_naming_directives.md` | Delivered filenames, including the timestamp/account/title convention and exceptions |
+
+Use these live files even when a skill runs from a plugin cache. Do not rely
+on embedded or cached snapshots. Reusable repository assets keep stable names;
+customer deliverables stay in the ignored local work area.
 
 ## Context efficiency
 
-- Start with existing account assessments when relevant. Retrieve additional
-  evidence to resolve material gaps or verify claims, following the task's
-  required source coverage and freshness checks.
-- Search before reading large files. Read relevant sections with enough
-  surrounding context to preserve meaning; read required guides in full when
-  their instructions apply throughout.
-- Filter embedded images, base64 data and other non-text payloads before
-  displaying Markdown. Inspect those assets separately when relevant.
-- When tool responses duplicate text and structured content, display one
-  representation and only the fields needed for the task.
-- Discover tools by name and brief description; load full schemas only for
-  selected tools.
-- Retain retrieved results during the task. Avoid fetching or printing the
-  same material again unless it changed or needs further verification.
-- Keep tool output bounded. If truncated, retrieve the missing range or
-  narrow the selection rather than repeat the full response.
-- Efficiency must not weaken required evidence review, chronological
-  coverage or source verification. Identify source gaps that remain.
+Retrieve enough evidence to support the task without repeatedly loading it.
+
+- Start with existing account assessments where relevant, then resolve material
+  gaps and verify claims using the task's coverage and freshness requirements.
+- Search before reading large files. Read relevant sections with enough context;
+  read required guides in full when their instructions apply throughout.
+- Filter embedded images, base64, and non-text payloads before displaying
+  Markdown. Inspect relevant assets separately.
+- Display one representation of duplicated text/structured tool responses and
+  only the fields needed. Discover tools by name and brief description before
+  loading selected schemas.
+- Retain retrieved evidence. Re-fetch only when it changes or verification
+  requires it. Keep output bounded; narrow a truncated result or fetch its
+  missing range rather than repeating it.
+- Preserve required source review and chronological coverage. Identify any
+  remaining evidence gaps.
 
 ## Repository conventions
 
-- Put durable agent-wide rules in this file.
-- Add reusable workflows under `skills/<workflow-name>/` using lowercase,
-  hyphenated names.
-- Use lowercase underscore-separated names for shared-context directories
-  and reference files under `shared_context/`. Preserve lowercase hyphenated
-  skill names and directories under `skills/` for skill discovery.
-- Keep shared POV, prompt and rule templates in
-  `shared_context/pov/templates/`,
-  `shared_context/build_preparation/prompt_templates/` and
-  `shared_context/build_preparation/rule_templates/`. Use `templates/` for
-  other generic reusable output patterns. Deliverable filenames follow the
-  naming guide.
-- Keep documentation concise, specific, and updated when behavior or safety
-  requirements change.
-- Use clear, focused commits. Inspect `git diff --cached` before each commit.
+Keep shared rules, workflows, references, and customer work in their intended homes.
 
-## Writing standards
+- Put durable agent-wide rules in this file; reusable workflows in
+  `skills/<lowercase-hyphenated-name>/`.
+- Use lowercase underscore-separated names for shared-context directories and
+  reference files. Keep hyphenated skill names for discovery.
+- Keep POV templates in `shared_context/pov/templates/`, prompt templates in
+  `shared_context/build_preparation/prompt_templates/`, and project rules in
+  `shared_context/build_preparation/rule_templates/`. Use `templates/` for other
+  generic reusable output patterns.
+- Maintain instructions when behavior or requirements change. Use focused
+  commits and inspect `git diff --cached` before every commit.
 
-- Read and follow `shared_context/standards/writing_style_guide.md` for every
-  written output, including customer emails, follow-ups, executive updates,
-  internal summaries, knowledge documents, and repository documentation.
-- Treat that guide as the current, project-wide source of truth for voice,
-  structure, formatting, and claims. Do not rely on embedded or cached style
-  snapshots when the file is available.
+## Reference routing
 
-## Engagement stage and shared references
+Use platform guidance for capabilities and workflows, and account evidence for
+needs, commitments, approvals, and measured results. Read only task-relevant
+references; start with the introduction when explaining Blitzy and the glossary
+when terminology needs clarification.
 
-- Ground Blitzy descriptions and workflow recommendations in
-  `shared_context/platform/introduction.md` and the relevant platform
-  pages below. Read only those needed for the task; use `glossary.md` when a
-  platform term needs clarification.
-- Use platform references to explain capabilities and review practices.
-  Use account evidence for customer needs, agreements and measured results.
-  Cite the relevant source when a material claim depends on it. Documentation
-  and template examples do not prove project coverage, successful tests,
-  acceleration or acceptance. Surface conflicts between references or with
-  account agreements rather than resolving them by assumption.
-- Distinguish automated ingestion/specification, AAP and Project Guide
-  generation from human readouts, review, approval and acceptance.
-
-| Task or question | Read under `shared_context/platform/` |
+| Task or question | Read under `shared_context/` |
 | --- | --- |
-| Workflow, artifact purpose and terminology | `introduction.md`; `glossary.md` as needed |
-| Account provisioning, repository/submodule access, branch isolation, integrations and project sharing | `project_setup.md` |
-| Conversational source exploration, Build prompt drafting and advisory scoring | `chat_with_code.md` |
-| Ingestion scope, business context, exclusions, formats and branch/spec inheritance | `ingestion_prompts.md` |
-| Current-state understanding and specification review | `tech_spec.md` |
-| AAP completeness, rules, refinement and inline edits | `agent_action_plan.md` |
-| Delivered scope, validation, remaining work and merge-readiness discussion | `project_guide.md` |
-| Toolchains, target OS, build/test setup, private dependencies and secrets references | `environment_config.md` |
+| Workflow, artifact purpose and terminology | `platform/intro/introduction.md`; `platform/intro/glossary.md` |
+| First-use walkthrough and sprint/development workflow guidance | `platform/intro/quickstart.md`; `platform/intro/building_with_blitzy.md` |
+| Project navigation, codebase exploration and branch-scoped specifications | `platform/intro/workspace.md`; `platform/intro/knowledge_base.md` |
+| Vulnerability findings, reachability and remediation-project workflow | `platform/intro/proactive_insights.md` |
+| Provisioning, branch isolation, integrations and project sharing | `platform/project_lifecycle/project_setup.md` |
+| Repository preparation, submodules and pinned commits | `build_preparation/setup/preparing_your_codebase.md`; `build_preparation/setup/git_submodules.md` |
+| Toolchains, target OS, build/test setup, dependencies and secrets references | `build_preparation/setup/environment_config.md` |
+| Test Setup execution, results and retesting | `build_preparation/setup/environment_testing.md` |
+| Source Q&A, Build prompt drafting and advisory scoring | `platform/project_lifecycle/chat_with_code.md` |
+| Ingestion context, exclusions, formats and branch/spec inheritance | `build_preparation/ingestion_prompts.md` |
+| Build prompt submission, iteration and attachment formats | `build_preparation/generation_prompts.md` |
+| Figma input preparation and design-output issues | `build_preparation/figma/design_with_figma.md`; `build_preparation/figma/avoiding_common_issues.md` |
+| Current-state understanding and specification review | `platform/project_lifecycle/technical_specification.md` |
+| AAP completeness, rules, refinement and inline edits | `platform/project_lifecycle/agent_action_plan.md` |
+| Generation progress and completion | `platform/project_lifecycle/code.md` |
+| Delivered scope, validation and remaining-work evidence | `platform/project_lifecycle/project_guide.md` |
+| PR Review navigation, review modes, merge/refine/close options | `platform/project_lifecycle/pr_review.md` |
+| Intent, dynamic validation and code-level review practices | `platform/project_lifecycle/code_review.md` |
+| Teams, roles, project sharing and enforcement | `platform/admin/teams.md` |
+| Domain verification, SSO, SCIM and IdP-managed access | `platform/admin/sso.md`; `platform/admin/teams.md` |
+| Metered activities, attribution, quotas and overages | `platform/admin/usage_metering.md` |
+| Demo discovery and universally read-only behavior | `platform/admin/demo_projects.md` |
+| Project locking, role-dependent restrictions and running work | `platform/admin/locked_projects.md`; `platform/admin/teams.md` |
 
-- For setup recommendations, identify the required repositories and submodules,
-  authorized integration owner, stable branch and intended sharing audience.
-  Reading setup guidance does not authorize provisioning, permission changes,
-  source transfer or sharing. Do not push to a branch during generation.
-- Preserve Chat with Code's beta, workflow-step and access qualifications.
-  At the AAP step it provides source Q&A, not plan review or plan edits;
+## Applying platform guidance
+
+Preserve each guide's qualifications and distinguish documentation from evidence
+that a particular project is configured, validated, or accepted.
+
+- Cite material sourced claims in the final appendix required by the readability
+  directives. Templates and platform examples do not prove project coverage,
+  test success, acceleration, or acceptance. Surface conflicts with account
+  agreements or other references.
+- Distinguish automatic ingestion/specification, AAP, and Project Guide
+  generation from human readouts, review, approval, and acceptance.
+- Use operational guides for practical platform questions. They are not default
+  required reading for POV maps or evaluation memos; consult them when an
+  operational dependency affects readiness, responsibilities, or milestones.
+- Preserve role, subscription-tier, project-type, and IdP-management-mode
+  qualifications. Explain sharing/ownership and access effects; documentation
+  does not authorize administrative actions. Demos are read-only for everyone;
+  ordinary project restrictions depend on roles and project state.
+- For setup recommendations, identify required repositories/submodules, the
+  authorized integration owner, a stable branch, and the intended audience.
+  Guidance does not authorize provisioning, access changes, source transfer,
+  or sharing. Do not push to a branch during generation.
+- Preserve Chat with Code's beta, access, and workflow-step limits. At the AAP
+  step it answers source questions, not plan-review or plan-edit requests.
   Build Prompt Strength is advisory, not approval or an acceptance gate.
-  Flag conflicting availability statements rather than promising support.
-- Select a task-matching prompt template from
-  `shared_context/build_preparation/prompt_templates/` when drafting or
-  recommending a generation prompt. Consult
-  `shared_context/build_preparation/rule_templates/` when proposing or
-  checking project rules. Templates are starting points, not
-  customer requirements; apply only selected or agreed rules. Do not load the
-  entire library or impose every rule on every task.
-- Establish the stage of the specific engagement or workstream from the
-  request and account evidence. One account can have early discovery and an
-  active POV in separate workstreams. Preserve agreed scope and commitments.
-- For early sales positioning, use
-  `shared_context/presales/positioning_directives.md` to guide discovery
-  toward a paid engagement while bypassing a POV or technical validation.
-- For an active POV or technical validation, read and apply
-  `shared_context/pov/playbook.md`. Tailor outputs, deliverables and
-  feedback to its applicable criteria and the customer-agreed evaluation:
-  baselines, success criteria, target state, spec/AAP approval, environment
-  readiness, build/test/parity evidence and Mutual Action Plan milestones.
-  Surface missing inputs and deviations; do not replace an active evaluation
-  with the earlier-stage sales approach or silently rewrite agreed criteria.
-- Distinguish playbook targets from measured results and customer sign-offs.
-  A target or proposed baseline does not establish achieved acceleration.
-- Use `shared_context/security/security_faqs.md` as an internal reference when
-  answering customer questions about Blitzy security. Preserve deployment-tier
-  qualifications, flag contradictions and keep items marked `TO CONFIRM`
+  Flag availability conflicts rather than promising support.
+- Select task-matching prompt/rule templates only when relevant. Use a prompt
+  page's **Prompt template** section or a rule page's **Rule Definition**;
+  do not copy an entire guide or impose the whole library. Apply only selected
+  or agreed rules; template defaults are not customer requirements.
+- Metered hours-saved estimates do not establish delivery acceleration or
+  acceptance. Use account subscription evidence for actual quotas and terms.
+  The usage-metering guide conflicts on Sandbox team attribution; flag that
+  uncertainty rather than promising team-level reporting for that tier.
+
+## Engagement stage and security
+
+Establish the stage of each workstream and preserve its agreed commitments.
+
+- For early positioning, use
+  `shared_context/presales/positioning_directives.md` to guide discovery toward
+  a paid engagement while bypassing a POV or technical validation.
+- For an active POV or technical validation, apply
+  `shared_context/pov/playbook.md` and the agreed evaluation: baselines,
+  success criteria, target state, spec/AAP approval, environment readiness,
+  build/test/parity evidence, and MAP milestones. Surface missing inputs and
+  deviations; do not substitute early sales positioning or rewrite criteria.
+- Separate workstreams when an account spans multiple stages. Playbook targets
+  and proposed baselines are not measured outcomes or customer sign-offs.
+- Use `shared_context/security/security_faqs.md` internally for Blitzy security
+  questions. Preserve deployment-tier qualifications; keep `TO CONFIRM` items
   unverified until the appropriate internal owner confirms them. Do not send
-  the internal FAQ wholesale or turn draft answers into security guarantees.
-- Read current shared files from the working repository, including when a
-  skill is loaded from a plugin cache. If a required reference or engagement
-  stage is unclear, identify the gap and qualify the assessment; ask only when
-  the missing information changes the work.
-
-## Output traceability
-
-- Read and follow `shared_context/standards/file_naming_directives.md` for files
-  delivered by skills and ad hoc prompts. It is the source of truth for the
-  `<timestamp>-<account>-<title>` convention and its exceptions.
+  the FAQ wholesale or turn draft answers into guarantees.
+- If a required reference or stage is unclear, identify the gap and qualify
+  the assessment. Ask only when the missing information changes the work.
 
 ## Completion checks
 
-Before considering a change ready:
+Before a repository change is ready, verify its scope, privacy, and traceability.
 
-1. Confirm no sensitive or account-specific information is included.
-2. Verify new files conform to the repository layout and naming conventions.
-3. Review the staged diff for accidental files or credentials.
-4. State any assumptions, required permissions, or actions that were not
-   performed.
+1. Confirm reusable files contain no sensitive or account-specific material.
+2. Check the layout, filenames, and affected references.
+3. Review staged paths and diff for accidental files or credentials.
+4. State assumptions, permissions still needed, and actions not performed.

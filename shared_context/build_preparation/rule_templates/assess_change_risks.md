@@ -1,3 +1,22 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blitzy.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Assess Change Risks
+
+> Require inline risk documentation for any change that modifies public contracts, schemas, or infrastructure
+
+## When to Use
+
+Add this to ensure every code generation that touches public interfaces, data schemas, or infrastructure includes risk documentation alongside the code.
+
+## Rule Definition
+
+**Name** — Assess Change Risks
+
+**Description** — paste this into the rule description field on the platform:
+
+```
 When generated code modifies public APIs, data schemas, infrastructure configuration, or external-facing contracts, document the associated risks inline as code comments and in a summary block at the end of the output.
 
 Requirements:
@@ -14,3 +33,15 @@ Forbidden Patterns:
 - Introducing a breaking change without documenting a migration path for existing consumers
 
 Validation Gate: Every modification to a public contract or schema must have an inline comment documenting the risk and mitigation. Changes to infrastructure or deployment configuration must include deployment step documentation. Generated code that modifies external-facing behavior without risk annotations fails review.
+```
+
+## How It Works
+
+1. Add this rule to your project on the platform
+2. Generated code that modifies public contracts includes inline risk annotations
+3. Schema changes document migration paths and backward compatibility
+4. Deployment-sensitive changes include step documentation
+5. Code review validates that risk annotations accompany all external-facing changes
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

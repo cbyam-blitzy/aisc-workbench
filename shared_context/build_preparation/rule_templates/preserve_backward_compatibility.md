@@ -1,3 +1,22 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blitzy.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Preserve Backward Compatibility
+
+> Ensure code changes maintain backward compatibility with existing consumers and contracts
+
+## When to Use
+
+Add this when making modifications to existing code, APIs, or interfaces to ensure changes do not break existing consumers or integrations.
+
+## Rule Definition
+
+**Name** — Preserve Backward Compatibility
+
+**Description** — paste this into the rule description field on the platform:
+
+```
 Ensure all code changes, API modifications, and interface updates maintain backward compatibility with existing consumers and contracts.
 
 Requirements:
@@ -20,3 +39,15 @@ Forbidden Patterns:
 - Silently changing behavior that existing callers depend on
 
 Validation Gate: Any modification to a public interface must preserve the old contract or provide a deprecated alias with a migration note. Changes that remove or alter an existing public contract without a compatibility path fail review.
+```
+
+## How It Works
+
+1. Add this rule to your project on the platform
+2. Existing interfaces and contracts are identified before modifications begin
+3. Changes are implemented with backward compatibility preserved
+4. Deprecated items include migration notes explaining the replacement
+5. Code review validates that no breaking changes were introduced without a compatibility path
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

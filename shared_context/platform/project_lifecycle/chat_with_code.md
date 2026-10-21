@@ -154,19 +154,19 @@ Users with the Viewer role can read the chat transcript and see artifacts but ca
 >
 > The Artifacts tab appears when Chat with Code is active. If you do not see it, verify that the chat drawer is open and that your project meets the access requirements.
 
-> **[Build prompt writing](/prompt-engineering/generation)**
+> **[Build prompt writing](../../build_preparation/generation_prompts.md)**
 >
 > Write and submit generation requests
 
-> **[Agent action plan](/project-lifecycle/aap-review)**
+> **[Agent action plan](agent_action_plan.md)**
 >
 > Review implementation plans before generation
 
-> **[Tech spec review](/project-lifecycle/tech-spec-review)**
+> **[Tech spec review](technical_specification.md)**
 >
 > Review specs generated from ingestion
 
-> **[Golden Rules](/prompt-engineering/golden-rules)**
+> **[Golden Rules](../../build_preparation/prompt_golden_rules.md)**
 >
 > Principles for writing effective prompts
 

@@ -19,7 +19,7 @@ Ingestion prompts are an optional way to refine how your codebase is represented
 
 You can start code generation immediately without an ingestion prompt and add it later if needed.
 
-> **[Ready to ingest your codebase?](/templates/documentation-onboarding/codebase-ingestion)**
+> **[Ready to ingest your codebase?](https://docs.blitzy.com/templates/documentation-onboarding/codebase-ingestion)**
 >
 > Use the **Ingest Codebase Template** to get started immediately with a structured prompt
 

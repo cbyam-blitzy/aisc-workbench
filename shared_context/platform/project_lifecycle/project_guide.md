@@ -49,7 +49,7 @@ The **Table of Contents** lets you jump directly to any section of the Project G
 
 > [!NOTE]
 >
-> The Project Guide is the first item in [PR Review](/project-lifecycle/pr-review), the step you reach after code generation. Reviewing it there puts the guide and the ordered change sequence in the same surface, and it is what the walkthrough falls back to when the review content is unavailable.
+> The Project Guide is the first item in [PR Review](pr_review.md), the step you reach after code generation. Reviewing it there puts the guide and the ordered change sequence in the same surface, and it is what the walkthrough falls back to when the review content is unavailable.
 
 **1. Open the Project Guide and PR together**
 
@@ -133,27 +133,27 @@ Documenting Gaps in this manner will help when creating followup tickets, a Refi
 
 ## Related Guides
 
-> **[Agent action plan review](/project-lifecycle/aap-review)**
+> **[Agent action plan review](agent_action_plan.md)**
 >
 > Review and refine the AAP before code generation begins.
 
-> **[Tech spec review](/project-lifecycle/tech-spec-review)**
+> **[Tech spec review](technical_specification.md)**
 >
 > Verify Blitzy's understanding of your codebase after ingestion.
 
-> **[PR Review](/project-lifecycle/pr-review)**
+> **[PR Review](pr_review.md)**
 >
 > Review a generated pull request as an ordered, grouped sequence.
 
-> **[Project Setup](/project-lifecycle/sharing)**
+> **[Project Setup](project_setup.md)**
 >
 > Configure your repository, environment, and project on the platform.
 
-> **[PR Review](/project-lifecycle/pr-review)**
+> **[PR Review](pr_review.md)**
 >
 > Walk the generated pull request, triage by risk, and decide: merge, refine, or close.
 
-> **[Golden Rules](/prompt-engineering/golden-rules)**
+> **[Golden Rules](../../build_preparation/prompt_golden_rules.md)**
 >
 > Best practices for writing precise generation prompts.
 

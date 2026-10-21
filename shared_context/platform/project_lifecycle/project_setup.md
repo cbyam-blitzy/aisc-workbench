@@ -29,7 +29,7 @@ Submit a list of email addresses for all users requiring platform access to your
 
 Account creation is handled by Blitzy. Users receive email invitations upon completion of the provisioning process.
 
-**Role Permissions:** For detailed specifications on capabilities and restrictions for each role type, refer to the [Teams & Role Configuration guide](/administration/teams).
+**Role Permissions:** For detailed specifications on capabilities and restrictions for each role type, refer to the [Teams & Role Configuration guide](../admin/teams.md).
 
 ## Phase 2: Repository Structure Configuration
 
@@ -41,7 +41,7 @@ If you are onboarding a single repository, no additional configuration is requir
 
 For multi-repository projects (microservices, monorepo decomposition, shared libraries), Blitzy uses Git submodules to maintain context across related codebases and understand inter-repository dependencies.
 
-**To implement:** Create a parent repository, add child repositories as submodule references, and configure tracking branches. See the **[Git Submodules Guide](/administration/submodules)** for complete setup instructions with Git commands and configuration examples.
+**To implement:** Create a parent repository, add child repositories as submodule references, and configure tracking branches. See the **[Git Submodules Guide](../../build_preparation/setup/git_submodules.md)** for complete setup instructions with Git commands and configuration examples.
 
 ## Phase 3: Branch Configuration
 
@@ -103,7 +103,7 @@ Go to **Settings > Integrations**
 
 **3. Connect Provider**
 
-Select your source control provider and complete the connection flow it presents. An OAuth provider opens an authorization page for approval. [Azure DevOps Server](/integrations/azure-devops-server) asks for a collection URL and a personal access token without leaving Blitzy.
+Select your source control provider and complete the connection flow it presents. An OAuth provider opens an authorization page for approval. [Azure DevOps Server](https://docs.blitzy.com/integrations/azure-devops-server) asks for a collection URL and a personal access token without leaving Blitzy.
 
 **4. Confirm Repository Access**
 
@@ -111,7 +111,7 @@ Confirm Blitzy reaches every repository that will be ingested (see below)
 
 **5. Choose Sharing**
 
-Keep the connection private with **Just me**, or make it available to your team with **Share with team**, then click **Done**. See [Managing](/integrations/managing) to change the choice later.
+Keep the connection private with **Just me**, or make it available to your team with **Share with team**, then click **Done**. See [Managing](https://docs.blitzy.com/integrations/managing) to change the choice later.
 
 ### Repository Access Configuration
 
@@ -132,7 +132,7 @@ If you choose to grant access to specific repositories only, include every repos
 >
 > **Submodule access is not inherited.** Granting access to a parent repository does not automatically include its submodules. Each must be explicitly authorized.
 
-For additional information on configuring environment-specific access and credentials, refer to the [Environment Configuration guide](/administration/environments).
+For additional information on configuring environment-specific access and credentials, refer to the [Environment Configuration guide](../../build_preparation/setup/environment_config.md).
 
 ## Phase 5: Codebase Context Configuration
 
@@ -150,13 +150,13 @@ Provide complete build and runtime setup steps that a developer would need to ge
 * **Compilation steps** - build order for multi-module projects
 * **Local development server** - startup commands
 
-See the **[Environment Configuration Guide](/administration/environments)** for detailed examples.
+See the **[Environment Configuration Guide](../../build_preparation/setup/environment_config.md)** for detailed examples.
 
 #### Secrets and Environment Variables
 
 Document all required configuration values: API keys, PATs for private registries, service endpoints, feature flags, and authentication credentials. Use placeholder syntax with curly braces (e.g., `${DATABASE_PASSWORD}`, `${API_KEY}`) to reference secrets in your build instructions. Actual credential values are encrypted and stored separately.
 
-See the **[Environment Configuration Guide](/administration/environments)** for complete details on variables vs. secrets, encryption, and configuration best practices.
+See the **[Environment Configuration Guide](../../build_preparation/setup/environment_config.md)** for complete details on variables vs. secrets, encryption, and configuration best practices.
 
 ### Ingestion Prompt (Optional)
 
@@ -187,11 +187,11 @@ Click **Create new project**
 
 Choose between **New Product** or **Existing Product** based on your use case
 
-> **[New Product](/quickstart#new-product)**
+> **[New Product](https://docs.blitzy.com/quickstart#new-product)**
 >
 > Starting from scratch. Skip ingestion and go straight to writing a generation prompt.
 
-> **[Existing Product](/quickstart#existing-product)**
+> **[Existing Product](https://docs.blitzy.com/quickstart#existing-product)**
 >
 > Working with an existing codebase. Blitzy ingests your repository before code generation begins.
 
@@ -244,11 +244,11 @@ Select "Share" to share the project and open it; the "Share" button stays disabl
 
 ## Related Guides
 
-> **[Teams](/administration/teams)**
+> **[Teams](../admin/teams.md)**
 >
 > Configure the admin setting that requires project sharing
 
-> **[Workspace](/platform/workspace)**
+> **[Workspace](../intro/workspace.md)**
 >
 > Filter projects by visibility and read sharing badges
 

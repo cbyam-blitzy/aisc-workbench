@@ -5,6 +5,8 @@ description: Edit text to remove signs of AI-generated writing and make it sound
 
 # Blitzy Humanizer
 
+Read and follow `shared_context/standards/readability_directives.md` for all delivered outputs. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Read and follow `shared_context/standards/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 Edit writing so it sounds like a person wrote it without changing its meaning. Remove AI-writing tells, then restore an appropriate human voice. Do not make formal material performatively casual: match the document's register.
@@ -20,7 +22,7 @@ Edit writing so it sounds like a person wrote it without changing its meaning. R
 
 ## Blitzy reference context
 
-For text about Blitzy, consult `shared_context/platform/glossary.md` for unclear terminology and the relevant overview page when a wording change could alter a capability or workflow claim. Preserve the source meaning and do not add platform claims merely to enrich the rewrite. Flag material discrepancies separately instead of silently changing facts. Ordinary prose editing does not require loading the overview library.
+For text about Blitzy, consult `shared_context/platform/intro/glossary.md` for unclear terminology and the relevant overview page when a wording change could alter a capability or workflow claim. Preserve the source meaning and do not add platform claims merely to enrich the rewrite. Flag material discrepancies separately instead of silently changing facts. Ordinary prose editing does not require loading the overview library.
 
 ## Facts and voice
 

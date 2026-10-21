@@ -86,13 +86,13 @@ Five terms you need to know before using Blitzy:
 
 | Concept | What It Is | When You Use It |
 | - | - | - |
-| **[Ingestion](/prompt-engineering/ingestion)** | Blitzy analyzes your codebase to understand architecture, patterns, and terminology. | Required for existing codebases. Not needed for greenfield projects. |
-| **[Technical Specification](/project-lifecycle/tech-spec-review)** | A knowledge base Blitzy generates after ingestion, documenting your architecture and conventions. | Generated automatically. Review it to confirm Blitzy understands your codebase. |
-| **[Agent action plan (AAP)](/project-lifecycle/aap-review)** | A detailed implementation plan showing which files will be created or modified. | Every generation. This is your primary control point — review, edit, approve, or reject. |
-| **[Project Guide](/project-lifecycle/project-guide-review)** | Documentation generated alongside your code, explaining architecture decisions and next steps. | Generated automatically after every code generation. |
-| **[Runtime Validation](/administration/environments)** | Blitzy compiles and tests generated code in isolated environments before creating a PR. | Automatic when environment configuration is provided. |
+| **[Ingestion](../../build_preparation/ingestion_prompts.md)** | Blitzy analyzes your codebase to understand architecture, patterns, and terminology. | Required for existing codebases. Not needed for greenfield projects. |
+| **[Technical Specification](../project_lifecycle/technical_specification.md)** | A knowledge base Blitzy generates after ingestion, documenting your architecture and conventions. | Generated automatically. Review it to confirm Blitzy understands your codebase. |
+| **[Agent action plan (AAP)](../project_lifecycle/agent_action_plan.md)** | A detailed implementation plan showing which files will be created or modified. | Every generation. This is your primary control point — review, edit, approve, or reject. |
+| **[Project Guide](../project_lifecycle/project_guide.md)** | Documentation generated alongside your code, explaining architecture decisions and next steps. | Generated automatically after every code generation. |
+| **[Runtime Validation](../../build_preparation/setup/environment_config.md)** | Blitzy compiles and tests generated code in isolated environments before creating a PR. | Automatic when environment configuration is provided. |
 
-See the full [Glossary](/glossary) for all Blitzy-specific terminology.
+See the full [Glossary](glossary.md) for all Blitzy-specific terminology.
 
 
 This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

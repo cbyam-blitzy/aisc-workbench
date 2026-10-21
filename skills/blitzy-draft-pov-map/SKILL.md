@@ -5,6 +5,8 @@ description: Draft or update a Blitzy POV Mutual Action Plan from an account eva
 
 # Draft a POV Mutual Action Plan
 
+Read and follow `shared_context/standards/readability_directives.md` for all delivered outputs. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Turn the account evaluation into a customer-reviewable MAP using the current shared template. The Evaluation Memo defines scope, success criteria and measurement; the MAP tracks when work and decisions occur and who is responsible. Preserve that distinction and the customer's actual commitments.
 
 ## Resolve inputs
@@ -17,7 +19,7 @@ Read the current working repository files, including when this skill is loaded f
 - `shared_context/standards/writing_style_guide.md`
 - `shared_context/standards/file_naming_directives.md`
 - `shared_context/pov/playbook.md`
-- `shared_context/platform/introduction.md`
+- `shared_context/platform/intro/introduction.md`
 
 Find the repository through the workspace and parent directories; do not hardcode a machine path. Follow account instructions. Read any relevant Evaluation Memo, approved scope, baseline worksheet, existing MAP or written changes supplied in the account folder. An Evaluation Memo is useful but not required to produce a discussion draft: flag its absence and leave approval-dependent fields pending. Do not create or revise a separate Evaluation Memo unless requested.
 
@@ -25,9 +27,9 @@ If a required shared reference is unavailable, identify the missing path and qua
 
 ## Blitzy reference context
 
-Read the relevant pages in `shared_context/platform/` when tailoring milestones: `ingestion_prompts.md` for optional context and branch/spec inheritance, `tech_spec.md` for specification review, `agent_action_plan.md` for plan approval/refinement, `project_guide.md` for delivery and review, and `environment_config.md` for setup and validation. Use `glossary.md` for terminology. Match milestones to the selected workflow and agreed validation depth; documentation does not prove readiness or completion. Consult task-matching prompt/rule templates in `shared_context/build_preparation/prompt_templates/` and `shared_context/build_preparation/rule_templates/` only when needed to define proposed inputs or rules.
+Read the relevant shared references when tailoring milestones: `shared_context/build_preparation/ingestion_prompts.md` for optional context and branch/spec inheritance, `shared_context/platform/project_lifecycle/technical_specification.md` for specification review, `shared_context/platform/project_lifecycle/agent_action_plan.md` for plan approval/refinement, `shared_context/platform/project_lifecycle/project_guide.md` for delivery and review, and `shared_context/build_preparation/setup/environment_config.md` for setup and validation. Use `shared_context/platform/intro/glossary.md` for terminology. Match milestones to the selected workflow and agreed validation depth; documentation does not prove readiness or completion. Consult task-matching prompt/rule templates in `shared_context/build_preparation/prompt_templates/` and `shared_context/build_preparation/rule_templates/` only when needed to define proposed inputs or rules.
 
-Use `shared_context/platform/project_setup.md` to tailor entry/preparation milestones for provisioning, repository/submodule permissions, branch isolation and the intended project audience. Read `chat_with_code.md` in that directory when planning source exploration or Build prompt drafting. Schedule that assistance within the relevant step; AAP-stage chat cannot review or edit the plan, and advisory prompt scoring does not complete an approval milestone.
+Use `shared_context/platform/project_lifecycle/project_setup.md` to tailor entry/preparation milestones for provisioning, repository/submodule permissions, branch isolation and the intended project audience. Read `shared_context/platform/project_lifecycle/chat_with_code.md` when planning source exploration or Build prompt drafting. Schedule that assistance within the relevant step; AAP-stage chat cannot review or edit the plan, and advisory prompt scoring does not complete an approval milestone.
 
 ## Separate evidence from proposed planning
 
@@ -75,7 +77,7 @@ For an initial plan, leave the progress and agreed-change logs empty rather than
 
 Save a Markdown MAP by default in the ignored account folder using `shared_context/standards/file_naming_directives.md` and a title such as `pov-map`, including the project when useful. Preserve an existing filename for updates. Honor a requested destination or format.
 
-Save separate concise internal drafting notes in the account folder under the same naming convention. Include source links/sections and evidence cutoff, material field references keyed to milestone IDs, scope assumptions, conflicting commitments, proposed owners/dates and decisions blocking entry or generation. Keep internal strategy and negotiation commentary out of the customer-review MAP. If a single file is requested, use a clearly labeled internal appendix and identify it before any customer use.
+Save separate concise internal drafting notes in the account folder under the same naming convention. Include source links/sections and evidence cutoff, material field references keyed to milestone IDs, scope assumptions, conflicting commitments, proposed owners/dates and decisions blocking entry or generation. Keep internal strategy and negotiation commentary out of the customer-review MAP. If a single file is requested, use a clearly labeled internal appendix and identify it before any customer use. Put required source citations in a final source appendix within the internal drafting notes; keep the customer-review document free of internal evidence citations.
 
 Read back the MAP and notes. Check milestone IDs and order, R1–R3 references, gates and dependencies, memo consistency, both owner columns, expected versus actual dates, statuses supported by evidence, preserved history and source links. Verify that every unresolved section or field has the required bold uppercase marker and that future evidence has not been treated as an entry requirement. Confirm the skill and other reusable files contain no customer details; keep account artifacts out of version control.
 

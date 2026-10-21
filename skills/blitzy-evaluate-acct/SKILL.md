@@ -5,6 +5,8 @@ description: Evaluate a Blitzy pre-sales account from its meeting history and cr
 
 # Blitzy account evaluation
 
+Read and follow `shared_context/standards/readability_directives.md` for all delivered outputs. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Create an internal account memo that explains what each stakeholder wants, how the discussions connect, and what evidence and decisions could support adoption of Blitzy across software initiatives. Apply the shared guidance for each workstream's engagement stage while preserving the customer's actual scope, commitments and commercial history.
 
 ## Establish scope and sources
@@ -37,9 +39,9 @@ Resolve changes chronologically where the later statement clearly supersedes the
 
 ## Blitzy reference context
 
-Read `shared_context/platform/introduction.md` to ground platform descriptions and engagement recommendations. Use `glossary.md` in that directory for terminology; read `ingestion_prompts.md` and `tech_spec.md` for discovery scope and outputs, `agent_action_plan.md` and `project_guide.md` for implementation/review responsibilities, and `environment_config.md` for access or validation prerequisites when those topics affect the assessment. Use platform references as capability context, account sources as evidence of needs, commitments and results, and flag discrepancies. Select relevant prompt/rule templates under `shared_context/build_preparation/prompt_templates/` and `shared_context/build_preparation/rule_templates/` only when proposing a specific workflow; proposals do not establish accepted scope.
+Read `shared_context/platform/intro/introduction.md` to ground platform descriptions and engagement recommendations. Use `shared_context/platform/intro/glossary.md` for terminology; read `shared_context/build_preparation/ingestion_prompts.md` and `shared_context/platform/project_lifecycle/technical_specification.md` for discovery scope and outputs, `shared_context/platform/project_lifecycle/agent_action_plan.md` and `shared_context/platform/project_lifecycle/project_guide.md` for implementation/review responsibilities, and `shared_context/build_preparation/setup/environment_config.md` for access or validation prerequisites when those topics affect the assessment. Use platform references as capability context, account sources as evidence of needs, commitments and results, and flag discrepancies. Select relevant prompt/rule templates under `shared_context/build_preparation/prompt_templates/` and `shared_context/build_preparation/rule_templates/` only when proposing a specific workflow; proposals do not establish accepted scope.
 
-Use `shared_context/platform/project_setup.md` when qualifying onboarding, multi-repository access, branch isolation or sharing responsibilities. Use `chat_with_code.md` in that directory when proposing source exploration or Build prompt assistance; preserve its beta, step-specific and role/access limits. Chat answers and advisory prompt scores do not establish customer intent, validated findings or acceptance.
+Use `shared_context/platform/project_lifecycle/project_setup.md` when qualifying onboarding, multi-repository access, branch isolation or sharing responsibilities. Use `shared_context/platform/project_lifecycle/chat_with_code.md` when proposing source exploration or Build prompt assistance; preserve its beta, step-specific and role/access limits. Chat answers and advisory prompt scores do not establish customer intent, validated findings or acceptance.
 
 ## Build the account assessment
 
@@ -47,7 +49,7 @@ Preserve the technical needs of individual teams rather than combining them into
 
 Organize the material into the discussion threads the evidence supports. Do not force a fixed number or copy stakeholders, initiatives or architecture from another account. For each thread, capture:
 
-1. **Discussion so far:** the need, business consequence, decisions, changes over time and unresolved issue, with dated source references.
+1. **Discussion so far:** the need, business consequence, decisions, changes over time and unresolved issue, with supporting dated references in the final source appendix.
 2. **Questions to answer:** specific questions for reverse engineering, discovery or implementation, as appropriate to the thread.
 3. **Evidence and decision:** the artifact or observation needed, the decision it supports, and the person or role who should review it. Mark proposed reviewers as proposals.
 4. **Adoption relevance:** how the thread could improve planning, coordination, implementation, validation or reuse across subsequent initiatives.
@@ -95,9 +97,9 @@ Use a structure appropriate to the account, normally:
 4. **Proposed engagement and operating model.** Define initial initiatives, minimum process changes, bounded evaluation if needed, artifacts and measures.
 5. **Next conversation and actions.** Give the sponsor decision and proposed or committed owners.
 6. **Stage-specific review.** For early positioning, map every shared directive to account evidence, gaps and recommended adjustments. For active POV/technical validation, map applicable playbook criteria and agreed evaluation milestones to evidence, status and next decisions. Separate these reviews for mixed-stage accounts; do not manufacture a numeric readiness score.
-7. **Source references.** Link meetings or local files with dates and timestamps or section locations. Keep analysis recommendations distinct from customer commitments.
+7. **Appendix — Sources and evidence.** Map claims to meetings or local files with dates and timestamps or section locations. Keep analysis recommendations distinct from customer commitments.
 
-Keep the opening concise and the question bank proportional to the decisions at hand. Avoid repeating the same qualification across sections. Write the memo for internal account and solutions planning unless the user specifies a customer-facing audience; exclude candid internal commentary from customer-facing material.
+Keep the question bank proportional to the decisions at hand. Write the memo for internal account and solutions planning unless the user specifies a customer-facing audience; exclude candid internal commentary from customer-facing material.
 
 Read back the saved memo. Verify material claims and commitments against their sources, links, chronology, reviewer attribution and the analysis/implementation boundary. Check recommendations against the stage-appropriate shared guidance and the customer's existing commitments. Confirm that reusable changes contain no customer material.
 

@@ -10,7 +10,7 @@ Environment configuration tells Blitzy how to build and run your application. Pr
 
 > [!NOTE]
 >
-> **Jump to:** [Target OS](#target-operating-system) • [Setup Instructions](#setup-instructions) • [Example](#example-setup-instructions) • [Variables & Secrets](#variables-%26-secrets) • [Best Practices](#best-practices) • [Getting Started](#getting-started) • [Cloning](#cloning-an-environment) • [Multiple Environments](#multiple-environments) • [Troubleshooting](#troubleshooting)
+> **Jump to:** [Target OS](#target-operating-system) • [Setup Instructions](#setup-instructions) • [Example](#example-setup-instructions) • [Variables & Secrets](#variables--secrets) • [Best Practices](#best-practices) • [Getting Started](#getting-started) • [Cloning](#cloning-an-environment) • [Multiple Environments](#multiple-environments) • [Troubleshooting](#troubleshooting)
 
 ![Blitzy Environment Access Insights](https://mintcdn.com/blitzy-c2eefe5a/zW1V6gp28Dv1LcG8/images/blitzy-insights-on-access.webp?fit=max\&auto=format\&n=zW1V6gp28Dv1LcG8\&q=85\&s=0f84928b0b9fc4b0f2994d6a1aa99c86)
 
@@ -23,7 +23,7 @@ Choose the OS and virtualization type Blitzy uses to build and run your project.
 | OS | When to use |
 | :- | :- |
 | **Linux** | Most web applications, APIs, and backend services. Default for the majority of projects. |
-| **Windows** | .NET Framework, Windows-native desktop applications, or projects that depend on Windows-only toolchains. Required for [Computer Use on Windows](/project-lifecycle/code-review#validation-signals) desktop validation. |
+| **Windows** | .NET Framework, Windows-native desktop applications, or projects that depend on Windows-only toolchains. Required for [Computer Use on Windows](../../platform/project_lifecycle/code_review.md#validation-signals) desktop validation. |
 | **macOS** | iOS and macOS application builds that require Xcode, Swift toolchains, or Apple-specific signing. |
 
 ### Virtualization Type
@@ -216,7 +216,7 @@ Add non-sensitive variables as plaintext and sensitive credentials as encrypted 
 
 **5. Save and Test**
 
-Save the configuration and click **Test Setup** to validate it. See the [Environment Testing](/project-lifecycle/environment-testing) guide for details on what the test checks and how to interpret the results.
+Save the configuration and click **Test Setup** to validate it. See the [Environment Testing](environment_testing.md) guide for details on what the test checks and how to interpret the results.
 
 > [!NOTE]
 >
@@ -228,7 +228,7 @@ Save the configuration and click **Test Setup** to validate it. See the [Environ
 
 > [!NOTE]
 >
-> **Windows desktop validation:** If your project uses [Computer Use on Windows](/project-lifecycle/code-review#validation-signals) to visually validate a desktop application, you need a Windows environment with UI login credentials and desktop-specific setup instructions. See [Computer Use on Windows](/project-lifecycle/code-review#validation-signals) for details.
+> **Windows desktop validation:** If your project uses [Computer Use on Windows](../../platform/project_lifecycle/code_review.md#validation-signals) to visually validate a desktop application, you need a Windows environment with UI login credentials and desktop-specific setup instructions. See [Computer Use on Windows](../../platform/project_lifecycle/code_review.md#validation-signals) for details.
 
 ## Cloning an Environment
 
@@ -331,19 +331,19 @@ If all configuration is project-specific, a single environment at position 1 is 
 
 ## Related Guides
 
-> **[Environment Testing](/project-lifecycle/environment-testing)**
+> **[Environment Testing](environment_testing.md)**
 >
 > Validate your environment before starting code generation
 
-> **[Teams & Roles](/administration/teams)**
+> **[Teams & Roles](../../platform/admin/teams.md)**
 >
 > Role-based access control for environments
 
-> **[Project Setup](/project-lifecycle/sharing)**
+> **[Project Setup](../../platform/project_lifecycle/project_setup.md)**
 >
 > Connect environments to projects
 
-> **[Computer Use on Windows](/project-lifecycle/code-review#validation-signals)**
+> **[Computer Use on Windows](../../platform/project_lifecycle/code_review.md#validation-signals)**
 >
 > Visual validation using Windows desktop interaction
 

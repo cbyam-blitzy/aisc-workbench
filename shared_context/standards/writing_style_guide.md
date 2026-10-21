@@ -1,6 +1,6 @@
 # **Blitzy Writing Style Guide**
 
-Last updated: 2026-06-23 · Applies to: customer emails, follow-ups, exec updates, internal summaries, and the knowledge/GTM docs in this project. This is the project-wide default.
+Last updated: 2026-10-21 · Applies to: customer emails, follow-ups, exec updates, internal summaries, and the knowledge/GTM docs in this project. This is the project-wide default for voice and claims. Refresh when voice or claims guidance changes. Follow [Readability directives](readability_directives.md) for output structure, layout, plain language, and citation placement.
 The standard: **action-oriented, concise, and professional**, guided by Strunk & White's *The Elements of Style* — written in Blitzy's voice as a **partner, not a vendor**.
 
 ## ---
@@ -15,15 +15,10 @@ Blitzy sells autonomy and precision: thousands of agents executing entire softwa
 
 **Principles**
 
-> 1. **Omit needless words.** Every sentence should lose nothing if shortened. Cut throat-clearing ("I just wanted to reach out to…"), hedges, and filler.
-> 2. **Lead with the action.** Say what you need, from whom, by when — first. Context supports the ask; it doesn't precede it.
-> 3. **Active voice, definite language.** "The project lead coordinates the schema," not "the schema will be coordinated." Name the owner, the item, and the date.
-> 4. **One idea per sentence.** Short declarative sentences over compound ones.
-> 5. **Partner, not vendor.** Warm and direct. We collaborate and set expectations; we don't oversell or over-apologize.
-> 6. **Set expectations delicately but plainly.** Frame tradeoffs as shared ("the more complete the inputs, the more we deliver autonomously"), not as blame.
-> 7. **Flag added scope honestly.** When we offer work beyond the contract, say so in one clean line — as value, not a hard sell.
-> 8. **Claims are sourced or they're cut.** Use Blitzy's real numbers and name the basis (benchmark, audit, prior run). If you can't source it, don't claim it.
-> 9. **Precise over impressive.** Use the exact technical term, not the grander one. "Reverse-engineers the codebase into a knowledge graph" beats "understands everything."
+> 1. **Partner, not vendor.** Warm and direct. We collaborate and set expectations; we don't oversell or over-apologize.
+> 2. **Set expectations delicately but plainly.** Frame tradeoffs as shared ("the more complete the inputs, the more we deliver autonomously"), not as blame.
+> 3. **Flag added scope honestly.** When we offer work beyond the contract, say so in one clean line — as value, not a hard sell.
+> 4. **Claims are sourced or they're cut.** Use Blitzy's real numbers and name the basis (benchmark, audit, prior run). If you can't source it, don't claim it.
 
 ## ---
 
@@ -59,20 +54,13 @@ Confident, specific, and economical — the tone of a senior engineer who has al
 
 This project captures what Blitzy is, how the tools work, and GTM/delivery artifacts — so most docs here are reference, not outreach. For those:
 
-> * **Front-load the takeaway.** First line says what the reader needs to know; detail follows.
-> * **Prose over walls of bullets for explanation; tables for facts.** Use tables for specs, metrics, and comparisons (as the overview and pricing docs do).
-> * **Date and source.** Open living docs with a "Last updated" line and a refresh trigger ("Refresh when funding, leadership, or benchmarks change"). Cite sources for any external claim.
-> * **Write so a future reader can act.** These docs exist to be reused — keep them self-contained.
+> * **Date and source.** Open living docs with a "Last updated" line and a refresh trigger ("Refresh when funding, leadership, or benchmarks change"). Put required source citations in the final appendix specified by the readability directives.
 
 ## ---
 
-**Formatting**
+**Email subject lines**
 
-> * Bullets for lists of asks; **bold the deliverable**, plain text for the detail.
-> * Italicize the item label when pairing it with an owner/date (*Defect list* — customer lead, this week).
-> * No walls of text; no more than \~2 sentences per bullet.
-> * Subject lines: specific and action-forward ("Project — next steps and required inputs").
-> * Numbers carry weight — use them exactly and cite the basis.
+Use specific, action-forward subjects ("Project — next steps and required inputs"), unless a skill or user specifies a fixed subject format. General formatting follows the readability directives.
 
 ## ---
 

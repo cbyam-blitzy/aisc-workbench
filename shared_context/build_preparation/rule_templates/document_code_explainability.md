@@ -1,3 +1,22 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blitzy.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Document Code Explainability
+
+> Add 'What and Why' documentation through docstrings and inline comments
+
+## When to Use
+
+Add this when you need documentation that explains not just what the code does, but why specific implementation decisions were made. Useful for codebases where rationale and decision history must be preserved for future maintainers.
+
+## Rule Definition
+
+**Name** — Document Code Explainability
+
+**Description** — paste this into the rule description field on the platform:
+
+```
 Generate code with documentation that explains both WHAT the code does and WHY specific implementation decisions were made, using docstrings and inline comments.
 
 Docstring Requirements:
@@ -26,3 +45,15 @@ Forbidden Patterns:
 - Using vague rationales ("this is better", "for performance") without specific justification
 
 Validation Gate: Every new or modified function must have a docstring with purpose, parameters, and return values. Every non-obvious implementation decision must have an inline comment explaining why that approach was chosen using at least one of the categories above. Code missing either fails review.
+```
+
+## How It Works
+
+1. Add this rule to your project on the platform
+2. Code is generated with docstrings for all functions, classes, and entry points
+3. Inline comments explain the reasoning behind implementation decisions
+4. Each non-obvious choice includes at least one "Why" category
+5. Code review validates both technical correctness and documentation completeness
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -1,3 +1,22 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blitzy.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Document API Consumer Paths
+
+> Ensure every new or modified API endpoint includes inline documentation of its consumer contract and data flow
+
+## When to Use
+
+Add this to ensure every API endpoint generated or modified includes clear documentation of how consumers interact with it, what data flows through it, and what contract it exposes.
+
+## Rule Definition
+
+**Name** — Document API Consumer Paths
+
+**Description** — paste this into the rule description field on the platform:
+
+```
 When generating or modifying API endpoints, webhooks, or event handlers, document the consumer contract and data flow inline.
 
 Requirements:
@@ -15,3 +34,15 @@ Forbidden Patterns:
 - Adding a webhook handler without documenting the expected payload format
 
 Validation Gate: Every new or modified public endpoint must have a documented contract (method, parameters, response codes, payload shape). Every data transformation and side effect must have an inline comment. Endpoints missing contract documentation fail review.
+```
+
+## How It Works
+
+1. Add this rule to your project on the platform
+2. Every generated API endpoint includes contract documentation inline
+3. Data transformations and side effects are annotated at the call site
+4. Consumer relationships are noted when known
+5. Code review validates that all endpoints have complete contract documentation
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -1,3 +1,22 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blitzy.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Prevent Security Vulnerabilities
+
+> Ensure generated code follows security best practices and never introduces common vulnerability patterns
+
+## When to Use
+
+Add this to enforce secure coding practices across all code generation for a project, preventing common vulnerability patterns from being introduced.
+
+## Rule Definition
+
+**Name** — Prevent Security Vulnerabilities
+
+**Description** — paste this into the rule description field on the platform:
+
+```
 All generated code must follow security best practices. Never introduce code that contains known vulnerability patterns.
 
 Requirements:
@@ -20,3 +39,15 @@ Forbidden Patterns:
 - Storing sensitive data (passwords, tokens, PII) in logs, error messages, or client-facing responses
 
 Validation Gate: Generated code that introduces any forbidden pattern fails review. Every database query must use parameterized access. Every credential must reference an environment variable or secrets manager. Every endpoint accepting external input must validate that input before processing.
+```
+
+## How It Works
+
+1. Add this rule to your project on the platform
+2. All generated code automatically follows secure coding practices
+3. Database queries use parameterized access, secrets are externalized, input is validated
+4. Forbidden vulnerability patterns are never introduced in generated code
+5. Code review validates that security constraints are met across all generated files
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

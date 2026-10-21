@@ -145,15 +145,15 @@ Always diff the LLM output against the original before re-uploading. Confirm no 
 | Broad gaps or missing sections | **Prompt refinement** | Update prompt, regenerate the full AAP |
 | Fundamental issues after 2+ iterations | **Discard** | Return to the project status page and start over with a new generation prompt |
 
-> **[Golden Rules](/prompt-engineering/golden-rules)**
+> **[Golden Rules](../../build_preparation/prompt_golden_rules.md)**
 >
 > Best practices for writing precise prompts
 
-> **[Project Guide Review](/project-lifecycle/project-guide-review)**
+> **[Project Guide Review](project_guide.md)**
 >
 > Next step after AAP approval and code generation
 
-> **[Generation Prompts](/prompt-engineering/generation)**
+> **[Generation Prompts](../../build_preparation/generation_prompts.md)**
 >
 > Write generation prompts for Blitzy
 

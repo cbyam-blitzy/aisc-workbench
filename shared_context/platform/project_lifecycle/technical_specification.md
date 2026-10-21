@@ -28,11 +28,11 @@ Verify that Blitzy correctly interprets acronyms, internal terminology, and DSL 
 
 **3. Proceed to code generation**
 
-Once you've validated the areas relevant to your work, move on to writing your [generation prompt](/prompt-engineering/generation). Most specs are accurate enough to proceed after a targeted review.
+Once you've validated the areas relevant to your work, move on to writing your [generation prompt](../../build_preparation/generation_prompts.md). Most specs are accurate enough to proceed after a targeted review.
 
 > [!NOTE]
 >
-> If the tech spec has significant gaps or you want to personalize how Blitzy interprets your codebase, you can create a new Blitzy project on the same branch with an updated [ingestion prompt](/prompt-engineering/ingestion). This re-ingests your codebase and produces a new spec. This is rarely needed. Most teams proceed directly to code generation.
+> If the tech spec has significant gaps or you want to personalize how Blitzy interprets your codebase, you can create a new Blitzy project on the same branch with an updated [ingestion prompt](../../build_preparation/ingestion_prompts.md). This re-ingests your codebase and produces a new spec. This is rarely needed. Most teams proceed directly to code generation.
 
 ## Review Checklist
 
@@ -76,19 +76,19 @@ The tech spec gives your team an always-current, queryable understanding of your
 * **For executives** - Unknown liabilities become managed exposures with auditable system lineage produced on demand
 * **For the organization** - Modernization scoping based on verified system structure instead of guesswork
 
-> **[Generation Prompts](/prompt-engineering/generation)**
+> **[Generation Prompts](../../build_preparation/generation_prompts.md)**
 >
 > Write a generation prompt that translates your development request into a clear build instruction for Blitzy
 
-> **[Prompt Library](/templates)**
+> **[Prompt Library](https://docs.blitzy.com/templates)**
 >
 > Browse ready-to-use prompt templates for common use cases
 
-> **[Golden Rules](/prompt-engineering/golden-rules)**
+> **[Golden Rules](../../build_preparation/prompt_golden_rules.md)**
 >
 > Best practices for writing precise, unambiguous prompts
 
-> **[Agent action plan](/project-lifecycle/aap-review)**
+> **[Agent action plan](agent_action_plan.md)**
 >
 > What happens after your prompt - reviewing the AAP that drives code generation
 

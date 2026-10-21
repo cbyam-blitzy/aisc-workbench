@@ -5,6 +5,8 @@ description: Produce an evidence-based impact report for a Blitzy-delivered solu
 
 # Blitzy review project guide
 
+Read and follow `shared_context/standards/readability_directives.md` for all delivered outputs. Locate it in the working repository when this skill is loaded from a plugin cache.
+
 Memorialize what Blitzy delivered, how it was validated, and the business value it enables. Compare an equivalent scope and quality of work without Blitzy against the actual Blitzy delivery interval. Make the baseline calculation reproducible.
 
 Use the current overview references for Blitzy's delivery model. If an operating or completion target is relevant, cite its supplied source and distinguish it from measured project results; do not impose a fixed autonomous-completion percentage on the guide.
@@ -13,9 +15,9 @@ Read and follow `shared_context/standards/writing_style_guide.md` before draftin
 
 ## Blitzy reference context
 
-Read `shared_context/platform/project_guide.md` for the artifact's role, review criteria and gap reporting, and `introduction.md` in that directory for workflow context. Consult `environment_config.md` for validation limits, `agent_action_plan.md` when assessing plan alignment, and `glossary.md` for terminology as needed. Keep these platform references separate from the supplied project's evidence. Inspect a supplied PR diff or test artifacts when within scope; otherwise mark implementation fidelity and merge readiness unverified. An impact-report request does not authorize executing setup commands, modifying code or merging a PR.
+Read `shared_context/platform/project_lifecycle/project_guide.md` for the artifact's role, review criteria and gap reporting, and `shared_context/platform/intro/introduction.md` for workflow context. Consult `shared_context/build_preparation/setup/environment_config.md` for validation limits, `shared_context/platform/project_lifecycle/agent_action_plan.md` when assessing plan alignment, and `shared_context/platform/intro/glossary.md` for terminology as needed. Keep these platform references separate from the supplied project's evidence. Inspect a supplied PR diff or test artifacts when within scope; otherwise mark implementation fidelity and merge readiness unverified. An impact-report request does not authorize executing setup commands, modifying code or merging a PR.
 
-Consult `shared_context/platform/project_setup.md` when assessing supplied evidence of repository/submodule access, branch provenance or reviewer sharing. Setup documentation alone does not prove the delivered project was configured correctly.
+Consult `shared_context/platform/project_lifecycle/project_setup.md` when assessing supplied evidence of repository/submodule access, branch provenance or reviewer sharing. Setup documentation alone does not prove the delivered project was configured correctly.
 
 ## Read the project evidence
 
@@ -73,10 +75,10 @@ When constructing a retrospective estimate or a separate sensitivity check, rese
 
 Use a task-level work breakdown matching the guide. For each work package show:
 
-| Work package and matched deliverable | Guide estimate | Baseline low/base/high person-hours | Roles | Benchmark/source | Rationale and adjustments |
-| --- | --- | --- | --- | --- | --- |
+| Work package and matched deliverable | Guide estimate | Baseline low/base/high person-hours | Roles | Rationale and adjustments |
+| --- | --- | --- | --- | --- |
 
-Explain how a source constrains each estimate or a clearly identified group of packages. Separate source observations from your extrapolations. Cite title, publisher/author, publication date, direct URL and applicable finding. Give the reason for each adjustment, its numerical effect, and confidence. A report about developer sentiment, deployment frequency or defect rates does not directly establish implementation hours.
+Explain how a source constrains each estimate or a clearly identified group of packages. Separate source observations from your extrapolations. In the final source appendix, map each benchmark to the supported work packages and include its title, publisher/author, publication date, direct URL and applicable finding. Give the reason for each adjustment, its numerical effect, and confidence. A report about developer sentiment, deployment frequency or defect rates does not directly establish implementation hours.
 
 Use the guide's completed-hour estimates as a cross-check, not independent proof of an industry baseline. Do not relabel them as an industry average or multiply them by an arbitrary uplift. If benchmarks do not support defensible task-hour rates, state that limitation and produce an explicitly labeled analyst estimate informed by the available evidence. If browsing is unavailable, use supplied benchmark material or label the baseline provisional and unsourced; never fabricate a source or an industry standard.
 
@@ -115,7 +117,7 @@ Use this structure, keeping the opening concise and the calculation detail audit
 3. **Business impact:** connect each material capability to the business problem, evidence and benefit. Distinguish observed outcomes, estimated engineering capacity delivered, and benefits enabled but dependent on adoption or release. Avoid invented revenue, cost savings, incident reductions or compliance guarantees. State how an enabled benefit could be measured after deployment.
 4. **Baseline, velocity, and acceleration:** present matched scope, task effort ranges, team composition, schedule rationale, source applicability, user-supplied time and exclusions, formulas and scenario results. Show baseline duration, Blitzy duration, velocity multiplier, and elapsed-time reduction together. Distinguish independently supported estimates from guide-derived ones.
 5. **Human delivery and readiness:** summarize remaining work by category, estimated effort, owner if documented, dependencies, open approvals, access gaps, material deviations and residual risks. Preserve the actual completion percentage even when below the operating target. Separate built, tested, deployable, deployed and producing business results.
-6. **Evidence and assumptions:** include guide section references, benchmark citations, input provenance and date, source gaps and a compact coverage check showing where every guide section informed the report. Do not repeat the guide wholesale.
+6. **Appendix — Sources and evidence:** include guide section references, benchmark citations, input provenance and date, source gaps and a compact coverage check showing where every guide section informed the report. Keep decision-relevant assumptions and limitations beside the conclusions they affect. Do not repeat the guide wholesale.
 
 Before finalizing, reconcile hours and test totals, check every ratio's scope and units, confirm staffing capacity supports the schedule, and trace material claims to evidence. Surface contradictions and unresolved inputs where they affect conclusions. Preserve useful impact even when acceleration cannot yet be calculated.
 
