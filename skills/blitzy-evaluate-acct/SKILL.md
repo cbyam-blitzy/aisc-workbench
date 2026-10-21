@@ -13,10 +13,10 @@ Resolve the account from the request and the workspace. Ask only if the account 
 
 Read and follow the repository's current shared guidance before drafting. These files are the source of truth for writing, positioning and file naming; keep their rules in shared context rather than duplicating them in this skill:
 
-- `shared_context/blitzy_writing_style_guide.md`
-- `shared_context/file_naming_directives.md`
+- `shared_context/standards/writing_style_guide.md`
+- `shared_context/standards/file_naming_directives.md`
 
-Establish each workstream's stage using the engagement-stage rules in `AGENTS.md`. For early positioning, read `shared_context/blitzy_presales_positioning_directives.md`. For active POV/technical validation work, read `shared_context/blitzy_pov_playbook.md`. Read both when the account spans both stages, keeping their assessments separate. Use `shared_context/blitzy_security_faqs.md` only when a Blitzy security question is relevant; preserve its qualifications and unconfirmed items.
+Establish each workstream's stage using the engagement-stage rules in `AGENTS.md`. For early positioning, read `shared_context/presales/positioning_directives.md`. For active POV/technical validation work, read `shared_context/pov/playbook.md`. Read both when the account spans both stages, keeping their assessments separate. Use `shared_context/security/security_faqs.md` only when a Blitzy security question is relevant; preserve its qualifications and unconfirmed items.
 
 Locate these in the working repository when the installed skill is in a plugin cache. Do not substitute an embedded style or positioning snapshot. If a required guide cannot be found, identify that gap and distinguish a provisional account assessment from a completed review against the missing guidance.
 
@@ -37,9 +37,9 @@ Resolve changes chronologically where the later statement clearly supersedes the
 
 ## Blitzy reference context
 
-Read `shared_context/blitzy_overview/blitzy_intro.md` to ground platform descriptions and engagement recommendations. Use `glossary.md` in that directory for terminology; read `ingestion_prompts.md` and `tech_spec.md` for discovery scope and outputs, `agent_action_plan.md` and `project_guide.md` for implementation/review responsibilities, and `environment_config.md` for access or validation prerequisites when those topics affect the assessment. Use platform references as capability context, account sources as evidence of needs, commitments and results, and flag discrepancies. Select relevant prompt/rule templates under `shared_context/blitzy_prompt_templates/` and `shared_context/blitzy_rule_templates/` only when proposing a specific workflow; proposals do not establish accepted scope.
+Read `shared_context/platform/introduction.md` to ground platform descriptions and engagement recommendations. Use `glossary.md` in that directory for terminology; read `ingestion_prompts.md` and `tech_spec.md` for discovery scope and outputs, `agent_action_plan.md` and `project_guide.md` for implementation/review responsibilities, and `environment_config.md` for access or validation prerequisites when those topics affect the assessment. Use platform references as capability context, account sources as evidence of needs, commitments and results, and flag discrepancies. Select relevant prompt/rule templates under `shared_context/build_preparation/prompt_templates/` and `shared_context/build_preparation/rule_templates/` only when proposing a specific workflow; proposals do not establish accepted scope.
 
-Use `shared_context/blitzy_overview/project_setup.md` when qualifying onboarding, multi-repository access, branch isolation or sharing responsibilities. Use `chat_with_code.md` in that directory when proposing source exploration or Build prompt assistance; preserve its beta, step-specific and role/access limits. Chat answers and advisory prompt scores do not establish customer intent, validated findings or acceptance.
+Use `shared_context/platform/project_setup.md` when qualifying onboarding, multi-repository access, branch isolation or sharing responsibilities. Use `chat_with_code.md` in that directory when proposing source exploration or Build prompt assistance; preserve its beta, step-specific and role/access limits. Chat answers and advisory prompt scores do not establish customer intent, validated findings or acceptance.
 
 ## Build the account assessment
 
@@ -58,7 +58,7 @@ Respect teams' accounts of what already works. Do not invent poor documentation,
 
 ## Apply guidance for the engagement stage
 
-For early positioning, evaluate the relevant workstreams against `shared_context/blitzy_presales_positioning_directives.md` as read for this task. For each directive, identify the relevant account evidence, an unresolved question or mismatch, and any recommended adjustment. Refer to the current directive number or heading so the review remains traceable when the shared guidance changes.
+For early positioning, evaluate the relevant workstreams against `shared_context/presales/positioning_directives.md` as read for this task. For each directive, identify the relevant account evidence, an unresolved question or mismatch, and any recommended adjustment. Refer to the current directive number or heading so the review remains traceable when the shared guidance changes.
 
 Use this assessment to shape the recommended engagement and next conversation. Distinguish the position supported by customer discussions from the position recommended by the guidance. If they differ, explain the gap and the decision needed; do not rewrite customer commitments to make them fit. Do not reproduce the directive list or maintain a second positioning policy here.
 
@@ -85,7 +85,7 @@ Separate actions already committed on a call from newly proposed actions. If an 
 
 ## Write and deliver the memo
 
-Save a Markdown memo by default under the account's ignored local folder. Follow `shared_context/file_naming_directives.md` for its filename. Honor an explicitly requested destination or format. Do not put account names, source excerpts or deliverables into reusable skill assets or version control.
+Save a Markdown memo by default under the account's ignored local folder. Follow `shared_context/standards/file_naming_directives.md` for its filename. Honor an explicitly requested destination or format. Do not put account names, source excerpts or deliverables into reusable skill assets or version control.
 
 Use a structure appropriate to the account, normally:
 

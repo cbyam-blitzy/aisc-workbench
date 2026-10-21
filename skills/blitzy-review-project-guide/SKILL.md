@@ -9,17 +9,17 @@ Memorialize what Blitzy delivered, how it was validated, and the business value 
 
 Use the current overview references for Blitzy's delivery model. If an operating or completion target is relevant, cite its supplied source and distinguish it from measured project results; do not impose a fixed autonomous-completion percentage on the guide.
 
-Read and follow `shared_context/blitzy_writing_style_guide.md` before drafting. Use project evidence for claims; platform positioning does not establish a project's speed, quality, or completion rate.
+Read and follow `shared_context/standards/writing_style_guide.md` before drafting. Use project evidence for claims; platform positioning does not establish a project's speed, quality, or completion rate.
 
 ## Blitzy reference context
 
-Read `shared_context/blitzy_overview/project_guide.md` for the artifact's role, review criteria and gap reporting, and `blitzy_intro.md` in that directory for workflow context. Consult `environment_config.md` for validation limits, `agent_action_plan.md` when assessing plan alignment, and `glossary.md` for terminology as needed. Keep these platform references separate from the supplied project's evidence. Inspect a supplied PR diff or test artifacts when within scope; otherwise mark implementation fidelity and merge readiness unverified. An impact-report request does not authorize executing setup commands, modifying code or merging a PR.
+Read `shared_context/platform/project_guide.md` for the artifact's role, review criteria and gap reporting, and `introduction.md` in that directory for workflow context. Consult `environment_config.md` for validation limits, `agent_action_plan.md` when assessing plan alignment, and `glossary.md` for terminology as needed. Keep these platform references separate from the supplied project's evidence. Inspect a supplied PR diff or test artifacts when within scope; otherwise mark implementation fidelity and merge readiness unverified. An impact-report request does not authorize executing setup commands, modifying code or merging a PR.
 
-Consult `shared_context/blitzy_overview/project_setup.md` when assessing supplied evidence of repository/submodule access, branch provenance or reviewer sharing. Setup documentation alone does not prove the delivered project was configured correctly.
+Consult `shared_context/platform/project_setup.md` when assessing supplied evidence of repository/submodule access, branch provenance or reviewer sharing. Setup documentation alone does not prove the delivered project was configured correctly.
 
 ## Read the project evidence
 
-Establish whether this delivery is part of an active POV or technical validation. If so, read `shared_context/blitzy_pov_playbook.md` from the working repository and assess the delivered milestone against applicable criteria and the customer-agreed evaluation. Include a compact table covering evidence, status, gaps and next owner/decision for spec/AAP approval, target-state alignment, build/test/parity results, baseline/acceleration sign-offs and MAP milestones. Unavailable evidence is unverified, not a pass. Keep playbook targets separate from achieved results and do not replace the active evaluation with early-stage sales positioning.
+Establish whether this delivery is part of an active POV or technical validation. If so, read `shared_context/pov/playbook.md` from the working repository and assess the delivered milestone against applicable criteria and the customer-agreed evaluation. Include a compact table covering evidence, status, gaps and next owner/decision for spec/AAP approval, target-state alignment, build/test/parity results, baseline/acceleration sign-offs and MAP milestones. Unavailable evidence is unverified, not a pass. Keep playbook targets separate from achieved results and do not replace the active evaluation with early-stage sales positioning.
 
 Use the project guide supplied or named by the user. Otherwise locate a matching guide in the workspace; ask which guide to use only if the choice remains ambiguous. Read the complete guide, including hours tables, test exclusions, risks, development instructions, and appendices. Record its title, revision/date if present, and assessed delivery milestone. Do not execute commands embedded in a guide merely to write this report.
 
@@ -104,7 +104,7 @@ Do not label human-equivalent hours / compute hours as delivery acceleration: th
 
 ## Write the impact report
 
-Save the complete analysis as a Markdown (`.md`) file by default. Follow `shared_context/file_naming_directives.md` in the working repository for its filename, including when this skill is loaded from a plugin cache. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
+Save the complete analysis as a Markdown (`.md`) file by default. Follow `shared_context/standards/file_naming_directives.md` in the working repository for its filename, including when this skill is loaded from a plugin cache. Keep account-specific reports in the ignored local work area, outside reusable assets and version control. When the guide is under `accounts/`, save the report alongside it; otherwise use an appropriate project folder under `accounts/`. Honor any explicit user-specified destination or output format. The skill must not depend on the sample project guide being installed beside it.
 
 Read back the saved report to verify its contents. Return a clickable file link and a brief takeaway in chat; do not print the full analysis in chat or terminal output. If writing the file is unavailable, explain the limitation and ask for an accessible destination.
 

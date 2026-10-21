@@ -13,11 +13,11 @@ Resolve the account, workstream and existing memo from the request and workspace
 
 Read these current files from the working repository, even when this skill is loaded from a plugin cache:
 
-- `shared_context/blitzy_pov_templates/blitzy_pov_eval_memo_template.md`
-- `shared_context/blitzy_writing_style_guide.md`
-- `shared_context/file_naming_directives.md`
-- `shared_context/blitzy_pov_playbook.md`
-- `shared_context/blitzy_overview/blitzy_intro.md`
+- `shared_context/pov/templates/evaluation_memo.md`
+- `shared_context/standards/writing_style_guide.md`
+- `shared_context/standards/file_naming_directives.md`
+- `shared_context/pov/playbook.md`
+- `shared_context/platform/introduction.md`
 
 Find the repository through the workspace and its parent directories; do not hardcode a machine path. Read account instructions and any existing scope agreement, memo or MAP relevant to the requested work. If a required reference is unavailable, identify the missing path and qualify any provisional output; do not present an invented structure as the shared template.
 
@@ -25,9 +25,9 @@ The account evaluation supplies context, not proof that its recommendations were
 
 ## Blitzy reference context
 
-For the selected scope, read relevant pages under `shared_context/blitzy_overview/`: `ingestion_prompts.md` and `tech_spec.md` for inputs and specification review, `agent_action_plan.md` for plan approval, `project_guide.md` for delivery evidence and review, and `environment_config.md` for reproducible validation prerequisites. Use `glossary.md` for terminology. These explain the platform; account agreements define scope, acceptance and responsibilities. Select task-matching prompt/rule templates from `shared_context/blitzy_prompt_templates/` and `shared_context/blitzy_rule_templates/` only when useful, labeling any added requirements as proposals. Ingestion prompts are optional platform context; preserve an agreed prompt requirement and make inherited-versus-regenerated specification coverage explicit when relevant.
+For the selected scope, read relevant pages under `shared_context/platform/`: `ingestion_prompts.md` and `tech_spec.md` for inputs and specification review, `agent_action_plan.md` for plan approval, `project_guide.md` for delivery evidence and review, and `environment_config.md` for reproducible validation prerequisites. Use `glossary.md` for terminology. These explain the platform; account agreements define scope, acceptance and responsibilities. Select task-matching prompt/rule templates from `shared_context/build_preparation/prompt_templates/` and `shared_context/build_preparation/rule_templates/` only when useful, labeling any added requirements as proposals. Ingestion prompts are optional platform context; preserve an agreed prompt requirement and make inherited-versus-regenerated specification coverage explicit when relevant.
 
-Use `shared_context/blitzy_overview/project_setup.md` for proposed provisioning, repository/submodule authorization, stable branches, integration and sharing responsibilities. Consult `chat_with_code.md` in that directory only when proposing source exploration or Build prompt assistance. Chat remains beta and step-dependent; its advisory prompt score is not a success criterion or customer approval.
+Use `shared_context/platform/project_setup.md` for proposed provisioning, repository/submodule authorization, stable branches, integration and sharing responsibilities. Consult `chat_with_code.md` in that directory only when proposing source exploration or Build prompt assistance. Chat remains beta and step-dependent; its advisory prompt score is not a success criterion or customer approval.
 
 ## Separate evidence from decisions
 

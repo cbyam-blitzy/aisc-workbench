@@ -5,7 +5,7 @@ description: Review an Agent Action Plan (AAP) against its build prompt and auth
 
 # AAP Reviewer
 
-Read and follow `shared_context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+Read and follow `shared_context/standards/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 An Agent Action Plan is the contract a build will execute. It is generated
 from a build prompt (what the user asked for) and grounded in a tech spec
@@ -36,9 +36,9 @@ build prompt, not the spec. The spec cannot tell you what the user wanted.
 
 ## Blitzy reference context
 
-Unless the user restricts the review to the three supplied documents, read `shared_context/blitzy_overview/agent_action_plan.md` for completeness, custom-rule verification and refinement options. Consult `environment_config.md` in that directory for execution prerequisites, `tech_spec.md` for current-state context, and `glossary.md` for terminology as needed. Check selected custom rules by intent; use `shared_context/blitzy_rule_templates/` and the task-matching template in `shared_context/blitzy_prompt_templates/` only when relevant to supplied rules or a requested correction. Template defaults are not omitted customer directives. Keep platform guidance distinct from document conflicts. For recommended fixes, distinguish Refine, prompt regeneration and inline edits; preserve all existing AAP headings when proposing inline edits. A restriction to the three documents also excludes these platform references.
+Unless the user restricts the review to the three supplied documents, read `shared_context/platform/agent_action_plan.md` for completeness, custom-rule verification and refinement options. Consult `environment_config.md` in that directory for execution prerequisites, `tech_spec.md` for current-state context, and `glossary.md` for terminology as needed. Check selected custom rules by intent; use `shared_context/build_preparation/rule_templates/` and the task-matching template in `shared_context/build_preparation/prompt_templates/` only when relevant to supplied rules or a requested correction. Template defaults are not omitted customer directives. Keep platform guidance distinct from document conflicts. For recommended fixes, distinguish Refine, prompt regeneration and inline edits; preserve all existing AAP headings when proposing inline edits. A restriction to the three documents also excludes these platform references.
 
-For permitted setup/readiness checks, consult `shared_context/blitzy_overview/project_setup.md` on repository/submodule access and branch isolation. Read `chat_with_code.md` in that directory when recommending conversational help: at the AAP step, chat answers source questions and does not discuss or edit the plan. Use the AAP refinement paths for plan changes; an advisory Build Prompt Strength score does not replace this review or approval.
+For permitted setup/readiness checks, consult `shared_context/platform/project_setup.md` on repository/submodule access and branch isolation. Read `chat_with_code.md` in that directory when recommending conversational help: at the AAP step, chat answers source questions and does not discuss or edit the plan. Use the AAP refinement paths for plan changes; an advisory Build Prompt Strength score does not replace this review or approval.
 
 ## Inputs
 
@@ -58,7 +58,7 @@ against the source documents. A false conflict wastes the user's time.
 ## What to check
 
 For an active POV or technical validation, read the current
-`shared_context/blitzy_pov_playbook.md` from the working repository. Assess
+`shared_context/pov/playbook.md` from the working repository. Assess
 the plan against its applicable criteria and the customer-agreed target,
 baseline, success criteria, validation approach, environment access and MAP.
 Identify missing evidence or approvals before generation. Keep playbook
@@ -95,6 +95,28 @@ not assessed. Early-stage pre-sales positioning does not replace this review.
 6. **Prompt-to-spec conflicts.** Raise directives in the build prompt that
    rest on facts the tech spec contradicts. The user owns the prompt fix.
 
+### Checklist completeness review
+
+Unless the user restricts the review to the three supplied documents, read
+`shared_context/artifact_review/aap_validation_checklist.md` from the
+working repository, including when this skill is loaded from a plugin cache.
+Use its current review areas to identify missing specificity in the prompt
+and AAP. Consider every area, scaling review depth to the task's complexity
+and risk; mark irrelevant areas not applicable with a brief reason.
+
+For each applicable area, assess whether the supplied documents provide
+enough detail to execute and validate the work. Record supporting evidence,
+missing detail, and the clarification or document edit needed. Do not invent
+technology versions, coverage thresholds, architecture choices, or other
+requirements to fill gaps. Checklist questions guide review; they do not
+override the prompt or spec or establish customer requirements.
+
+Keep completeness gaps distinct from prompt/spec conflicts. Apply the gating
+verdicts below to material gaps based on their execution impact; a missing
+detail does not automatically block the build. If the review is restricted
+to the three documents, skip this reference and state that checklist
+alignment was not assessed.
+
 ## Gating verdicts
 
 Give every conflict exactly one verdict and a one-sentence reason:
@@ -125,12 +147,12 @@ it.
 
 When the AAP cites legacy files, workbooks, or source outside the supplied
 documents, say those citations are unverified. Limit conclusions to the AAP,
-prompt, and spec for document conflicts; keep the permitted playbook-readiness
-assessment separate.
+prompt, and spec for document conflicts; keep permitted checklist-completeness
+and playbook-readiness assessments separate.
 
 ## How to write it
 
-Follow `shared_context/blitzy_writing_style_guide.md` for the briefing's
+Follow `shared_context/standards/writing_style_guide.md` for the briefing's
 voice, structure, formatting, and claims.
 
 - Explain the why for every conflict: what the AAP says, what the prompt or
@@ -166,6 +188,13 @@ voice, structure, formatting, and claims.
    recommended option with a reason.
 7. **What I could not check.** State dependencies on information outside the
    three documents and claims that were not independently verified.
+
+When checklist review is permitted, include a compact completeness table
+covering the checklist's current areas: area, status (sufficient, needs
+clarification, or not applicable), evidence or gap, and recommended fix or
+decision owner. Cross-reference existing findings to avoid duplication.
+Reflect material gaps and their gating verdicts in the opening verdict,
+separately from the prompt/spec conflict counts.
 
 For active evaluations where the review scope permits it, include a compact
 playbook-alignment table: applicable criterion, evidence, status, gap and

@@ -5,14 +5,14 @@ description: Edit text to remove signs of AI-generated writing and make it sound
 
 # Blitzy Humanizer
 
-Read and follow `shared_context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+Read and follow `shared_context/standards/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 Edit writing so it sounds like a person wrote it without changing its meaning. Remove AI-writing tells, then restore an appropriate human voice. Do not make formal material performatively casual: match the document's register.
 
 ## Workflow
 
 1. Read [the pattern guide](references/patterns.md) before editing.
-2. Read and follow `shared_context/blitzy_writing_style_guide.md` before drafting. It is the repository's current source of truth for Blitzy voice and claims.
+2. Read and follow `shared_context/standards/writing_style_guide.md` before drafting. It is the repository's current source of truth for Blitzy voice and claims.
 3. If the user provides a writing sample, calibrate to it before rewriting. Note its sentence rhythm, word choice, openings, punctuation, recurring phrases, and transitions.
 4. Rewrite the problem sections. Prefer plain, specific language over generic polish. Keep the original message, facts, intended tone, and format intact.
 5. Review the rewrite aloud in effect: vary rhythm where natural, use simple verbs such as “is,” “are,” and “has” where they fit, and remove remaining slogan-like or evenly paced phrasing.
@@ -20,7 +20,7 @@ Edit writing so it sounds like a person wrote it without changing its meaning. R
 
 ## Blitzy reference context
 
-For text about Blitzy, consult `shared_context/blitzy_overview/glossary.md` for unclear terminology and the relevant overview page when a wording change could alter a capability or workflow claim. Preserve the source meaning and do not add platform claims merely to enrich the rewrite. Flag material discrepancies separately instead of silently changing facts. Ordinary prose editing does not require loading the overview library.
+For text about Blitzy, consult `shared_context/platform/glossary.md` for unclear terminology and the relevant overview page when a wording change could alter a capability or workflow claim. Preserve the source meaning and do not add platform claims merely to enrich the rewrite. Flag material discrepancies separately instead of silently changing facts. Ordinary prose editing does not require loading the overview library.
 
 ## Facts and voice
 

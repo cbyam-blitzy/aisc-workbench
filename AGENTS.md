@@ -2,9 +2,21 @@
 
 ## Purpose
 
-This repository holds reusable operating guidance for agents that work with
-Wispr Flow through its MCP server. Its contents must remain safe to share with
-everyone who has repository access.
+This repository holds reusable operating guidance for agents supporting the
+AISC across account evaluation, technical validation, Blitzy artifact review,
+impact assessment, and customer follow-up. Use Wispr Flow's MCP server for
+meeting context as described below. Repository contents must remain safe to
+share with everyone who has repository access.
+
+The AISC owns the technical validation path: the platform deep dive, POC
+execution, key technical relationships within the account, and the credibility
+of Blitzy's output. The AISC is the customer's technical counterpart for
+engineering questions, concerns, and blockers.
+
+Support that ownership with evidence-backed technical assessments and clear
+next steps. Surface unresolved questions, validation gaps, and blockers;
+identify the owner or decision needed to resolve each. Preserve agreed
+customer responsibilities and approval authority when recommending actions.
 
 ## Privacy and data handling
 
@@ -65,17 +77,18 @@ everyone who has repository access.
   and reference files under `shared_context/`. Preserve lowercase hyphenated
   skill names and directories under `skills/` for skill discovery.
 - Keep shared POV, prompt and rule templates in
-  `shared_context/blitzy_pov_templates/`,
-  `shared_context/blitzy_prompt_templates/` and
-  `shared_context/blitzy_rule_templates/`. Use `templates/` for other generic
-  reusable output patterns. Deliverable filenames follow the naming guide.
+  `shared_context/pov/templates/`,
+  `shared_context/build_preparation/prompt_templates/` and
+  `shared_context/build_preparation/rule_templates/`. Use `templates/` for
+  other generic reusable output patterns. Deliverable filenames follow the
+  naming guide.
 - Keep documentation concise, specific, and updated when behavior or safety
   requirements change.
 - Use clear, focused commits. Inspect `git diff --cached` before each commit.
 
 ## Writing standards
 
-- Read and follow `shared_context/blitzy_writing_style_guide.md` for every
+- Read and follow `shared_context/standards/writing_style_guide.md` for every
   written output, including customer emails, follow-ups, executive updates,
   internal summaries, knowledge documents, and repository documentation.
 - Treat that guide as the current, project-wide source of truth for voice,
@@ -85,7 +98,7 @@ everyone who has repository access.
 ## Engagement stage and shared references
 
 - Ground Blitzy descriptions and workflow recommendations in
-  `shared_context/blitzy_overview/blitzy_intro.md` and the relevant overview
+  `shared_context/platform/introduction.md` and the relevant platform
   pages below. Read only those needed for the task; use `glossary.md` when a
   platform term needs clarification.
 - Use platform references to explain capabilities and review practices.
@@ -97,9 +110,9 @@ everyone who has repository access.
 - Distinguish automated ingestion/specification, AAP and Project Guide
   generation from human readouts, review, approval and acceptance.
 
-| Task or question | Read under `shared_context/blitzy_overview/` |
+| Task or question | Read under `shared_context/platform/` |
 | --- | --- |
-| Workflow, artifact purpose and terminology | `blitzy_intro.md`; `glossary.md` as needed |
+| Workflow, artifact purpose and terminology | `introduction.md`; `glossary.md` as needed |
 | Account provisioning, repository/submodule access, branch isolation, integrations and project sharing | `project_setup.md` |
 | Conversational source exploration, Build prompt drafting and advisory scoring | `chat_with_code.md` |
 | Ingestion scope, business context, exclusions, formats and branch/spec inheritance | `ingestion_prompts.md` |
@@ -117,19 +130,20 @@ everyone who has repository access.
   Build Prompt Strength is advisory, not approval or an acceptance gate.
   Flag conflicting availability statements rather than promising support.
 - Select a task-matching prompt template from
-  `shared_context/blitzy_prompt_templates/` when drafting or recommending a
-  generation prompt. Consult `shared_context/blitzy_rule_templates/` when
-  proposing or checking project rules. Templates are starting points, not
+  `shared_context/build_preparation/prompt_templates/` when drafting or
+  recommending a generation prompt. Consult
+  `shared_context/build_preparation/rule_templates/` when proposing or
+  checking project rules. Templates are starting points, not
   customer requirements; apply only selected or agreed rules. Do not load the
   entire library or impose every rule on every task.
 - Establish the stage of the specific engagement or workstream from the
   request and account evidence. One account can have early discovery and an
   active POV in separate workstreams. Preserve agreed scope and commitments.
 - For early sales positioning, use
-  `shared_context/blitzy_presales_positioning_directives.md` to guide discovery
+  `shared_context/presales/positioning_directives.md` to guide discovery
   toward a paid engagement while bypassing a POV or technical validation.
 - For an active POV or technical validation, read and apply
-  `shared_context/blitzy_pov_playbook.md`. Tailor outputs, deliverables and
+  `shared_context/pov/playbook.md`. Tailor outputs, deliverables and
   feedback to its applicable criteria and the customer-agreed evaluation:
   baselines, success criteria, target state, spec/AAP approval, environment
   readiness, build/test/parity evidence and Mutual Action Plan milestones.
@@ -137,7 +151,7 @@ everyone who has repository access.
   with the earlier-stage sales approach or silently rewrite agreed criteria.
 - Distinguish playbook targets from measured results and customer sign-offs.
   A target or proposed baseline does not establish achieved acceleration.
-- Use `shared_context/blitzy_security_faqs.md` as an internal reference when
+- Use `shared_context/security/security_faqs.md` as an internal reference when
   answering customer questions about Blitzy security. Preserve deployment-tier
   qualifications, flag contradictions and keep items marked `TO CONFIRM`
   unverified until the appropriate internal owner confirms them. Do not send
@@ -149,7 +163,7 @@ everyone who has repository access.
 
 ## Output traceability
 
-- Read and follow `shared_context/file_naming_directives.md` for files
+- Read and follow `shared_context/standards/file_naming_directives.md` for files
   delivered by skills and ad hoc prompts. It is the source of truth for the
   `<timestamp>-<account>-<title>` convention and its exceptions.
 

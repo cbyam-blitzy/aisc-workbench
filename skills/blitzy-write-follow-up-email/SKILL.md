@@ -5,7 +5,7 @@ description: Turn a customer meeting transcript or notes into a short follow-up 
 
 # Meeting Recap Email
 
-Read and follow `shared_context/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
+Read and follow `shared_context/standards/file_naming_directives.md` when delivering files. Locate it in the working repository when this skill is loaded from a plugin cache.
 
 Produce a short, scannable follow-up email the user can send to the customer after a call. Customers skim these. The goal is that someone who missed the meeting knows in 20 seconds what was decided and who owes what.
 
@@ -18,28 +18,28 @@ Produce a short, scannable follow-up email the user can send to the customer aft
 - Transcripts are auto-generated and garbled (names misspelled, numbers wrong, speakers mislabeled). Use the Participants section to resolve names. If a figure, date, or name is ambiguous, flag it in the note after the email instead of guessing.
 
 **The Blitzy Writing Style Guide.** Read and follow
-`shared_context/blitzy_writing_style_guide.md` before drafting. It is the
+`shared_context/standards/writing_style_guide.md` before drafting. It is the
 project-wide source of truth for voice, structure, formatting, and claims.
 The fixed subject format in Step 2 takes precedence over the guide's general
 subject-line guidance.
 
 ## Blitzy reference context
 
-When the recap describes Blitzy capabilities, artifacts or next steps, use `shared_context/blitzy_overview/blitzy_intro.md` and the relevant pages in that directory: `ingestion_prompts.md`, `tech_spec.md`, `agent_action_plan.md`, `project_guide.md` or `environment_config.md`; use `glossary.md` to clarify terms. Read only what the call requires. These references clarify the workflow, not what was agreed: retain call commitments and put material discrepancies or new recommendations in the separate user note rather than silently rewriting the meeting record or adding actions.
+When the recap describes Blitzy capabilities, artifacts or next steps, use `shared_context/platform/introduction.md` and the relevant pages in that directory: `ingestion_prompts.md`, `tech_spec.md`, `agent_action_plan.md`, `project_guide.md` or `environment_config.md`; use `glossary.md` to clarify terms. Read only what the call requires. These references clarify the workflow, not what was agreed: retain call commitments and put material discrepancies or new recommendations in the separate user note rather than silently rewriting the meeting record or adding actions.
 
-For setup or conversational-assistance topics discussed on the call, consult `shared_context/blitzy_overview/project_setup.md` or `chat_with_code.md`. Preserve repository/submodule access, branch and sharing qualifications, and Chat with Code's beta and step-specific limits. Do not turn documentation recommendations into new customer actions or represent AAP-stage chat as plan review/editing.
+For setup or conversational-assistance topics discussed on the call, consult `shared_context/platform/project_setup.md` or `chat_with_code.md`. Preserve repository/submodule access, branch and sharing qualifications, and Chat with Code's beta and step-specific limits. Do not turn documentation recommendations into new customer actions or represent AAP-stage chat as plan review/editing.
 
 ## Step 2: Draft the email
 
 For an active POV or technical validation, read
-`shared_context/blitzy_pov_playbook.md` from the working repository. Prioritize
+`shared_context/pov/playbook.md` from the working repository. Prioritize
 the call's decisions and blockers affecting agreed success criteria, baselines,
 target state, spec/AAP reviews, environment access, validation and MAP dates.
 Keep the email short and include only actions actually committed on the call.
 Flag additional playbook gaps or proposed actions separately in the user note;
 do not turn them into customer commitments or use early-stage positioning to
 redirect the active evaluation. For Blitzy security questions, consult
-`shared_context/blitzy_security_faqs.md` and preserve deployment qualifications
+`shared_context/security/security_faqs.md` and preserve deployment qualifications
 and `TO CONFIRM` limitations; keep internal draft material out of the email.
 
 Deliver the draft in chat, not as a file, unless the user asks for a file.
