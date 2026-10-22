@@ -159,6 +159,14 @@ Establish the stage of each workstream and preserve its agreed commitments.
 - For early positioning, use
   `shared_context/presales/positioning_directives.md` to guide discovery toward
   a paid engagement while bypassing a POV or technical validation.
+- For practical positioning, discovery questions, talk tracks, objections,
+  demo preparation or adoption-pilot design, consult relevant sections of
+  `shared_context/presales/ai_dlc_positioning_playbook.md`. The positioning
+  directives govern; the playbook helps apply them. Read the current checkout
+  when needed, without requiring the whole playbook for every skill. Platform
+  and security references qualify capabilities; account evidence establishes
+  commitments and results. Surface conflicts rather than adopting playbook
+  examples or claims as requirements or verified outcomes.
 - For an active POV or technical validation, apply
   `shared_context/pov/playbook.md` and the agreed evaluation: baselines,
   success criteria, target state, spec/AAP approval, environment readiness,

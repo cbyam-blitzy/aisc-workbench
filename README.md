@@ -112,9 +112,18 @@ evidence establishes customer commitments and measured results.
 - Use Wispr Flow MCP meeting notes when available. Otherwise use the matching
   local transcript under `accounts/<account>/transcripts/` and identify it as
   the fallback source.
-- Use the active POV playbook for an agreed evaluation and positioning guidance
-  for early discovery. Operational references are read as needed, not loaded
-  into every POV deliverable.
+- Use the active POV playbook for an agreed evaluation. For early discovery,
+  [positioning directives](shared_context/presales/positioning_directives.md)
+  establish the rules; the
+  [AI-DLC positioning playbook](shared_context/presales/ai_dlc_positioning_playbook.md)
+  helps apply them through discovery questions, talk tracks, objections, demos
+  and adoption-pilot examples. Read relevant sections from the current checkout
+  when needed; the whole playbook is not required for every skill.
+- Maintain the positioning playbook in place as guidance evolves, update its
+  revision date and source appendix for material changes, and update the
+  directives only when positioning rules change. Keep examples in the playbook
+  rather than copying them into skills. Operational references are read as
+  needed, not loaded into every POV deliverable.
 - Treat prompt/rule templates as selectable starting points. Their examples
   are not customer requirements or proof of validation.
 

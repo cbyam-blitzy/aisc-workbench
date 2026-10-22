@@ -1,12 +1,21 @@
 # Blitzy pre-sales positioning directives
 
-Last updated: October 20, 2026. Refresh when pre-sales positioning or engagement guidance changes.
+Last updated: October 21, 2026. Refresh when pre-sales positioning or engagement guidance changes.
 
 Source: Supplied notes from the October 16, 2026 AISC training, “How to land deals without a POV.” These directives summarize the training; they do not establish contractual terms or verified product capabilities.
 
 Position Blitzy around changing how the customer delivers software. Use individual initiatives to demonstrate and adopt that process.
 
 **Applicability:** Use these directives for early sales positioning toward a paid engagement while bypassing a POV or technical validation. Once a workstream is in an active POV or technical validation, use `shared_context/pov/playbook.md` to guide its outputs, deliverables and feedback against the applicable playbook criteria and customer-agreed evaluation. These directives can inform a separate expansion conversation; they do not replace active evaluation commitments. Apply this distinction per workstream, as described in `AGENTS.md`.
+
+**Companion playbook:** These directives establish the positioning rules. The
+[AI-DLC positioning playbook](ai_dlc_positioning_playbook.md) helps apply
+them through discovery questions, talk tracks, objection handling, demos and
+adoption-pilot examples. Consult relevant sections when useful, using the
+current checkout as the playbook evolves. Its examples are not additional
+requirements, agreed terms or verified product and customer claims. Surface
+conflicts with these directives, platform/security guidance or account
+agreements rather than silently adopting them.
 
 1. **Lead discovery with strategic priorities and delivery processes.**
    Establish what the organization needs to change, where software delivery constrains it, and what leadership expects from AI adoption. Gather stack details and timelines once their relevance is clear.
