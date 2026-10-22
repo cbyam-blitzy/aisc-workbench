@@ -1,6 +1,6 @@
 # Set up and maintain AISC Workbench
 
-Last updated: 2026-10-21. Refresh when installation commands, plugin identifiers,
+Last updated: 2026-10-22. Refresh when installation commands, plugin identifiers,
 authentication requirements, or reference loading change.
 
 Install the local plugin from a checkout, use that checkout as the working
@@ -13,7 +13,8 @@ Have repository access and a signed-in Codex environment with local plugin suppo
 
 - Install Git and a Codex CLI that provides `codex plugin` commands.
 - For desktop use, have a compatible signed-in desktop app.
-- Configure an authorized Wispr Flow MCP connection for meeting retrieval.
+- Follow the [Wispr Flow MCP setup runbook](wispr_flow_mcp_setup.md) to configure
+  an authorized connection for meeting retrieval.
   Supplied-document review does not require that connection.
 - No application build, package installation, or submodule initialization is
   required for this repository's current contents.
@@ -50,9 +51,9 @@ read shared standards and references from the working repository.
 Authenticate meeting access separately and supply customer files only through
 an authorized local workflow.
 
-- Configure Wispr Flow MCP using your organization's connection instructions;
-  this skills-only plugin supplies neither the server nor credentials.
-- Confirm the intended meeting tools are available before meeting-based work.
+- Follow the [Wispr Flow MCP setup runbook](wispr_flow_mcp_setup.md) for server
+  registration, browser authorization, retrieval verification, and troubleshooting.
+  This skills-only plugin supplies neither the server nor credentials.
 - `accounts/` is Git-ignored and absent from a fresh clone. Retrieve meeting
   context through Wispr Flow or supply authorized local artifacts as needed.
 - Put fallback transcripts in `accounts/<account>/transcripts/`. Use only the
@@ -123,7 +124,7 @@ Resolve registration and project access before diagnosing individual skills.
 | A skill does not appear when using `/` | Type `$` in the chat composer and use its exact skill name; `/` does not invoke these repository skills |
 | Skills are missing or outdated | Refresh the plugin, compare installed skills, restart the app, and start a new chat |
 | Shared references cannot be found | Use the full checkout as the working project; a plugin installed into an unrelated project may not locate them |
-| Meeting tools are unavailable | Check the separate Wispr Flow MCP connection and its authorization |
+| Meeting tools are unavailable | Follow the [Wispr Flow MCP troubleshooting steps](wispr_flow_mcp_setup.md#troubleshooting) and verify retrieval |
 | `codex plugin` commands are unavailable | Check `codex plugin --help` and use a CLI version supporting local marketplaces |
 
 ## Appendix — Sources and evidence

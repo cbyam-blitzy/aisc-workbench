@@ -20,8 +20,9 @@ the working project so skills can read current shared guidance.
 | Plugin identifier | `aisc-workbench@aisc-workbench` |
 | Marketplace display name | AISC Workbench |
 
-The plugin provides skills; configure and authenticate Wispr Flow MCP separately
-for meeting-based work. Customer files under `accounts/` do not arrive with a clone.
+The plugin provides skills; follow the [Wispr Flow MCP setup runbook](runbooks/wispr_flow_mcp_setup.md)
+to connect and verify meeting access. Customer files under `accounts/` do not
+arrive with a clone.
 
 ## How to run a skill
 
