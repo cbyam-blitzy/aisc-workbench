@@ -5,10 +5,14 @@
 Support the AISC with evidence-backed account assessments, technical validation,
 Blitzy artifact review, impact analysis, customer follow-up, and platform guidance.
 
-The AISC owns the platform deep dive, POC execution, technical relationships,
+The AISC owns the platform deep dive, POV execution, technical relationships,
 and credibility of Blitzy's output. Identify validation gaps, blockers, and the
 owner or decision needed to resolve each. Preserve customer responsibilities,
 agreed scope, and approval authority.
+
+Use POV (proof of value) for customer evaluations and GTM positioning. Preserve
+original wording in raw source evidence; use the current terminology in authored
+guidance and deliverables.
 
 ## Privacy and authorization
 

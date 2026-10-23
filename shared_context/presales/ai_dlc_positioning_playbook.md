@@ -4,12 +4,12 @@ type: synthesis
 tags: [playbook, sales-enablement, ai-dlc, positioning, enterprise-sales]
 sources: []
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-23
 ---
 
 # Blitzy AI-DLC Positioning Playbook
 
-Last updated: 2026-10-21. Refresh when positioning, discovery practices,
+Last updated: 2026-10-23. Refresh when positioning, discovery practices,
 product guidance or supporting evidence changes.
 
 ## How to use and maintain this playbook
@@ -62,7 +62,7 @@ Open with these trends, and ask which ones the prospect is feeling. They create 
 4. **Build-vs-buy is shifting.** Software licensing costs keep rising while AI makes building cheaper. Enterprises are re-opening "buy" decisions and asking how easily they could exit a vendor.
 5. **Trust and risk outrank speed.** CIOs and CTOs are tired and risk-focused. Their main fear is the hidden risk in their own estate: vulnerabilities, unmaintained code, systems nobody fully understands. Governance is now a competitive position, not a tax.
 6. **Multi-model is the norm.** Serious enterprises do not expect one winning model. They are routing work across providers, open-weight models and purpose-built models by task, cost and control.
-7. **Pilots stall; process change sticks.** Short proofs of concept prove a narrow thing and then die. Organizations that change how work gets done are the ones that scale.
+7. **Pilots stall; process change sticks.** Short proofs of value prove a narrow thing and then die. Organizations that change how work gets done are the ones that scale.
 
 **How to use this:** pick the two or three trends that match what the prospect has told you, and tie the rest of the conversation to them.
 
@@ -224,7 +224,7 @@ Lead with trust and control. Speed is the result you deliver, not the opening li
 | **"We will build it ourselves."** | Some enterprises do, and some succeed. Ask about their thesis first. Offer the parallel-track pattern: their internal effort continues while Blitzy handles the hard cases, such as large modernizations, so they learn from both. Language and version agnosticism lets modernization run on one track and new features on another |
 | **"Copilots already cover this."** | Complementary. Copilots help a developer inside a file. Blitzy handles system-wide change across repos. Many enterprises run both |
 | **"Agents like Devin already do this."** | Task-level agents work well on bounded tasks. They lack a persistent global model of the system and tend to struggle when a change ripples widely. Show a cross-repo change |
-| **"Show us a proof of concept first."** | Reframe at the process level. A short proof proves a narrow thing and cannot demonstrate a change in how work gets done. Offer a three-track paid pilot instead (see section 9) |
+| **"Show us a proof of value first."** | Reframe at the process level. A short proof proves a narrow thing and cannot demonstrate a change in how work gets done. Offer a three-track paid pilot instead (see section 9) |
 | **"What about our security, PII and secrets?"** | Blitzy operates on source code, not production data. The customer owns what they supply. Scanning can surface identified risks, and guardrails are rules defined at prompt time. Be precise and do not over-claim built-in guardrails for every scenario. Offer documentation on audit trails and logging |
 | **"Our developers will resist."** | Frame the change as career advancement. Developers who use Blitzy to finish large pieces of work quickly gain visibility and recognition, and the roles evolve toward architecture, review and validation |
 | **"Will it write our proprietary algorithms?"** | Blitzy implements a defined design; it is not an inventor of novel algorithms. Its added value is making visible how business processes live inside the code |
@@ -271,7 +271,7 @@ Use a repeatable five-step process, each step in its own pass so the AI stays on
 ## 11. Proof points and claim hygiene
 
 **Use with confidence**
-- A federal science agency proof of concept reached 87% autonomy in one to two weeks on work that averaged six months, with more than 5,000 automated tests.
+- A federal science agency proof of value reached 87% autonomy in one to two weeks on work that averaged six months, with more than 5,000 automated tests.
 - The run-time profile: roughly 25% planning and context engineering, 1% code generation, 24% in-stride validation, 50% end-to-end validation.
 - Typical onboarding of one to two days for very large estates.
 
@@ -307,7 +307,7 @@ Use a repeatable five-step process, each step in its own pass so the AI stays on
 
 **Don't**
 - Lead with speed or "autonomy" to regulated buyers.
-- Offer a short proof of concept by reflex.
+- Offer a short proof of value by reflex.
 - Over-claim on guardrails, data handling or benchmarks.
 - Pitch to codebases that are too small.
 - Treat copilots or in-house efforts as enemies; position as complementary or parallel.
