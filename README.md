@@ -67,6 +67,7 @@ workspace; follow-up emails and rewrites are normally delivered in chat.
 | Skill | What it produces | What to provide |
 | --- | --- | --- |
 | `$blitzy-evaluate-acct` | Account strategy memo connecting stakeholder goals, discussion history, adoption readiness, commercial status, and next steps | Account/workstream and available meeting history or matching local transcripts |
+| `$blitzy-draft-pov-questionnaire` | Full customer-facing POV questionnaire tailored to the account evaluation, with evidence-backed prefills and blank unknowns; separate internal source notes | Account evaluation, selected workstream, and any existing questionnaire or scope agreement |
 | `$blitzy-draft-pov-eval-memo` | Customer-reviewable pre-POV agreement covering scope, baseline, success criteria, responsibilities, and open approvals; separate internal drafting notes | Account evaluation, proposed or agreed scope, and existing agreements or memo |
 | `$blitzy-draft-pov-map` | Mutual Action Plan with milestones, dates, owners, approval gates, and unresolved decisions; separate internal drafting notes | Account evaluation, agreed scope, and any Evaluation Memo or existing MAP |
 | `$blitzy-review-tech-spec` | Briefing on the system, architectural findings, missing inputs, blockers, and who should confirm them | Technical specification and review scope; supporting account context if permitted |
