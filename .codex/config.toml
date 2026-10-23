@@ -1,2 +1,7 @@
 [plugins."aisc-workbench@aisc-workbench"]
 enabled = true
+
+# Experimental coordinator with up to three specialist threads.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3

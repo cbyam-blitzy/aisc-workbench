@@ -85,11 +85,13 @@ Reusable guidance is version-controlled; customer evidence and deliverables stay
 
 | Path | Purpose |
 | --- | --- |
-| `AGENTS.md` | Operating rules, privacy requirements, and task-to-reference routing |
+| `AGENTS.md` | Compact universal rules, coordinator responsibilities, and task-to-reference routing |
+| `.codex/agents/` | Project-scoped account evidence, technical review, and verification specialists |
 | `plugin.json`, `.agents/plugins/marketplace.json`, `.codex/config.toml` | Plugin manifest, local marketplace, and project enablement |
 | `skills/` | Reusable workflows |
 | `runbooks/` | Installation, verification, refresh, and troubleshooting |
 | `shared_context/standards/` | Writing style, readability, citation placement, and naming |
+| `shared_context/agent_operations/` | On-demand platform routing, engagement guidance, delegation, and checkpoint lifecycle |
 | `shared_context/platform/intro/` | Overview, terminology, quickstart, workspace, knowledge base, and insights |
 | `shared_context/platform/admin/` | Teams, SSO/SCIM, usage, demos, and locking |
 | `shared_context/platform/project_lifecycle/` | Project setup, source Q&A, specification/AAP review, generation, and PR/code review |
@@ -100,6 +102,26 @@ Reusable guidance is version-controlled; customer evidence and deliverables stay
 | `shared_context/presales/`, `shared_context/security/` | Positioning guidance and qualified internal security answers |
 | `templates/` | Other generic output patterns |
 | `accounts/` | Git-ignored local customer workspace |
+
+## Specialist agents experiment
+
+The main agent coordinates substantial work and can delegate bounded reviews to
+`account_evidence`, `technical_review`, and `verification`. Short tasks stay with
+the coordinator. Specialists return traceable findings; the coordinator owns
+final writing and local account checkpoints. Model settings inherit existing
+preferences; the project configuration caps spawned threads at three.
+
+Start a new session in this checkout to load the experiment. Follow the
+[trial runbook](runbooks/specialist_agents_trial.md) for activation, a fictional
+smoke trial, checkpoint resumption, and comparison with a single-agent baseline.
+The [delegation guide](shared_context/agent_operations/delegation.md) defines
+handoffs and freshness checks. Use the
+[checkpoint template](templates/account_checkpoint.md) only inside ignored
+`accounts/<account>/checkpoints/` for populated account snapshots.
+
+This project configuration is separate from installing the skills plugin.
+Runtime availability and configuration loading must be verified in the client;
+the experiment does not establish measured context or token savings.
 
 ## Working standards
 
